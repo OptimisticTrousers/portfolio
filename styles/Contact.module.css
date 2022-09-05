@@ -20,11 +20,11 @@
 .contact__label {
     font-size: .94rem;
     left: 15px;
-    background-color: white;
     padding: 0 10px;
     pointer-events: none;
     position: absolute;
     top: -13px;
+    background-color: #10121b;
 }
 
 .contact__input{
@@ -33,6 +33,8 @@
     padding: 0 15px;
     vertical-align: middle;
     width: 100%;
+    border: 1px solid #2e344e;
+    background: transparent;
 }
 
 .contact__textarea {
@@ -40,6 +42,9 @@
     vertical-align: middle;
     width: 100%;
     padding: 10px 15px;
+    background: transparent;
+    border: 1px solid #2e344e;
+    resize: vertical;
 }
 
 .contact__button {
@@ -63,8 +68,23 @@
     padding: 30px;
 }
 
+.contact__span{
+    border: 1px solid #2e344e;
+    display: inline-block;
+    height: 70px;
+    line-height: 66px;
+    max-width: 70px;
+    margin-right: 20px;
+    width: 70px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .contact__icon {
-    
+    width: 30px;
+    height: 30px;
 }
 
 .contact__right {
