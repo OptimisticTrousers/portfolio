@@ -5,13 +5,13 @@ import Layout from "../components/Layout/Layout";
 import styles from "../styles/Contact.module.css";
 import { BsTelephone } from "react-icons/bs";
 import { HiOutlineMail } from "react-icons/hi";
-import { GrLocation } from "react-icons/gr";
+import { GoLocation } from "react-icons/go";
 
 const Contact: NextPage = () => {
   return (
     <Layout>
       <div styleName="contact">
-        <h1 styleName="contact__title">Contact Me</h1>
+        <h1 styleName="contact__title">CONTACT ME</h1>
         <div styleName="contact__content">
           <div styleName="contact__left">
             <h2>Get In Touch</h2>
@@ -45,14 +45,16 @@ const Contact: NextPage = () => {
                 />
               </div>
 
-              <button styleName="contact__button" type="submit">Send Mail</button>
+              <button styleName="contact__button" type="submit">
+                Send Mail
+              </button>
             </form>
           </div>
           <div styleName="contact__right">
             <ul>
               <li styleName="contact__card">
-                <span styleName="contact__icon">
-                  <BsTelephone />
+                <span styleName="contact__span">
+                  <BsTelephone styleName="contact__icon"/>
                 </span>
                 <div styleName="card__card-content">
                   <h3>Phone</h3>
@@ -60,8 +62,8 @@ const Contact: NextPage = () => {
                 </div>
               </li>
               <li styleName="contact__card">
-                <span styleName="contact__icon">
-                  <HiOutlineMail />
+                <span styleName="contact__span">
+                  <HiOutlineMail styleName="contact__icon"/>
                 </span>
                 <div styleName="card__card-content">
                   <h3>Email</h3>
@@ -69,8 +71,8 @@ const Contact: NextPage = () => {
                 </div>
               </li>
               <li styleName="contact__card">
-                <span styleName="contact__icon">
-                  <GrLocation />
+                <span styleName="contact__span">
+                  <GoLocation styleName="contact__icon"/>
                 </span>
                 <div styleName="card__card-content">
                   <h3>Address</h3>
