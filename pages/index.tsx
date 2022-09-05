@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import About from "../components/About/About";
+import FeaturedProjects from "../components/FeaturedProjects/FeaturedProjects";
 import Hero from "../components/Hero/Hero";
 import Layout from "../components/Layout/Layout";
 import styles from "../styles/Home.module.css";
@@ -11,6 +12,7 @@ const Home: NextPage = () => {
     <Layout>
       <Hero />
       <About />
+      <FeaturedProjects />
       <main className={styles.main}>
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
