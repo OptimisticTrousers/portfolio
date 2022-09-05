@@ -1,0 +1,79 @@
+.hero__hi {
+  font-weight: 600;
+  font-size: calc(1.5rem + ((1vw - 7.68px) * 1.0416666666666667));
+}
+.hero__name {
+  letter-spacing: -1.8px;
+  line-height: 95%;
+  font-size: calc(5rem + ((1vw - 7.68px) * 5.555555555555555));
+  font-weight: 700;
+}
+
+.hero__description {
+  line-height: 1.2;
+  letter-spacing: -1.6px;
+  font-size: calc(1.5rem + ((1vw - 7.68px) * 1.0416666666666667));
+  font-weight: 600;
+}
+
+.hero__colorful {
+  background-image: linear-gradient(270deg, #ff0000, #0035ff, #19ff00, #ff00f9);
+  background-size: 800% 800%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+
+  -webkit-animation: AnimationName 9s ease infinite;
+  -moz-animation: AnimationName 9s ease infinite;
+  animation: AnimationName 9s ease infinite;
+}
+
+.hero__dash {
+    animation-name: profileAnimation3;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes profileAnimation3 {
+  0% {
+    color: rgba(0, 0, 0, 0);
+  }
+  100% {
+    color: rgb(255, 0, 0);
+  }
+}
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 51%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 51%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 51%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
