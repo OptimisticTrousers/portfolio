@@ -4,6 +4,9 @@ import Link from "next/link";
 import { FC } from "react";
 import CSSModules from "react-css-modules";
 import styles from "./Hero.module.css";
+import { GrLinkedinOption } from "react-icons/gr";
+import { AiFillGithub } from "react-icons/ai";
+import { HiOutlineMail } from "react-icons/hi";
 
 const Hero: FC = () => {
   return (
@@ -14,17 +17,29 @@ const Hero: FC = () => {
         <h1 styleName="hero__name">Tony Isern</h1>
       </div>
       <div styleName="hero__position">
-        <p styleName="hero__description"><span styleName="hero__colorful">A Web Developer</span><span styleName="hero__dash">_</span> studying Computer Science</p>
+        <p styleName="hero__description">
+          <span styleName="hero__colorful">A Web Developer</span>
+          <span styleName="hero__dash">_</span> studying Computer Science
+        </p>
       </div>
       <div styleName="hero__links">
         <Link href="">
-          <button>LinkedIn</button>
+          <button styleName="hero__button">
+            <GrLinkedinOption />
+            LinkedIn
+          </button>
         </Link>
         <Link href="">
-          <button>Github</button>
+          <button styleName="hero__button">
+            <AiFillGithub />
+            Github
+          </button>
         </Link>
         <Link href="">
-          <button>Email</button>
+          <button styleName="hero__button">
+            <HiOutlineMail />
+            Email
+          </button>
         </Link>
       </div>
     </div>

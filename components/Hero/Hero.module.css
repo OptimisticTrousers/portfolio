@@ -35,6 +35,21 @@
     animation-iteration-count: infinite;
 }
 
+.hero__links {
+    display: flex;
+    column-gap: 16px;
+}
+
+.hero__button {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    border: 0px;
+    border-radius: 0.2rem;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+}
+
 @keyframes profileAnimation3 {
   0% {
     color: rgba(0, 0, 0, 0);
