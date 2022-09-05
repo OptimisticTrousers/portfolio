@@ -1,12 +1,72 @@
 .contact__content {
     display: flex;
-    justify-content: space-around;
 }
+
 .contact__left {
     width: 50%;
 }
+
 .contact__form {
 
     display: flex;
     flex-direction: column;
+}
+
+.contact__field {
+    margin-top: 30px;
+    position: relative;
+}
+
+.contact__label {
+    font-size: .94rem;
+    left: 15px;
+    background-color: white;
+    padding: 0 10px;
+    pointer-events: none;
+    position: absolute;
+    top: -13px;
+}
+
+.contact__input{
+    font-size: 1rem;
+    height: 50px;
+    padding: 0 15px;
+    vertical-align: middle;
+    width: 100%;
+}
+
+.contact__textarea {
+    font-size: 1rem;
+    vertical-align: middle;
+    width: 100%;
+    padding: 10px 15px;
+}
+
+.contact__button {
+    margin-top: 30px;
+    cursor: pointer;
+    background: #037fff;
+    border: 0;
+    color: #fff;
+    font-size: .9rem;
+    height: 50px;
+    letter-spacing: 2px;
+    padding: 0 30px;
+    text-transform: uppercase;
+}
+
+.contact__card {
+    background: #191d2b;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    padding: 30px;
+}
+
+.contact__icon {
+    
+}
+
+.contact__right {
+    width: 50%;
 }

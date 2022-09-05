@@ -16,22 +16,28 @@ const Contact: NextPage = () => {
           <div styleName="contact__left">
             <h2>Get In Touch</h2>
             <form styleName="contact__form">
-              <div styleName="contact-field">
-                <label htmlFor="name">Enter your name*</label>
+              <div styleName="contact__field">
+                <label styleName="contact__label" htmlFor="name">
+                  Enter your name*
+                </label>
                 <input id="name" name="name" styleName="contact__input" />
               </div>
-              <div styleName="contact-field">
-                <label htmlFor="email">Enter your email*</label>
+              <div styleName="contact__field">
+                <label styleName="contact__label" htmlFor="email">
+                  Enter your email*
+                </label>
                 <input id="email" name="email" styleName="contact__input" />
               </div>
-              <div styleName="contact-field">
-                <label htmlFor="subject">Enter your subject*</label>
+              <div styleName="contact__field">
+                <label styleName="contact__label" htmlFor="subject">
+                  Enter your subject*
+                </label>
                 <input name="subject" id="subject" styleName="contact__input" />
               </div>
-              <div styleName="contact-field">
-                <label htmlFor="message">Enter your message*</label>
-              </div>
-              <div styleName="contact-field">
+              <div styleName="contact__field">
+                <label styleName="contact__label" htmlFor="message">
+                  Enter your message*
+                </label>
                 <textarea
                   name="message"
                   id="message"
@@ -39,13 +45,13 @@ const Contact: NextPage = () => {
                 />
               </div>
 
-              <button type="submit">Send Mail</button>
+              <button styleName="contact__button" type="submit">Send Mail</button>
             </form>
           </div>
           <div styleName="contact__right">
             <ul>
               <li styleName="contact__card">
-                <span>
+                <span styleName="contact__icon">
                   <BsTelephone />
                 </span>
                 <div styleName="card__card-content">
@@ -54,7 +60,7 @@ const Contact: NextPage = () => {
                 </div>
               </li>
               <li styleName="contact__card">
-                <span>
+                <span styleName="contact__icon">
                   <HiOutlineMail />
                 </span>
                 <div styleName="card__card-content">
@@ -63,7 +69,7 @@ const Contact: NextPage = () => {
                 </div>
               </li>
               <li styleName="contact__card">
-                <span>
+                <span styleName="contact__icon">
                   <GrLocation />
                 </span>
                 <div styleName="card__card-content">
