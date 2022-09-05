@@ -11,6 +11,8 @@ const Project: FC = () => {
   return (
     <div styleName="project__project">
       <div styleName="project__details">
+        <div styleName="project__content">
+
         <h2>REDDIT CLONE</h2>
         <i
           className="devicon-react-original colored"
@@ -31,17 +33,12 @@ const Project: FC = () => {
           consequat reprehenderit. Duis ex nisi esse consequat eu amet dolor
           voluptate in deserunt velit cillum.
         </p>
+        </div>
         <div styleName="project__buttons">
           <div styleName="project__button-container">
             <Link href="">
               <div>
-                <Image
-                  styleName="project__image"
-                  src={greenDot}
-                  alt="green dot"
-                  width={48}
-                  height={48}
-                />
+                <Image src={greenDot} alt="green dot" width={48} height={48} />
                 <button styleName="project__button">LIVE</button>
               </div>
             </Link>
@@ -56,12 +53,11 @@ const Project: FC = () => {
           </div>
         </div>
       </div>
-      <Image
-        src="/optimistictrousers.jpg"
+      {/* <img
+        styleName="project__image"
+        src="/images/reddit-clone.png"
         alt="project"
-        width={650}
-        height={326}
-      />
+      /> */}
     </div>
   );
 };

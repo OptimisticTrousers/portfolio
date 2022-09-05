@@ -43,3 +43,13 @@
   line-height: 1.75;
   letter-spacing: 0.02857em;
 }
+
+.project__image {
+    box-shadow: rgb(80 78 78 / 50%) 3px 3px 20px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.profile__content {
+    max-width: 65%;
+}
