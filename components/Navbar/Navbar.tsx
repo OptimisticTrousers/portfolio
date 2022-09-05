@@ -5,12 +5,14 @@ import styles from "./Navbar.module.css";
 
 const Navbar: FC = () => {
   return (
-    <nav>
-      <Link href="">Tony Isern</Link>
-      <Link href="">Projects</Link>
-      <Link href="">Contact</Link>
-      <Link href="">Blog</Link>
-    </nav>
+    <header>
+      <nav>
+        <Link href="">Tony Isern</Link>
+        <Link href="">Projects</Link>
+        <Link href="">Contact</Link>
+        <Link href="">Blog</Link>
+      </nav>
+    </header>
   );
 };
 

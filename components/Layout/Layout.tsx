@@ -2,6 +2,7 @@
 import Head from "next/head";
 import { FC, PropsWithChildren } from "react";
 import CSSModules from "react-css-modules";
+import Navbar from "../Navbar/Navbar";
 import styles from "./Layout.module.css";
 
 interface Props {
@@ -20,6 +21,7 @@ const Layout: FC<Props> = ({ children }) => {
           href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
         />
       </Head>
+      <Navbar />
       <main styleName="main">{children}</main>
     </div>
   );
