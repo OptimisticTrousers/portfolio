@@ -1,0 +1,12 @@
+.contact__content {
+    display: flex;
+    justify-content: space-around;
+}
+.contact__left {
+    width: 50%;
+}
+.contact__form {
+
+    display: flex;
+    flex-direction: column;
+}
