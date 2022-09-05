@@ -1,21 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap");
 .home {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 .nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0 auto;
-    width: 1270px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 1270px;
+  font-family: "Space Grotesk"
 }
 .list {
-    display: flex;
-    justify-content: space-around;
-    column-gap: 16px;
+  display: flex;
+  justify-content: space-around;
+  column-gap: 16px;
 }
 .item {
-    list-style: none;
-    font-size: 2rem;
-    line-height: 32px;
-    transition: all 0.4s ease 0s;
+  list-style: none;
+  font-size: 2rem;
+  line-height: 32px;
+  transition: all 0.4s ease 0s;
 }
