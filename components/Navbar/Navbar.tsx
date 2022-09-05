@@ -9,7 +9,7 @@ const Navbar: FC = () => {
     <header>
       <nav styleName="nav">
         <div styleName="home">
-          <Link href="">Tony Isern</Link>
+          <Link href="/">Tony Isern</Link>
         </div>
         <div styleName="pages">
           <ul styleName="list">
