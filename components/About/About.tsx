@@ -7,9 +7,9 @@ import styles from "./About.module.css";
 const About: FC = () => {
   return (
     <section styleName="about">
-      <div styleName="about__description">
-        <h2>About me</h2>
-        <p>
+      <div styleName="about__content">
+        <h2 styleName="about__title">About me</h2>
+        <p styleName="about__description">
           Hey! I'm Abdul Rahman, I've been close to a computer since an early
           age, and been passionate about it ever since. I really liked to build
           stuff using no-code tools back in 2010, and from that, I explored how
