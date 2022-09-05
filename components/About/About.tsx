@@ -2,14 +2,12 @@
 import Image from "next/image";
 import { FC } from "react";
 import CSSModules from "react-css-modules";
-import about from "../../public/about.svg";
 import styles from "./About.module.css";
 
 const About: FC = () => {
   return (
-    <div styleName="about">
+    <section styleName="about">
       <div styleName="about__description">
-        <Image src={about} alt="Red sihoulette of a man" />
         <h2>About me</h2>
         <p>
           Hey! I'm Abdul Rahman, I've been close to a computer since an early
@@ -24,8 +22,42 @@ const About: FC = () => {
           Netflix, or if the weather's good, play basketball! 🏀
         </p>
       </div>
-      <div styleName="about__icons"></div>
-    </div>
+      <div styleName="about__icons">
+        <i
+          className="devicon-html5-plain-wordmark colored"
+          styleName="about__icon"
+        ></i>
+        <i
+          className="devicon-css3-plain-wordmark colored"
+          styleName="about__icon"
+        ></i>
+        <i
+          className="devicon-javascript-plain colored"
+          styleName="about__icon"
+        ></i>
+        <i
+          className="devicon-react-original-wordmark colored"
+          styleName="about__icon"
+        ></i>
+        <i className="devicon-jest-plain colored" styleName="about__icon"></i>
+        <i
+          className="devicon-typescript-plain colored"
+          styleName="about__icon"
+        ></i>
+        <i
+          className="devicon-redux-original colored"
+          styleName="about__icon"
+        ></i>
+        <i
+          className="devicon-git-plain-wordmark colored"
+          styleName="about__icon"
+        ></i>
+        <i
+          className="devicon-firebase-plain-wordmark colored"
+          styleName="about__icon"
+        ></i>
+      </div>
+    </section>
   );
 };
 

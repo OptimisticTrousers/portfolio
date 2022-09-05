@@ -1,0 +1,15 @@
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about__icons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.about__icon {
+  font-size: 50px;
+  margin: 5px;
+}
