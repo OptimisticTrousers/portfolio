@@ -12,7 +12,7 @@ const Hero: FC = () => {
   return (
     <div styleName="hero">
       <div styleName="hero__intro">
-        {/* <Image src="././../public/dots.svg" alt="dots" width={50} height={50}/> */}
+        {/* <Image src="/svg/animation.svg" alt="dots" width={50} height={50}/> */}
         <p styleName="hero__hi">Hi, I'm</p>
         <h1 styleName="hero__name">Tony Isern</h1>
       </div>
