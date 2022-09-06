@@ -33,19 +33,19 @@ const Hero: FC = () => {
       <div styleName="hero__links">
         <Link href="">
           <button styleName="hero__button">
-            <GrLinkedinOption styleName="hero__icon" />
+            <Image src="/svg/linkedin.svg" styleName="hero__icon" alt="linkedin logo" width={24} height={24} />
             LinkedIn
           </button>
         </Link>
         <Link href="">
           <button styleName="hero__button">
-            <AiFillGithub styleName="hero__icon" />
+            <Image src="/svg/github.svg" styleName="hero__icon" alt="github logo" width={24} height={24}/>
             Github
           </button>
         </Link>
         <Link href="">
           <button styleName="hero__button">
-            <HiOutlineMail styleName="hero__icon" />
+            <Image src="/svg/email.svg" styleName="hero__icon" width={24} height={24} alt="email logo"/>
             Email
           </button>
         </Link>

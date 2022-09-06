@@ -29,9 +29,7 @@
 }
 
 .hero__icon {
-  width: 30px;
-  height: 30px;
-  color: #3ccf91;
+  fill: rgb(60, 207, 145);
 }
 
 .hero__animation {
@@ -79,6 +77,16 @@
   border-radius: 0.2rem;
   cursor: pointer;
   padding: 0.5rem 1rem;
+  font-size: 1rem;
+  line-height: 1.2;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  background-color: #111111;
+  color: white;
+}
+
+.hero__button:hover {
+  background-color: rgba(255, 255, 255, 0.16);
 }
 
 @keyframes profileAnimation3 {
