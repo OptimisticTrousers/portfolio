@@ -2,6 +2,19 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  animation: 1s slideUp ease-in-out;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+    transition: all 1000ms ease-in-out;
+  }
 }
 
 .about__title {

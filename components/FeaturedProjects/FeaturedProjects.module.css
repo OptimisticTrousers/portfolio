@@ -1,8 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+
+.projects {
+
+  /* animation: 1s slideUp ease-in-out; */
+}
 .projects__text {
   color: #3ccf91;
   font-size: 1.25rem;
 }
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+    transition: all 1000ms ease-in-out;
+  }
+}
+
+
 
 .projects__title {
   font-size: 1.5rem;
