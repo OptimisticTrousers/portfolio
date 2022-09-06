@@ -1,7 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap");
+
 .home {
   font-size: 2rem;
 }
+
 .nav {
   padding-top: 1rem;
   display: flex;
@@ -9,13 +11,15 @@
   justify-content: space-between;
   margin: 0 auto;
   max-width: 1370px;
-  font-family: "Space Grotesk"
+  font-family: "Space Grotesk";
 }
+
 .list {
   display: flex;
   justify-content: space-around;
   column-gap: 16px;
 }
+
 .item {
   list-style: none;
   font-size: 2rem;
@@ -23,9 +27,8 @@
   transition: all 0.4s ease 0s;
 }
 
-@media(max-width: 550px) {
+@media (max-width: 550px) {
   .list {
     display: none;
   }
 }
-

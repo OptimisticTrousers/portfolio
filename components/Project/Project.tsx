@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unknown-property */
 import Image from "next/image";
 import Link from "next/link";
-import { FC } from "react";
+import { FC, ReactElement } from "react";
 import greenDot from "../../public/svg/green-dot.svg";
 import code from "../../public/svg/code.svg";
 import styles from "./Project.module.css";
@@ -31,7 +31,7 @@ const Project: FC<Props> = ({
           <p styleName="project__description">{description}</p>
         </div>
         <div styleName="project__buttons">
-          <a href={liveLink} target="_blank">
+          <a href={liveLink} target="_blank" rel="noreferrer">
             <div styleName="project__button-container">
               <Image
                 src="/svg/green-dot.svg"
@@ -42,7 +42,7 @@ const Project: FC<Props> = ({
               <button styleName="project__button">LIVE</button>
             </div>
           </a>
-          <a href={codeLink} target="_blank">
+          <a href={codeLink} target="_blank" rel="noreferrer">
             <div styleName="project__button-container">
               <Image
                 src="/svg/code.svg"

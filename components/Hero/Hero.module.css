@@ -22,6 +22,7 @@
   grid-template-columns: 1.5fr 1fr;
   position: relative;
 }
+
 .hero__name {
   letter-spacing: -1.8px;
   position: relative;
@@ -30,7 +31,6 @@
   font-size: calc(5rem + ((1vw - 7.68px) * 5.555555555555555));
   font-weight: 700;
   margin-bottom: 0;
-  /* color: linear-gradient(121.57deg, rgb(255, 255, 255) 18.77%, rgba(255, 255, 255, 0.66) 60.15%) text; */
 }
 
 .hero__icon {

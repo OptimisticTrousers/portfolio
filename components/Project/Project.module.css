@@ -1,10 +1,10 @@
-.project{
+.project {
   display: flex;
   column-gap: 58px;
   justify-content: space-around;
   margin-bottom: 3rem;
   margin-top: 60px;
-  background: #659B91;
+  background: #659b91;
   padding: 3rem 2rem;
   border-radius: 12px;
 }
@@ -68,16 +68,15 @@
 }
 
 .project__image {
-  width: 100%;
+  width: 97%;
   height: 100%;
   border-radius: 10px;
   transition: all 0.25s ease-in-out;
   object-fit: cover;
-  box-shadow: 0px 6px 6px -3px rgb(0 0 0 / 20%), 0px 10px 14px 1px rgb(0 0 0 / 14%), 0px 4px 18px 3px rgb(0 0 0 / 12%);
-  /* box-shadow: rgb(80 78 78 / 50%) 3px 3px 20px; */
-  /* width: 100%;
-    border-radius: 10px; */
+  box-shadow: 0px 6px 6px -3px rgb(0 0 0 / 20%),
+    0px 10px 14px 1px rgb(0 0 0 / 14%), 0px 4px 18px 3px rgb(0 0 0 / 12%);
 }
+
 .project__image:hover {
   transform: scale(1.1);
 }
@@ -86,7 +85,7 @@
   max-width: 30%;
 }
 
-@media(max-width: 1030px) {
+@media (max-width: 1030px) {
   .project {
     flex-direction: column;
     row-gap: 16px;
@@ -99,7 +98,5 @@
   .project__image {
     max-width: unset;
     width: 100%;
-
   }
-
 }
