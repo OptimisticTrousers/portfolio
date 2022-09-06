@@ -14,7 +14,7 @@ const projects = [
     description: `Created a curriculum vitae(CV)/resume builder. User can create, read, update, and delete content. User can upload images. This CV Application allows you to create and customize your CV, along with additional information about yourself`,
     liveLink: "https://optimistictrousers.github.io/TOP-cv-project/",
     codeLink: "https://github.com/OptimisticTrousers/TOP-cv-project",
-    video: "/video/waldo.webm",
+    video: "/video/cv-application.webm",
     render: () => (
       <>
         <i
@@ -32,7 +32,7 @@ const projects = [
       "A project that allows users to draw on the board, re-size the board, change colors, etc.",
     liveLink: "https://optimistictrousers.github.io/TOP-etch-a-sketch/",
     codeLink: "https://github.com/OptimisticTrousers/TOP-etch-a-sketch",
-    video: "/video/waldo.webm",
+    video: "/video/etch-a-sketch.webm",
     render: () => (
       <>
         <i
@@ -54,7 +54,7 @@ const projects = [
       "Learned about asynchronous programming with Javascript. Learned about the event loop, and single-threaded nature of Javascript. Learned about callbacks, promises, async and await, and fetched weather data from an API to render onto the page. Had lots of fun making this",
     liveLink: "https://optimistictrousers.github.io/TOP-weather-app/",
     codeLink: "https://github.com/OptimisticTrousers/TOP-weather-app",
-    video: "/video/waldo.webm",
+    video: "/video/weather-app.webm",
     render: () => (
       <>
         <i
@@ -100,7 +100,7 @@ const projects = [
       "Creating a multi-page application with react-router-dom, using Testing Library and Jest to test, and learning how to use context. Not functional when it comes to checkout.",
     liveLink: "https://optimistictrousers.github.io/TOP-shopping-cart/",
     codeLink: "https://github.com/OptimisticTrousers/TOP-shopping-cart",
-    video: "/video/waldo.webm",
+    video: "/video/shopping-cart.webm",
     render: () => (
       <>
         <i
@@ -118,7 +118,7 @@ const projects = [
     description: `Built an ecommerce site for a fashion business. Technologies used are React.js, Next.js, TailwindCSS, GraphQL(Shopify Storefront API), Typescript, EmailJS, the Typeform Embedded SDK and the Omnisend API. Deployed with Netlify. Currently not open-source. Will be in the future. `,
     liveLink: "iwanciw.com",
     codeLink: "https://github.com/OptimisticTrousers",
-    video: "/video/waldo.webm",
+    video: "/video/iwanciw.webm",
     render: () => (
       <>
         <i
@@ -132,7 +132,7 @@ const projects = [
         ></i>
         <i
           className="devicon-graphql-plain-wordmark colored"
-          styleName="about__icon"
+          styleName="project__icon"
         ></i>
       </>
     ),
