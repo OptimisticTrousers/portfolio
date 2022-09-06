@@ -10,6 +10,7 @@ const About: FC = () => {
       <section styleName="about">
         <div styleName="about__content">
           <h2 styleName="about__title">About me</h2>
+          <Image styleName="about__image" src="/images/me.jpg" alt="a picture of myself" width={300} height={300}/>
           <p styleName="about__description">
             Reprehenderit reprehenderit ut voluptate sint irure occaecat id ex.
             Pariatur labore exercitation tempor fugiat ad quis minim do sit

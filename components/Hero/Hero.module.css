@@ -39,6 +39,8 @@
   font-size: 1.6rem;
   cursor: pointer;
   color: rgb(242, 245, 247);
+  overflow: hidden;
+  position: absolute;
 }
 
 .hero__description {

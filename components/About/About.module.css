@@ -5,6 +5,10 @@
   animation: 1s slideUp ease-in-out;
 }
 
+.about__image {
+  border-radius: 9999px;
+}
+
 @keyframes slideUp {
   from {
     transform: translateY(100px);
@@ -42,4 +46,8 @@
 }
 
 .about__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
