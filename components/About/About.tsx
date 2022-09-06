@@ -3,72 +3,79 @@ import Image from "next/image";
 import { FC } from "react";
 import CSSModules from "react-css-modules";
 import styles from "./About.module.css";
-import {CSSTransition} from "react-transition-group"
+import { CSSTransition } from "react-transition-group";
 
 const About: FC = () => {
   return (
-      <section styleName="about">
-        <div styleName="about__content">
-          <h2 styleName="about__title">About me</h2>
-          <Image styleName="about__image" src="/images/me.jpg" alt="a picture of myself" width={300} height={300}/>
-          <p styleName="about__description">
-            Reprehenderit reprehenderit ut voluptate sint irure occaecat id ex.
-            Pariatur labore exercitation tempor fugiat ad quis minim do sit
-            ullamco do dolore sunt officia. Qui mollit consectetur in id
-            adipisicing commodo magna ipsum minim ullamco nostrud commodo
-            exercitation. Aliquip fugiat laboris et nostrud enim minim sint.
-            <br />
-            <br />
-            Sit pariatur dolor anim adipisicing nulla consequat tempor ullamco
-            veniam. Velit est exercitation excepteur ex incididunt sit enim ut
-            veniam magna irure. Qui minim occaecat ut cupidatat cillum. Eu
-            excepteur est ut esse qui. Consequat labore cupidatat culpa elit
-            aliqua aliquip irure consectetur cillum veniam deserunt in. Veniam
-            consectetur dolor elit id cupidatat.
-            <br />
-            <br />
-            Quis aute proident fugiat reprehenderit veniam cupidatat ullamco
-            nisi ad. Mollit officia magna labore aliqua occaecat. Do sunt eu
-            velit non aliqua aliqua. Duis occaecat nulla culpa in incididunt
-            pariatur.
-          </p>
-        </div>
-        <div styleName="about__icons">
-          <i
-            className="devicon-html5-plain-wordmark colored"
-            styleName="about__icon"
-          ></i>
-          <i
-            className="devicon-css3-plain-wordmark colored"
-            styleName="about__icon"
-          ></i>
-          <i
-            className="devicon-javascript-plain colored"
-            styleName="about__icon"
-          ></i>
-          <i
-            className="devicon-react-original-wordmark colored"
-            styleName="about__icon"
-          ></i>
-          <i className="devicon-jest-plain colored" styleName="about__icon"></i>
-          <i
-            className="devicon-typescript-plain colored"
-            styleName="about__icon"
-          ></i>
-          <i
-            className="devicon-redux-original colored"
-            styleName="about__icon"
-          ></i>
-          <i
-            className="devicon-git-plain-wordmark colored"
-            styleName="about__icon"
-          ></i>
-          <i
-            className="devicon-firebase-plain-wordmark colored"
-            styleName="about__icon"
-          ></i>
-        </div>
-      </section>
+    <section styleName="about">
+      <div styleName="about__content">
+        <h2 styleName="about__title">About me</h2>
+        <Image
+          styleName="about__image"
+          src="/images/me.jpg"
+          alt="a picture of myself"
+          width={300}
+          height={300}
+        />
+        <p styleName="about__description">
+          Hi! I'm Tony Isern. I love building things and the freedom that
+          programming gives you. I'm currently studying at New Jersey City
+          University with a major in Computer Science as a sophomore.
+          <br />
+          <br />
+          Web development is a space where things are constantly changing. Hell,
+          a new JS framework seems to come out every week! I love learning new
+          technologies and new skills. I pride myself in my persistance and
+          dedication to pursuing my goals. One thing I would like to do in the
+          future is to teach others the things I am currently learning! To me,
+          programming is the most relaxing and soothing thing I can do. No
+          distractions, I can collect my thoughts, and I can do it anywhere with
+          an internet connection! I'm planning on applying for internships this
+          summer of 2023 to get more experience from more senior developers.
+          Currently learning more about Data Structures and Algorithms.
+          <br />
+          <br />
+          When I'm not coding, I'm usually debating with my uncle about
+          economics, browsing Reddit, or reading my favorite manga, One Piece!
+          On a good day, I might play basketball with some friends!🏀
+        </p>
+      </div>
+      <div styleName="about__icons">
+        <i
+          className="devicon-html5-plain-wordmark colored"
+          styleName="about__icon"
+        ></i>
+        <i
+          className="devicon-css3-plain-wordmark colored"
+          styleName="about__icon"
+        ></i>
+        <i
+          className="devicon-javascript-plain colored"
+          styleName="about__icon"
+        ></i>
+        <i
+          className="devicon-react-original-wordmark colored"
+          styleName="about__icon"
+        ></i>
+        <i className="devicon-jest-plain colored" styleName="about__icon"></i>
+        <i
+          className="devicon-typescript-plain colored"
+          styleName="about__icon"
+        ></i>
+        <i
+          className="devicon-redux-original colored"
+          styleName="about__icon"
+        ></i>
+        <i
+          className="devicon-git-plain-wordmark colored"
+          styleName="about__icon"
+        ></i>
+        <i
+          className="devicon-firebase-plain-wordmark colored"
+          styleName="about__icon"
+        ></i>
+      </div>
+    </section>
   );
 };
 
