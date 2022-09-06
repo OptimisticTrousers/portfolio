@@ -21,13 +21,20 @@
 
 .project__buttons {
   display: flex;
-  column-gap: 16px;
+  column-gap: 8px;
+}
+
+.project__title {
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1.2;
 }
 
 .project__button-container {
   display: flex;
   align-items: center;
   justify-content: center;
+  column-gap: 8px;
 }
 
 .project__button {
@@ -45,11 +52,17 @@
 }
 
 .project__image {
-    box-shadow: rgb(80 78 78 / 50%) 3px 3px 20px;
-    width: 100%;
-    border-radius: 10px;
+  border-radius: 10px;
+  box-shadow: white 10px 10px 30px;
+  transition: all 0.25s ease-in-out;
+  /* box-shadow: rgb(80 78 78 / 50%) 3px 3px 20px; */
+  /* width: 100%;
+    border-radius: 10px; */
+}
+.project__image:hover {
+  transform: scale(1.1);
 }
 
-.profile__content {
-    max-width: 65%;
+.project__details {
+  max-width: 30%;
 }
