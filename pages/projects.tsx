@@ -15,6 +15,20 @@ const projects = [
     liveLink: "https://optimistictrousers.github.io/TOP-cv-project/",
     codeLink: "https://github.com/OptimisticTrousers/TOP-cv-project",
     video: "/video/waldo.webm",
+    render: () => (
+      <>
+        <i
+          className="devicon-react-original colored"
+          styleName="project__icon"
+        ></i>
+        <i className="devicon-css3-plain colored" styleName="project__icon"></i>
+        <i
+          className="devicon-javascript-plain colored"
+          styleName="project__icon"
+        ></i>
+        <i className="devicon-jest-plain colored" styleName="project__icon"></i>
+      </>
+    ),
   },
   {
     id: nanoid(),
@@ -24,6 +38,20 @@ const projects = [
     liveLink: "https://optimistictrousers.github.io/TOP-etch-a-sketch/",
     codeLink: "https://github.com/OptimisticTrousers/TOP-etch-a-sketch",
     video: "/video/waldo.webm",
+    render: () => (
+      <>
+        <i
+          className="devicon-react-original colored"
+          styleName="project__icon"
+        ></i>
+        <i className="devicon-css3-plain colored" styleName="project__icon"></i>
+        <i
+          className="devicon-javascript-plain colored"
+          styleName="project__icon"
+        ></i>
+        <i className="devicon-jest-plain colored" styleName="project__icon"></i>
+      </>
+    ),
   },
   {
     id: nanoid(),
@@ -33,6 +61,20 @@ const projects = [
     liveLink: "https://optimistictrousers.github.io/TOP-weather-app/",
     codeLink: "https://github.com/OptimisticTrousers/TOP-weather-app",
     video: "/video/waldo.webm",
+    render: () => (
+      <>
+        <i
+          className="devicon-react-original colored"
+          styleName="project__icon"
+        ></i>
+        <i className="devicon-css3-plain colored" styleName="project__icon"></i>
+        <i
+          className="devicon-javascript-plain colored"
+          styleName="project__icon"
+        ></i>
+        <i className="devicon-jest-plain colored" styleName="project__icon"></i>
+      </>
+    ),
   },
   {
     id: nanoid(),
@@ -42,6 +84,20 @@ const projects = [
     liveLink: "",
     codeLink: "https://github.com/OptimisticTrousers/Java-breakoutGame",
     video: "/video/waldo.webm",
+    render: () => (
+      <>
+        <i
+          className="devicon-react-original colored"
+          styleName="project__icon"
+        ></i>
+        <i className="devicon-css3-plain colored" styleName="project__icon"></i>
+        <i
+          className="devicon-javascript-plain colored"
+          styleName="project__icon"
+        ></i>
+        <i className="devicon-jest-plain colored" styleName="project__icon"></i>
+      </>
+    ),
   },
   {
     id: nanoid(),
@@ -51,6 +107,20 @@ const projects = [
     liveLink: "",
     codeLink: "https://github.com/OptimisticTrousers/Java2DSnake",
     video: "/video/waldo.webm",
+    render: () => (
+      <>
+        <i
+          className="devicon-react-original colored"
+          styleName="project__icon"
+        ></i>
+        <i className="devicon-css3-plain colored" styleName="project__icon"></i>
+        <i
+          className="devicon-javascript-plain colored"
+          styleName="project__icon"
+        ></i>
+        <i className="devicon-jest-plain colored" styleName="project__icon"></i>
+      </>
+    ),
   },
   {
     id: nanoid(),
@@ -60,6 +130,20 @@ const projects = [
     liveLink: "https://optimistictrousers.github.io/TOP-shopping-cart/",
     codeLink: "https://github.com/OptimisticTrousers/TOP-shopping-cart",
     video: "/video/waldo.webm",
+    render: () => (
+      <>
+        <i
+          className="devicon-react-original colored"
+          styleName="project__icon"
+        ></i>
+        <i className="devicon-css3-plain colored" styleName="project__icon"></i>
+        <i
+          className="devicon-javascript-plain colored"
+          styleName="project__icon"
+        ></i>
+        <i className="devicon-jest-plain colored" styleName="project__icon"></i>
+      </>
+    ),
   },
   {
     id: nanoid(),
@@ -68,6 +152,20 @@ const projects = [
     liveLink: "iwanciw.com",
     codeLink: "https://github.com/OptimisticTrousers",
     video: "/video/waldo.webm",
+    render: () => (
+      <>
+        <i
+          className="devicon-react-original colored"
+          styleName="project__icon"
+        ></i>
+        <i className="devicon-css3-plain colored" styleName="project__icon"></i>
+        <i
+          className="devicon-javascript-plain colored"
+          styleName="project__icon"
+        ></i>
+        <i className="devicon-jest-plain colored" styleName="project__icon"></i>
+      </>
+    ),
   },
   {
     id: nanoid(),
@@ -77,6 +175,20 @@ const projects = [
     liveLink: "https://optimistictrousers.github.io/TOP-wheres-waldo/",
     codeLink: "https://github.com/OptimisticTrousers/TOP-wheres-waldo",
     video: "/video/waldo.webm",
+    render: () => (
+      <>
+        <i
+          className="devicon-react-original colored"
+          styleName="project__icon"
+        ></i>
+        <i className="devicon-css3-plain colored" styleName="project__icon"></i>
+        <i
+          className="devicon-javascript-plain colored"
+          styleName="project__icon"
+        ></i>
+        <i className="devicon-jest-plain colored" styleName="project__icon"></i>
+      </>
+    ),
   },
   {
     id: nanoid(),
@@ -86,6 +198,20 @@ const projects = [
     codeLink: "https://github.com/OptimisticTrousers/reddit-clone",
     liveLink: "http://optimistictrousers.github.io/reddit-clone",
     video: "/video/reddit.webm",
+    render: () => (
+      <>
+        <i
+          className="devicon-react-original colored"
+          styleName="project__icon"
+        ></i>
+        <i className="devicon-css3-plain colored" styleName="project__icon"></i>
+        <i
+          className="devicon-javascript-plain colored"
+          styleName="project__icon"
+        ></i>
+        <i className="devicon-jest-plain colored" styleName="project__icon"></i>
+      </>
+    ),
   },
   {
     id: nanoid(),
@@ -95,6 +221,20 @@ const projects = [
     liveLink: "https://optimistictrousers.github.io/TOP-battleship/",
     codeLink: "https://github.com/OptimisticTrousers/TOP-battleship",
     video: "/video/battleship.webm",
+    render: () => (
+      <>
+        <i
+          className="devicon-react-original colored"
+          styleName="project__icon"
+        ></i>
+        <i className="devicon-css3-plain colored" styleName="project__icon"></i>
+        <i
+          className="devicon-javascript-plain colored"
+          styleName="project__icon"
+        ></i>
+        <i className="devicon-jest-plain colored" styleName="project__icon"></i>
+      </>
+    ),
   },
 ];
 
@@ -102,30 +242,7 @@ const Projects: NextPage = () => {
   return (
     <Layout>
       {projects.map((project) => (
-        <Project
-          render={() => (
-            <>
-              <i
-                className="devicon-react-original colored"
-                styleName="project__icon"
-              ></i>
-              <i
-                className="devicon-css3-plain colored"
-                styleName="project__icon"
-              ></i>
-              <i
-                className="devicon-javascript-plain colored"
-                styleName="project__icon"
-              ></i>
-              <i
-                className="devicon-jest-plain colored"
-                styleName="project__icon"
-              ></i>
-            </>
-          )}
-          key={project.id}
-          {...project}
-        />
+        <Project key={project.id} {...project} />
       ))}
     </Layout>
   );

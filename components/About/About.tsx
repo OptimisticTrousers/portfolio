@@ -74,6 +74,15 @@ const About: FC = () => {
           className="devicon-firebase-plain-wordmark colored"
           styleName="about__icon"
         ></i>
+        <i
+          className="devicon-graphql-plain-wordmark colored"
+          styleName="about__icon"
+        ></i>
+        <i className="devicon-vim-plain colored" styleName="about__icon"></i>
+        <i
+          className="devicon-nextjs-original-wordmark colored"
+          styleName="about__icon"
+        ></i>
       </div>
     </section>
   );
