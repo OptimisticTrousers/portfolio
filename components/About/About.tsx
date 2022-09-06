@@ -10,23 +10,24 @@ const About: FC = () => {
       <div styleName="about__content">
         <h2 styleName="about__title">About me</h2>
         <p styleName="about__description">
-          Hey! I'm Abdul Rahman, I've been close to a computer since an early
-          age, and been passionate about it ever since. 
-          
+          Reprehenderit reprehenderit ut voluptate sint irure occaecat id ex.
+          Pariatur labore exercitation tempor fugiat ad quis minim do sit
+          ullamco do dolore sunt officia. Qui mollit consectetur in id
+          adipisicing commodo magna ipsum minim ullamco nostrud commodo
+          exercitation. Aliquip fugiat laboris et nostrud enim minim sint.
           <br />
           <br />
-          I really liked to build
-          stuff using no-code tools back in 2010, and from that, I explored how
-          to code myself, fast-forward to today, I do programming in various
-          languages and technologies, and had the privilege to worked in a B2B
-          Company and a Recruitment Company I'm interested in building something
-          awesome with code and automate tasks with code, currently focused on
-          Web & Mobile Development, Open Source and Competitive Programming. 
-          <br/>
-          <br/>
-          When
-          I'm not coding I play games with my friends, watch some show on
-          Netflix, or if the weather's good, play basketball! 🏀
+          Sit pariatur dolor anim adipisicing nulla consequat tempor ullamco
+          veniam. Velit est exercitation excepteur ex incididunt sit enim ut
+          veniam magna irure. Qui minim occaecat ut cupidatat cillum. Eu
+          excepteur est ut esse qui. Consequat labore cupidatat culpa elit
+          aliqua aliquip irure consectetur cillum veniam deserunt in. Veniam
+          consectetur dolor elit id cupidatat.
+          <br />
+          <br />
+          Quis aute proident fugiat reprehenderit veniam cupidatat ullamco nisi
+          ad. Mollit officia magna labore aliqua occaecat. Do sunt eu velit non
+          aliqua aliqua. Duis occaecat nulla culpa in incididunt pariatur.
         </p>
       </div>
       <div styleName="about__icons">
