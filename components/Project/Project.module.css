@@ -40,6 +40,10 @@
   column-gap: 8px;
   cursor: pointer;
 }
+.project__icons {
+  display: flex;
+  flex-wrap: wrap;
+}
 
 .project__button {
   border: none;
@@ -64,7 +68,7 @@
 }
 
 .project__image {
-  width: 60%;
+  width: 100%;
   height: 100%;
   border-radius: 10px;
   transition: all 0.25s ease-in-out;
@@ -86,6 +90,7 @@
   .project {
     flex-direction: column;
     row-gap: 16px;
+    padding: 1rem;
   }
   .project__details {
     max-width: unset;

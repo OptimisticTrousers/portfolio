@@ -22,15 +22,15 @@
 }
 
 .about__title {
-    font-weight: 800;
-    font-size: 56px;
-    line-height: 56px;
-    margin-bottom: 16px
+  font-weight: 800;
+  font-size: 56px;
+  line-height: 56px;
+  margin-bottom: 16px;
 }
 .about__description {
-    font-size: 24px;
-    line-height: 40px;
-    font-weight: 300;
+  font-size: 24px;
+  line-height: 40px;
+  font-weight: 300;
 }
 
 .about__icons {
@@ -39,7 +39,7 @@
   place-items: center;
   max-width: 100%;
   gap: 8px;
-  margin:  0 auto;
+  margin: 0 auto;
 }
 
 .about__icon {
@@ -54,14 +54,20 @@
   align-items: center;
 }
 
-@media(max-width: 1030px) {
+@media (max-width: 1030px) {
   .about {
     flex-wrap: wrap;
   }
 }
 
-@media(max-width: 550px) {
+@media (max-width: 550px) {
   .about__icon {
     font-size: 100px;
+  }
+}
+
+@media (max-width: 400px) {
+  .about__icon {
+    font-size: 50px;
   }
 }
