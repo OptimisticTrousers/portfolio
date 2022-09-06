@@ -36,8 +36,10 @@
 .about__icons {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  max-width: 50%;
+  place-items: center;
+  max-width: 100%;
   gap: 8px;
+  margin:  0 auto;
 }
 
 .about__icon {
@@ -50,4 +52,16 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+@media(max-width: 1030px) {
+  .about {
+    flex-wrap: wrap;
+  }
+}
+
+@media(max-width: 550px) {
+  .about__icon {
+    font-size: 100px;
+  }
 }

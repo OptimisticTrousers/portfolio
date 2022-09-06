@@ -1,0 +1,10 @@
+
+@media(max-width:710px) {
+
+    .background {
+
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    }
+}

@@ -1,7 +1,10 @@
-import React, { FC } from 'react';
+/* eslint-disable react/no-unknown-property */
+import React, { FC } from "react";
+import CSSModules from "react-css-modules";
+import styles from "./BackgroundImage.module.css";
 
 const BackgroundAnimation: FC = () => (
-  <div>
+  <div styleName="background">
     <svg
       className="BgAnimation__svg"
       viewBox="0 0 602 602"
@@ -362,4 +365,7 @@ const BackgroundAnimation: FC = () => (
   </div>
 );
 
-export default BackgroundAnimation;
+export default CSSModules(BackgroundAnimation, styles, {
+  allowMultiple: true,
+  handleNotFoundStyleName: "log",
+});

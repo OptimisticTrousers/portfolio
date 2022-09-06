@@ -17,6 +17,7 @@ const Hero: FC = () => {
       <div styleName="hero__intro">
         <div styleName="hero__text">
           <div styleName="hero__hello">
+            <p styleName="hero__hi">Hi, I'm-</p>
             <img
               styleName="hero__dots"
               src="/svg/small-dots.svg"
@@ -24,7 +25,6 @@ const Hero: FC = () => {
               width={150}
               height={150}
             />
-            <p styleName="hero__hi">Hi, I'm-</p>
             <h1 styleName="hero__name">Tony Isern</h1>
           </div>
           <div styleName="hero__position">

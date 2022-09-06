@@ -7,7 +7,7 @@
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
-  width: 1370px;
+  max-width: 1370px;
   font-family: "Space Grotesk"
 }
 .list {
@@ -21,3 +21,4 @@
   line-height: 32px;
   transition: all 0.4s ease 0s;
 }
+

@@ -14,20 +14,21 @@
 .hero__dots {
   position: absolute;
   left: calc(2.5rem * -1);
-  top: 55px;
+  top: 40px;
 }
 
 .hero__intro {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
+  position: relative;
 }
 .hero__name {
   letter-spacing: -1.8px;
   position: relative;
+  white-space: nowrap;
   line-height: 95%;
   font-size: calc(5rem + ((1vw - 7.68px) * 5.555555555555555));
   font-weight: 700;
-  margin: 0;
   /* color: linear-gradient(121.57deg, rgb(255, 255, 255) 18.77%, rgba(255, 255, 255, 0.66) 60.15%) text; */
 }
 
@@ -40,10 +41,10 @@
   cursor: pointer;
   color: rgb(242, 245, 247);
   overflow: hidden;
-  position: absolute;
 }
 
 .hero__description {
+  position: relative;
   line-height: 1.2;
   letter-spacing: -1.6px;
   font-size: calc(1.5rem + ((1vw - 7.68px) * 1.0416666666666667));

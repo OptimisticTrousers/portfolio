@@ -1,4 +1,4 @@
-.project__project {
+.project{
   display: flex;
   column-gap: 58px;
   justify-content: space-around;
@@ -64,6 +64,8 @@
 }
 
 .project__image {
+  width: 60%;
+  height: 100%;
   border-radius: 10px;
   transition: all 0.25s ease-in-out;
   object-fit: cover;
@@ -78,4 +80,21 @@
 
 .project__details {
   max-width: 30%;
+}
+
+@media(max-width: 1030px) {
+  .project {
+    flex-direction: column;
+    row-gap: 16px;
+  }
+  .project__details {
+    max-width: unset;
+    width: 100%;
+  }
+  .project__image {
+    max-width: unset;
+    width: 100%;
+
+  }
+
 }
