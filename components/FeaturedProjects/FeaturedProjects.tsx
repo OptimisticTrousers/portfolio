@@ -7,6 +7,7 @@ import Project from "../Project/Project";
 import styles from "./FeaturedProjects.module.css";
 
 const FeaturedProjects: FC = () => {
+
   return (
     <div styleName="projects">
       <h1 styleName="projects__title">Featured Projects</h1>

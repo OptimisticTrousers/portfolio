@@ -7,7 +7,14 @@ import code from "../../public/svg/code.svg";
 import styles from "./Project.module.css";
 import CSSModules from "react-css-modules";
 
-const Project: FC = () => {
+interface Props {
+  title: string;
+  description: string;
+  liveLink: string;
+  codeLink: string;
+}
+
+const Project: FC<Props> = ({ title, description, liveLink, codeLink }) => {
   return (
     <div styleName="project__project">
       <div styleName="project__details">
