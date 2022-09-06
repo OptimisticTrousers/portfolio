@@ -10,7 +10,9 @@ const FeaturedProjects: FC = () => {
   return (
     <div styleName="projects">
       <h1>Featured Projects</h1>
-      <Link href="/">Explore more</Link>
+      <Link href="/">
+        <p styleName="projects__text">Explore more →</p>
+      </Link>
       <Project />
       <Project />
       <Project />

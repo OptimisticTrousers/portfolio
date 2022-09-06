@@ -66,12 +66,11 @@ const Project: FC = () => {
           </Link>
         </div>
       </div>
-      <Image
+      <img
         styleName="project__image"
         src="/images/app.png"
         alt="project"
-        width={1250}
-        height={600}
+        width={625}
       />
     </div>
   );
