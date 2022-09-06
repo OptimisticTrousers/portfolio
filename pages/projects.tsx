@@ -22,11 +22,6 @@ const projects = [
           styleName="project__icon"
         ></i>
         <i className="devicon-css3-plain colored" styleName="project__icon"></i>
-        <i
-          className="devicon-javascript-plain colored"
-          styleName="project__icon"
-        ></i>
-        <i className="devicon-jest-plain colored" styleName="project__icon"></i>
       </>
     ),
   },
@@ -41,7 +36,7 @@ const projects = [
     render: () => (
       <>
         <i
-          className="devicon-react-original colored"
+          className="devicon-html5-plain-wordmark colored"
           styleName="project__icon"
         ></i>
         <i className="devicon-css3-plain colored" styleName="project__icon"></i>
@@ -49,7 +44,6 @@ const projects = [
           className="devicon-javascript-plain colored"
           styleName="project__icon"
         ></i>
-        <i className="devicon-jest-plain colored" styleName="project__icon"></i>
       </>
     ),
   },
@@ -64,7 +58,7 @@ const projects = [
     render: () => (
       <>
         <i
-          className="devicon-react-original colored"
+          className="devicon-html5-plain-wordmark colored"
           styleName="project__icon"
         ></i>
         <i className="devicon-css3-plain colored" styleName="project__icon"></i>
@@ -72,7 +66,6 @@ const projects = [
           className="devicon-javascript-plain colored"
           styleName="project__icon"
         ></i>
-        <i className="devicon-jest-plain colored" styleName="project__icon"></i>
       </>
     ),
   },
@@ -85,18 +78,7 @@ const projects = [
     codeLink: "https://github.com/OptimisticTrousers/Java-breakoutGame",
     video: "/video/waldo.webm",
     render: () => (
-      <>
-        <i
-          className="devicon-react-original colored"
-          styleName="project__icon"
-        ></i>
-        <i className="devicon-css3-plain colored" styleName="project__icon"></i>
-        <i
-          className="devicon-javascript-plain colored"
-          styleName="project__icon"
-        ></i>
-        <i className="devicon-jest-plain colored" styleName="project__icon"></i>
-      </>
+      <i styleName="project__icon" className="devicon-java-plain colored"></i>
     ),
   },
   {
@@ -108,18 +90,7 @@ const projects = [
     codeLink: "https://github.com/OptimisticTrousers/Java2DSnake",
     video: "/video/waldo.webm",
     render: () => (
-      <>
-        <i
-          className="devicon-react-original colored"
-          styleName="project__icon"
-        ></i>
-        <i className="devicon-css3-plain colored" styleName="project__icon"></i>
-        <i
-          className="devicon-javascript-plain colored"
-          styleName="project__icon"
-        ></i>
-        <i className="devicon-jest-plain colored" styleName="project__icon"></i>
-      </>
+      <i styleName="project__icon" className="devicon-java-plain colored"></i>
     ),
   },
   {
@@ -137,10 +108,6 @@ const projects = [
           styleName="project__icon"
         ></i>
         <i className="devicon-css3-plain colored" styleName="project__icon"></i>
-        <i
-          className="devicon-javascript-plain colored"
-          styleName="project__icon"
-        ></i>
         <i className="devicon-jest-plain colored" styleName="project__icon"></i>
       </>
     ),
@@ -160,10 +127,13 @@ const projects = [
         ></i>
         <i className="devicon-css3-plain colored" styleName="project__icon"></i>
         <i
-          className="devicon-javascript-plain colored"
+          className="devicon-typescript-plain colored"
           styleName="project__icon"
         ></i>
-        <i className="devicon-jest-plain colored" styleName="project__icon"></i>
+        <i
+          className="devicon-graphql-plain-wordmark colored"
+          styleName="about__icon"
+        ></i>
       </>
     ),
   },
