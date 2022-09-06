@@ -51,7 +51,7 @@ const Contact: NextPage = () => {
             </form>
           </div>
           <div styleName="contact__right">
-            <ul>
+            <ul styleName="contact__list">
               <li styleName="contact__card">
                 <span styleName="contact__span">
                   <BsTelephone styleName="contact__icon"/>
@@ -67,7 +67,7 @@ const Contact: NextPage = () => {
                 </span>
                 <div styleName="card__card-content">
                   <h3>Email</h3>
-                  <p>tony.isern@yahoo.com</p>
+                  <p styleName="contact__text">tony.isern@yahoo.com</p>
                 </div>
               </li>
               <li styleName="contact__card">
