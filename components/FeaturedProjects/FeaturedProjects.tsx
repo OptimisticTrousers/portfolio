@@ -9,9 +9,9 @@ import styles from "./FeaturedProjects.module.css";
 const FeaturedProjects: FC = () => {
   return (
     <div styleName="projects">
-      <h1>Featured Projects</h1>
-      <p>I love building all kinds of things. Here's some of my better work.</p>
-      <Link href="/">
+      <h1 styleName="projects__title">Featured Projects</h1>
+      <p styleName="projects__description">I love building all kinds of things. Here's some of my better work.</p>
+      <Link href="/" styleName="projects__link">
         <p styleName="projects__text">Explore more →</p>
       </Link>
       <Project />

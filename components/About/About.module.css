@@ -19,9 +19,14 @@
 .about__icons {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  max-width: 50%;
+  gap: 8px;
 }
 
 .about__icon {
-  font-size: 50px;
+  font-size: 150px;
   margin: 5px;
+}
+
+.about__content {
 }

@@ -1,4 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
 .projects__text {
-     color: #3CCF91;
-     font-size: 1.25rem;
+  color: #3ccf91;
+  font-size: 1.25rem;
+}
+
+.projects__title {
+  font-size: 1.5rem;
+  line-height: 1.2;
+  font-family: "Ubuntu";
+}
+
+.projects__description {
+  color: #8f9094;
+  font-size: 1.25rem;
+}
+
+.projects__text:hover {
+     color: #F6A20E;
+     cursor: pointer;
+     transition: all 0.15s ease-out;
+     outline: none;
 }

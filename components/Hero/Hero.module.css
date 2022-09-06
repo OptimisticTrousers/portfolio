@@ -1,3 +1,7 @@
+.hero {
+  animation: 1s slideIn ease-in-out;
+  transition: all .25s ease-in-out;
+}
 .hero__hi {
   font-weight: 600;
   font-size: calc(1.5rem + ((1vw - 7.68px) * 1.0416666666666667));
@@ -87,6 +91,15 @@
 
 .hero__button:hover {
   background-color: rgba(255, 255, 255, 0.16);
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes profileAnimation3 {
