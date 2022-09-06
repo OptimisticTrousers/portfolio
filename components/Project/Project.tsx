@@ -12,44 +12,24 @@ interface Props {
   description: string;
   liveLink: string;
   codeLink: string;
+  render: () => any
 }
 
-const Project: FC<Props> = ({ title, description, liveLink, codeLink }) => {
+const Project: FC<Props> = ({ title, description, liveLink, codeLink, render}) => {
   return (
     <div styleName="project__project">
       <div styleName="project__details">
         <div styleName="project__content">
-          <h2 styleName="project__title">Reddit Clone</h2>
+          <h2 styleName="project__title">{title}</h2>
           <div styleName="project__icons">
-            <i
-              className="devicon-react-original colored"
-              styleName="project__icon"
-            ></i>
-            <i
-              className="devicon-css3-plain colored"
-              styleName="project__icon"
-            ></i>
-            <i
-              className="devicon-javascript-plain colored"
-              styleName="project__icon"
-            ></i>
-            <i
-              className="devicon-jest-plain colored"
-              styleName="project__icon"
-            ></i>
+            {render()}
           </div>
           <p styleName="project__description">
-            Enim dolor in adipisicing anim pariatur. Ea id quis voluptate Lorem
-            ipsum dolore occaecat incididunt adipisicing incididunt dolore sit
-            officia. Labore exercitation est duis voluptate. Excepteur elit aute
-            dolore officia eiusmod nulla dolor cupidatat. Magna occaecat aute
-            aliquip adipisicing non duis non dolore cupidatat nostrud tempor
-            consequat reprehenderit. Duis ex nisi esse consequat eu amet dolor
-            voluptate in deserunt velit cillum.
+            {description}
           </p>
         </div>
         <div styleName="project__buttons">
-          <Link href="">
+          <a href={liveLink} target="_blank" rel="noreferrer">
             <div styleName="project__button-container">
               <Image
                 src="/svg/green-dot.svg"
@@ -59,8 +39,8 @@ const Project: FC<Props> = ({ title, description, liveLink, codeLink }) => {
               />
               <button styleName="project__button">LIVE</button>
             </div>
-          </Link>
-          <Link href="">
+          </a>
+          <a href={codeLink} target="_blank" rel="noreferrer">
             <div styleName="project__button-container">
               <Image
                 src="/svg/code.svg"
@@ -70,7 +50,7 @@ const Project: FC<Props> = ({ title, description, liveLink, codeLink }) => {
               />
               <button styleName="project__button">CODE</button>
             </div>
-          </Link>
+          </a>
         </div>
       </div>
       <img
