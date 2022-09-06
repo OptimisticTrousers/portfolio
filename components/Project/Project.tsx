@@ -8,6 +8,7 @@ import styles from "./Project.module.css";
 import CSSModules from "react-css-modules";
 
 interface Props {
+  id: string;
   title: string;
   description: string;
   liveLink: string;
