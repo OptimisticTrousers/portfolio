@@ -6,6 +6,7 @@ import Layout from "../components/Layout/Layout";
 import Project from "../components/Project/Project";
 import styles from "../styles/Projects.module.css";
 import { nanoid } from "nanoid";
+import Footer from "../components/Footer/Footer";
 
 const projects = [
   {
@@ -210,11 +211,14 @@ const projects = [
 
 const Projects: NextPage = () => {
   return (
-    <Layout>
-      {projects.map((project) => (
-        <Project key={project.id} {...project} />
-      ))}
-    </Layout>
+    <>
+      <Layout>
+        {projects.map((project) => (
+          <Project key={project.id} {...project} />
+        ))}
+      </Layout>
+      <Footer />
+    </>
   );
 };
 
