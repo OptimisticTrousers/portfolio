@@ -14,13 +14,13 @@ const Navbar: FC = () => {
         <div styleName="pages">
           <ul styleName="list">
             <li styleName="item">
-              <Link href="">Projects</Link>
+              <Link href="/projects">Projects</Link>
             </li>
             <li styleName="item">
               <Link href="/contact">Contact</Link>
             </li>
             <li styleName="item">
-              <Link href="">Blog</Link>
+              <Link href="/">Blog</Link>
             </li>
           </ul>
         </div>

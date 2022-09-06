@@ -11,7 +11,7 @@ const FeaturedProjects: FC = () => {
     <div styleName="projects">
       <h1 styleName="projects__title">Featured Projects</h1>
       <p styleName="projects__description">I love building all kinds of things. Here's some of my better work.</p>
-      <Link href="/" styleName="projects__link">
+      <Link href="/projects" styleName="projects__link">
         <p styleName="projects__text">Explore more →</p>
       </Link>
       <Project />
