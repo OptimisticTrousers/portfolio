@@ -17,6 +17,7 @@ const FeaturedProjects: FC = () => {
         <p styleName="projects__text">Explore more →</p>
       </Link>
       <Project
+        id="1"
         title="Reddit Clone"
         description="A clone based on Reddit. Users can create communities, create posts, comment on posts, and like posts. Users can also view their profile to see which posts they saved and upvoted. Built with React.js and Firebase and works well on mobile devices."
         codeLink="https://github.com/OptimisticTrousers/reddit-clone"
@@ -29,21 +30,30 @@ const FeaturedProjects: FC = () => {
               styleName="project__icon"
             ></i>
             <i
-              className="devicon-css3-plain colored"
               styleName="project__icon"
+              className="devicon-firebase-plain colored"
             ></i>
             <i
-              className="devicon-javascript-plain colored"
+              className="devicon-css3-plain colored"
               styleName="project__icon"
             ></i>
             <i
               className="devicon-jest-plain colored"
               styleName="project__icon"
             ></i>
+            <i
+              className="devicon-typescript-plain colored"
+              styleName="project__icon"
+            ></i>
+            <i
+              className="devicon-redux-original colored"
+              styleName="project__icon"
+            ></i>
           </>
         )}
       />
       <Project
+        id="2"
         title="Where's Waldo?"
         description="A game based on the British game, 'Where's Waldo', where you are on a quest to find Waldo and his friends! Drag your mouse around the image to find them! A game built with React.js and Firebase."
         liveLink="https://optimistictrousers.github.io/TOP-wheres-waldo/"
@@ -67,10 +77,15 @@ const FeaturedProjects: FC = () => {
               className="devicon-jest-plain colored"
               styleName="project__icon"
             ></i>
+            <i
+              styleName="project__icon"
+              className="devicon-firebase-plain colored"
+            ></i>
           </>
         )}
       />
       <Project
+        id="3"
         title="Battleship"
         description="A game based on Battleship, a turn-based game. One of the more challenging projects. Built with HTML, CSS, and Javascript. Using Jest for unit testing. Users can drag their ships onto the board and play with an AI. Users can also randomize their board selection."
         liveLink="https://optimistictrousers.github.io/TOP-battleship/"
@@ -79,7 +94,7 @@ const FeaturedProjects: FC = () => {
         render={() => (
           <>
             <i
-              className="devicon-react-original colored"
+              className="devicon-html5-plain-wordmark colored"
               styleName="project__icon"
             ></i>
             <i
