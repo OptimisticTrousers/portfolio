@@ -12,6 +12,7 @@ interface Props {
   description: string;
   liveLink: string;
   codeLink: string;
+  video?: string;
   render: () => any;
 }
 
@@ -20,6 +21,7 @@ const Project: FC<Props> = ({
   description,
   liveLink,
   codeLink,
+  video,
   render,
 }) => {
   return (
@@ -56,7 +58,9 @@ const Project: FC<Props> = ({
         </div>
       </div>
       <div>
-        <img styleName="project__image" src="/images/app.png" alt="project" />
+        <video styleName="project__image" autoPlay muted>
+          <source src={video} type="video/webm" />{" "}
+        </video>
       </div>
     </div>
   );

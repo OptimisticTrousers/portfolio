@@ -57,6 +57,12 @@
   letter-spacing: 2px;
   padding: 0 30px;
   text-transform: uppercase;
+  transition: all 0.4s ease-out 0s;
+  border-bottom: 1px solid #037fff;
+}
+
+.contact__button:hover {
+    background-color: #5daefe;
 }
 
 .contact__card {

@@ -18,9 +18,10 @@ const FeaturedProjects: FC = () => {
       </Link>
       <Project
         title="Reddit Clone"
-        description="Enim dolor in adipisicing anim pariatur. Ea id quis voluptate Lorem ipsum dolore occaecat incididunt adipisicing incididunt dolore sit officia. Labore exercitation est duis voluptate. Excepteur elit aute dolore officia eiusmod nulla dolor cupidatat. Magna occaecat aute aliquip adipisicing non duis non dolore cupidatat nostrud tempor consequat reprehenderit. Duis ex nisi esse consequat eu amet dolor voluptate in deserunt velit cillum."
+        description="A clone based on Reddit. Built with React.js and Firebase and works well on mobile devices."
         codeLink="https://github.com/OptimisticTrousers/reddit-clone"
         liveLink="http://optimistictrousers.github.io/reddit-clone"
+        video="/video/reddit.webm"
         render={() => (
           <>
             <i
@@ -44,9 +45,10 @@ const FeaturedProjects: FC = () => {
       />
       <Project
         title="Where's Waldo?"
-        description="Enim dolor in adipisicing anim pariatur. Ea id quis voluptate Lorem ipsum dolore occaecat incididunt adipisicing incididunt dolore sit officia. Labore exercitation est duis voluptate. Excepteur elit aute dolore officia eiusmod nulla dolor cupidatat. Magna occaecat aute aliquip adipisicing non duis non dolore cupidatat nostrud tempor consequat reprehenderit. Duis ex nisi esse consequat eu amet dolor voluptate in deserunt velit cillum."
+        description="A game based on the British game, 'Where's Waldo', where you are on a quest to find Waldo and his friends! Drag your mouse around the image to find them! A game built with React.js and Firebase."
         liveLink="https://optimistictrousers.github.io/TOP-wheres-waldo/"
         codeLink="https://github.com/OptimisticTrousers/TOP-wheres-waldo"
+        video="/video/waldo.webm"
         render={() => (
           <>
             <i
@@ -70,9 +72,10 @@ const FeaturedProjects: FC = () => {
       />
       <Project
         title="Battleship"
-        description="Enim dolor in adipisicing anim pariatur. Ea id quis voluptate Lorem ipsum dolore occaecat incididunt adipisicing incididunt dolore sit officia. Labore exercitation est duis voluptate. Excepteur elit aute dolore officia eiusmod nulla dolor cupidatat. Magna occaecat aute aliquip adipisicing non duis non dolore cupidatat nostrud tempor consequat reprehenderit. Duis ex nisi esse consequat eu amet dolor voluptate in deserunt velit cillum."
+        description="A game based on Battleship, a turn-based game. Built with HTML, CSS, and Javascript. Using Jest for unit testing. "
         liveLink="https://optimistictrousers.github.io/TOP-battleship/"
         codeLink="https://github.com/OptimisticTrousers/TOP-battleship"
+        video="/video/battleship.webm"
         render={() => (
           <>
             <i
