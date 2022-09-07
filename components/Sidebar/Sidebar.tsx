@@ -12,7 +12,12 @@ const Sidebar: FC = () => {
       </div>
       <div styleName="aside__content">
         <h2 styleName="aside__author">Tony Isern</h2>
-        <p styleName="aside__description">Description</p>
+        <p styleName="aside__description">Aspiring full stack web developer. Be different.</p>
+      </div>
+      <div styleName="aside__buttons">
+        <button>Email</button>
+        <button>Github</button>
+        <button>LinkedIn</button>
       </div>
     </aside>
   );
