@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 import { NextPage } from "next";
 import CSSModules from "react-css-modules";
 import Footer from "../components/Footer/Footer";
@@ -8,8 +9,9 @@ const Blog: NextPage = () => {
   return (
     <>
       <Layout>
-        <div>
-          <h1>Hi</h1>
+        <div styleName="blog">
+          <h2>Recent Posts</h2>
+          
         </div>
       </Layout>
     </>
