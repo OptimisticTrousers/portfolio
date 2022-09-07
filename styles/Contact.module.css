@@ -34,6 +34,8 @@
   width: 100%;
   border: 1px solid #2e344e;
   background: transparent;
+  color: white;
+
 }
 
 .contact__textarea {
@@ -44,6 +46,7 @@
   background: transparent;
   border: 1px solid #2e344e;
   resize: vertical;
+  color: white;
 }
 
 .contact__button {
