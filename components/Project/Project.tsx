@@ -59,7 +59,7 @@ const Project: FC<Props> = ({
         </div>
       </div>
       <div>
-        <video styleName="project__image" autoPlay muted>
+        <video styleName="project__image" autoPlay muted loop>
           <source src={video} type="video/webm" />{" "}
         </video>
       </div>
