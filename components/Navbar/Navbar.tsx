@@ -20,7 +20,7 @@ const Navbar: FC = () => {
               <Link href="/contact">Contact</Link>
             </li>
             <li styleName="item">
-              <Link href="/">Blog</Link>
+              <Link href="/blog">Blog</Link>
             </li>
           </ul>
         </div>
