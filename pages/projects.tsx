@@ -77,7 +77,7 @@ const projects = [
       "Created a Java Breakout game using Java libaries JPanel, ActionListener, KeyListener, and AWT Font. ",
     liveLink: "",
     codeLink: "https://github.com/OptimisticTrousers/Java-breakoutGame",
-    video: "/video/waldo.webm",
+    video: "/video/breakout.webm",
     render: () => (
       <i styleName="project__icon" className="devicon-java-plain colored"></i>
     ),
@@ -89,7 +89,7 @@ const projects = [
       "Created a beakout game using Java using JPanel, KeyListener, Action Listener, and Color libraries. ",
     liveLink: "",
     codeLink: "https://github.com/OptimisticTrousers/Java2DSnake",
-    video: "/video/waldo.webm",
+    video: "/video/snake.webm",
     render: () => (
       <i styleName="project__icon" className="devicon-java-plain colored"></i>
     ),
