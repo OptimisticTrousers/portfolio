@@ -1,14 +1,15 @@
 /* eslint-disable react/no-unknown-property */
 import { FC } from "react";
 import CSSModules from "react-css-modules";
-import styles from "./Error.module.css";
+import styles from "./Alert.module.css";
 
 interface Props {
-  message: string;
+  errorMessage: string;
+  error: boolean;
 }
 
-const Error: FC<Props> = ({ message }) => {
-  return <div styleName="error">{message}</div>;
+const Error: FC<Props> = ({ errorMessage, error}) => {
+  return <div styleName={`alert ${error === true ? "error" : "success"}`}>{errorMessage}</div>;
 };
 
 export default CSSModules(Error, styles, {

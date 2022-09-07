@@ -7,9 +7,8 @@ import { BsTelephone } from "react-icons/bs";
 import { HiOutlineMail } from "react-icons/hi";
 import { GoLocation } from "react-icons/go";
 import emailjs from "@emailjs/browser";
-import React, { useReducer, useRef } from "react";
-
-const USER_ID = process.env.USER_ID;
+import React, { useReducer, useRef, useState } from "react";
+import Alert from "../components/Alert/Alert";
 
 interface State {
   name: string;
@@ -50,19 +49,36 @@ const Contact: NextPage = () => {
     subject: "",
   });
 
+  const [error, setError] = useState<boolean | undefined>();
+  const [errorMessage, setErrorMessage] = useState("");
+
   const form = useRef<HTMLFormElement | null>(null);
+
+  const handleAlerts = () => {
+    if (error && message) {
+      return <Alert error={error} errorMessage={errorMessage} />;
+    } else if (error === false && message) {
+      return <Alert error={error} errorMessage={errorMessage} />;
+    }
+  };
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    emailjs.sendForm("gmail", "template_s69p9bq", form.current!, USER_ID).then(
-      (result) => {
-        console.log(result.text);
-      },
-      (error) => {
-        console.log(error.text);
-      }
-    );
+    if (!form.current) return;
+
+    emailjs
+      .sendForm("service_wzqv2km", "template_s69p9bq", form.current, "sEnOyFn4MC3uJY6Vw")
+      .then(
+        (result) => {
+          console.log(result.text);
+          setErrorMessage("Sucesss. The form has been submitted");
+          setError(false);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
   };
 
   function handleName(event: InputChangeEvent) {
@@ -144,6 +160,7 @@ const Contact: NextPage = () => {
                 Send Mail
               </button>
             </form>
+            {handleAlerts()}
           </div>
           <div styleName="contact__right">
             <ul styleName="contact__list">

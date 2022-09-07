@@ -1,0 +1,19 @@
+.alert {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 0.25rem;
+  border: 1px solid transparent;
+}
+
+.error {
+  background-color: #f8d7da;
+  border-color: #f5c2c7;
+  color: #842029;
+}
+
+.success {
+  color: rgb(30, 70, 32);
+  background-color: rgb(101, 182, 105);
+  border-color: #88fc9b;
+}
