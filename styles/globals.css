@@ -1,4 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+@font-face {
+  font-family: "Inter";
+  src: url("../public/fonts/Inter-Regular.ttf");
+}
+
 html,
 body {
   padding: 0;
