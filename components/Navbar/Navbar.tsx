@@ -19,9 +19,9 @@ const Navbar: FC = () => {
             <li styleName="item">
               <Link href="/contact">Contact</Link>
             </li>
-            <li styleName="item">
+            {/* <li styleName="item">
               <Link href="/blog">Blog</Link>
-            </li>
+            </li> */}
           </ul>
         </div>
       </nav>
