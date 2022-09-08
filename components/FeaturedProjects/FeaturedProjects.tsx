@@ -14,7 +14,7 @@ const FeaturedProjects: FC = () => {
       <p styleName="projects__description">
         I love building all kinds of things. Here's some of my better work.
       </p>
-      <Link href="/projects" styleName="projects__link">
+      <Link href="/projects" styleName="projects__link" aria-label="projects page">
         <p styleName="projects__text">Explore more →</p>
       </Link>
       <Project
