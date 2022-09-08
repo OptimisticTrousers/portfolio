@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
 
-
 @font-face {
   font-family: "Ubuntu";
   src: url("../../public/fonts/Ubuntu-Regular.ttf");
@@ -19,8 +18,8 @@
 }
 
 .projects__description {
-  color: #8f9094;
   font-size: 1.25rem;
+  color: #9e9fa4;
 }
 
 .projects__text:hover {
