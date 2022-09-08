@@ -26,6 +26,7 @@
 .project__buttons {
   display: flex;
   column-gap: 8px;
+  align-items: center;
 }
 
 .project__title {
@@ -91,7 +92,7 @@
   .project {
     flex-direction: column;
     row-gap: 16px;
-    padding: 1rem;
+    padding: 2rem 4rem;
   }
   .project__details {
     max-width: unset;
