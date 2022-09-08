@@ -1,8 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
 
+
 @font-face {
   font-family: "Ubuntu";
   src: url("../../public/fonts/Ubuntu-Regular.ttf");
+  font-display: swap;
 }
 
 .projects__text {
