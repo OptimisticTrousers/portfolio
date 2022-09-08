@@ -9,15 +9,15 @@ const Navbar: FC = () => {
     <header>
       <nav styleName="nav">
         <div styleName="home">
-          <Link href="/">Tony Isern</Link>
+          <Link href="/" aria-label="home page">Tony Isern</Link>
         </div>
         <div styleName="pages">
           <ul styleName="list">
-            <li styleName="item">
-              <Link href="/projects">Projects</Link>
+            <li styleName="item" >
+              <Link href="/projects" tabIndex={0} aria-label="projects page">Projects</Link>
             </li>
-            <li styleName="item">
-              <Link href="/contact">Contact</Link>
+            <li styleName="item" >
+              <Link href="/contact" tabIndex={0} aria-label="contact page">Contact</Link>
             </li>
             {/* <li styleName="item">
               <Link href="/blog">Blog</Link>

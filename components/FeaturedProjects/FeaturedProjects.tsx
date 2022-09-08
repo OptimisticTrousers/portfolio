@@ -10,7 +10,7 @@ import styles from "./FeaturedProjects.module.css";
 const FeaturedProjects: FC = () => {
   return (
     <div styleName="projects">
-      <h1 styleName="projects__title">Featured Projects</h1>
+      <h2 styleName="projects__title">Featured Projects</h2>
       <p styleName="projects__description">
         I love building all kinds of things. Here's some of my better work.
       </p>

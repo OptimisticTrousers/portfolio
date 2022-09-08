@@ -29,12 +29,12 @@ const Project: FC<Props> = ({
     <div styleName="project">
       <div styleName="project__details">
         <div styleName="project__content">
-          <h2 styleName="project__title">{title}</h2>
+          <h3 styleName="project__title">{title}</h3>
           <div styleName="project__icons">{render()}</div>
           <p styleName="project__description">{description}</p>
         </div>
         <div styleName="project__buttons">
-          <a href={liveLink} target="_blank" rel="noreferrer">
+          <a href={liveLink} target="_blank" rel="noreferrer" aria-label="open hosted live project">
             <div styleName="project__button-container">
               <Image
                 src="/svg/green-dot.svg"
@@ -45,7 +45,7 @@ const Project: FC<Props> = ({
               <button styleName="project__button">LIVE</button>
             </div>
           </a>
-          <a href={codeLink} target="_blank" rel="noreferrer">
+          <a href={codeLink} target="_blank" rel="noreferrer" aria-label="open code repository on Github">
             <div styleName="project__button-container">
               <Image
                 src="/svg/code.svg"
