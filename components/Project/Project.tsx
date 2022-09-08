@@ -14,6 +14,7 @@ interface Props {
   liveLink: string;
   codeLink: string;
   video?: string;
+  reverse: boolean;
   render: () => any;
 }
 
@@ -23,10 +24,11 @@ const Project: FC<Props> = ({
   liveLink,
   codeLink,
   video,
+  reverse,
   render,
 }) => {
   return (
-    <section styleName="project">
+    <section styleName={`project ${reverse && "reverse"}`}>
       <div styleName="project__details">
         <div styleName="project__content">
           <h3 styleName="project__title">{title}</h3>

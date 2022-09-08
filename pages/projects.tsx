@@ -213,8 +213,8 @@ const Projects: NextPage = () => {
   return (
     <>
       <Layout>
-        {projects.map((project) => (
-          <Project key={project.id} {...project} />
+        {projects.map((project, index) => (
+          <Project key={project.id} {...project} reverse={index % 2 === 0} />
         ))}
       </Layout>
       <Footer />
