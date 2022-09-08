@@ -26,7 +26,7 @@ const Project: FC<Props> = ({
   render,
 }) => {
   return (
-    <div styleName="project">
+    <section styleName="project">
       <div styleName="project__details">
         <div styleName="project__content">
           <h3 styleName="project__title">{title}</h3>
@@ -63,7 +63,7 @@ const Project: FC<Props> = ({
           <source src={video} type="video/webm" />{" "}
         </video>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -97,7 +97,7 @@ const Contact: NextPage = () => {
 
   return (
     <Layout>
-      <div styleName="contact">
+      <section styleName="contact">
         <h1 styleName="contact__title">CONTACT ME</h1>
         <div styleName="contact__content">
           <div styleName="contact__left">
@@ -194,7 +194,7 @@ const Contact: NextPage = () => {
             </ul>
           </div>
         </div>
-      </div>
+      </section>
     </Layout>
   );
 };
