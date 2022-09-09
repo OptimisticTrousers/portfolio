@@ -1,20 +1,26 @@
 .aside__image {
-    padding: 5px;
-    border: 1px solid #51555d;
-    max-width: 110px;
-    border-radius: 50%;
-    width: 100%;
+  border-radius: 50%;
+}
+
+.aside__avatar {
+  padding: 7px;
+  border-radius: 40%;
+  border: 1px solid #51555d;
+  max-width: 110px;
+  height: auto;
+  width: auto;
+  display: block;
 }
 
 .aside__author {
-    font-size: 2rem;
-    margin-top: 10px;
-    color: #fff;
+  font-size: 2rem;
+  margin-top: 10px;
+  color: #fff;
 }
 
 .aside__description {
-    font-size: 1.5rem;
-    line-height: 1.5;
-    color: #eaeaea;
-    font-style: italic;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: #eaeaea;
+  font-style: italic;
 }
