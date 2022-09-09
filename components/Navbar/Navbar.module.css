@@ -7,7 +7,7 @@
 }
 
 .home {
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 .nav {
@@ -29,7 +29,7 @@
 
 .item {
   list-style: none;
-  font-size: 1.2rem;
+  font-size: 2rem;
   line-height: 32px;
   transition: all 0.4s ease 0s;
 }
