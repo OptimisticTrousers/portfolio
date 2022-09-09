@@ -16,6 +16,8 @@ const Blog: NextPage = () => {
           <div styleName="blog__blogs">
             <h2 styleName="blog__title">Recent Posts</h2>
             <BlogExcerpt />
+            <BlogExcerpt />
+            <BlogExcerpt />
           </div>
         </div>
       </Layout>
