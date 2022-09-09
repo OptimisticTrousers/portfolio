@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: "Inter";
-  src: url("../public/fonts/Inter-Regular.ttf");
+  src: local("../public/fonts/Inter-Regular.ttf");
   font-display: swap;
 }
 
