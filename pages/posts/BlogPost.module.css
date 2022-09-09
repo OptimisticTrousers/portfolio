@@ -26,9 +26,14 @@
   text-align: center;
 }
 
-.blog__button:hover {
+.blog__button:active{
     background-color: #eeeeee;
     color: #3d4144;
+}
+
+.blog__button--disabled {
+  color: rgba(238, 238, 238, 0.5);
+  cursor: not-allowed;
 }
 
 @media(max-width: 600px) {

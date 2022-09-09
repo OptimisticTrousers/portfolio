@@ -49,5 +49,5 @@ const Blog = ({
 
 export default CSSModules(Blog, styles, {
   allowMultiple: true,
-  handleNotFoundStyleName: "log",
+  handleNotFoundStyleName: "ignore",
 });

@@ -36,7 +36,12 @@ const Project: FC<Props> = ({
           <p styleName="project__description">{description}</p>
         </div>
         <div styleName="project__buttons">
-          <a href={liveLink} target="_blank" rel="noreferrer" aria-label="open hosted live project">
+          <a
+            href={liveLink}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="open hosted live project"
+          >
             <div styleName="project__button-container">
               <Image
                 src="/svg/green-dot.svg"
@@ -47,7 +52,12 @@ const Project: FC<Props> = ({
               <button styleName="project__button">LIVE</button>
             </div>
           </a>
-          <a href={codeLink} target="_blank" rel="noreferrer" aria-label="open code repository on Github">
+          <a
+            href={codeLink}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="open code repository on Github"
+          >
             <div styleName="project__button-container">
               <Image
                 src="/svg/code.svg"
@@ -71,5 +81,5 @@ const Project: FC<Props> = ({
 
 export default CSSModules(Project, styles, {
   allowMultiple: true,
-  handleNotFoundStyleName: "log",
+  handleNotFoundStyleName: "ignore",
 });

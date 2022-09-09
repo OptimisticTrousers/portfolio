@@ -68,7 +68,12 @@ const Contact: NextPage = () => {
     if (!form.current) return;
 
     emailjs
-      .sendForm("service_wzqv2km", "template_s69p9bq", form.current, "sEnOyFn4MC3uJY6Vw")
+      .sendForm(
+        "service_wzqv2km",
+        "template_s69p9bq",
+        form.current,
+        "sEnOyFn4MC3uJY6Vw"
+      )
       .then(
         (result) => {
           console.log(result.text);
@@ -201,5 +206,5 @@ const Contact: NextPage = () => {
 
 export default CSSModules(Contact, styles, {
   allowMultiple: true,
-  handleNotFoundStyleName: "log",
+  handleNotFoundStyleName: "ignore",
 });

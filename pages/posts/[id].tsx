@@ -29,15 +29,18 @@ export async function getStaticPaths() {
   };
 }
 
-const BlogPost = ({
-  postData,
-}: {
-  postData: { title: string; date: string; contentHtml: string; id: string };
-}) => {
+interface Props {
+  postData: {
+    title: string;
+    date: string;
+    contentHtml: string;
+    id: string;
+    nextContents: any;
+    previousContents: any;
+  };
+}
 
-  const previousLink = `/posts/${Number(postData.id) - 1}`
-  const nextLink = `/posts/${Number(postData.id) + 1}`
-
+const BlogPost = ({ postData }: Props) => {
   return (
     <BlogLayout>
       <BlogExcerpt
@@ -54,11 +57,27 @@ const BlogPost = ({
         </span>
       </p>
       <nav styleName="blog__pagination">
-        <button styleName="blog__button">
-          <Link href={previousLink}>Previous</Link>
+        <button
+          styleName={`blog__button ${
+            postData.previousContents === null && "blog__button--disabled"
+          }`}
+        >
+          {postData.previousContents !== null ? (
+            <Link href={`/posts/${Number(postData.id) - 1}`}>Previous</Link>
+          ) : (
+            "Previous"
+          )}
         </button>
-        <button styleName="blog__button">
-          <Link href={nextLink}>Next</Link>
+        <button
+          styleName={`blog__button ${
+            postData.nextContents === null && "blog__button--disabled"
+          }`}
+        >
+          {postData.nextContents !== null ? (
+            <Link href={`/posts/${Number(postData.id) + 1}`}>Next</Link>
+          ) : (
+            "Next"
+          )}
         </button>
       </nav>
     </BlogLayout>
@@ -67,5 +86,5 @@ const BlogPost = ({
 
 export default CSSModules(BlogPost, styles, {
   allowMultiple: true,
-  handleNotFoundStyleName: "log",
+  handleNotFoundStyleName: "ignore",
 });

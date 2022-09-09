@@ -21,10 +21,10 @@ export async function getSortedPostsData() {
     const matterResult = matter(fileContents);
 
     // Combine the data with the id
-  const processedContent = await remark()
-    .use(html)
-    .process(matterResult.content);
-  const contentHtml = processedContent.toString();
+    const processedContent = await remark()
+      .use(html)
+      .process(matterResult.content);
+    const contentHtml = processedContent.toString();
     return {
       id,
       contentHtml,
@@ -33,7 +33,7 @@ export async function getSortedPostsData() {
   });
   // Sort posts by date
 
-  const resolvedAllPostsData = await Promise.all(allPostsData)
+  const resolvedAllPostsData = await Promise.all(allPostsData);
   return resolvedAllPostsData.sort((a, b) => {
     if (a.date < b.date) {
       return 1;
@@ -57,6 +57,29 @@ export function getAllPostIds() {
 export async function getPostData(id: string) {
   const fullPath = path.join(postsDirectory, `${id}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
+  const nextPath = path.join(postsDirectory, `${Number(id) + 1}.md`);
+  const previousPath = path.join(postsDirectory, `${Number(id) - 1}.md`);
+
+  const doesNextExist = fs.existsSync(nextPath);
+  const doesPreviousNext = fs.existsSync(previousPath);
+
+  let nextContents = null;
+  let previousContents = null;
+
+  if (doesNextExist) {
+    try {
+      nextContents = fs.readFileSync(nextPath, "utf-8");
+    } catch (error) {
+      console.log(`Could not find nextContents: ${error}`);
+    }
+  }
+  if (doesPreviousNext) {
+    try {
+      previousContents = fs.readFileSync(previousPath, "utf-8");
+    } catch (error) {
+      console.log(`Could not find previousContents: ${error}`);
+    }
+  }
 
   // Use gray-matter to parse the post metadata section
   const matterResult = matter(fileContents);
@@ -70,6 +93,8 @@ export async function getPostData(id: string) {
   return {
     id,
     contentHtml,
+    nextContents,
+    previousContents,
     ...(matterResult.data as { date: string; title: string }),
   };
 }

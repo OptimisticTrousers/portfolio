@@ -107,7 +107,11 @@ const FeaturedProjects: FC = () => {
         <p styleName="projects__text">Explore more →</p>
       </Link>
       {featuredProjects.map((featuredProject, index) => (
-        <Project key={featuredProject.id} {...featuredProject} reverse={index % 2 === 0} />
+        <Project
+          key={featuredProject.id}
+          {...featuredProject}
+          reverse={index % 2 === 0}
+        />
       ))}
     </div>
   );
@@ -115,5 +119,5 @@ const FeaturedProjects: FC = () => {
 
 export default CSSModules(FeaturedProjects, styles, {
   allowMultiple: true,
-  handleNotFoundStyleName: "log",
+  handleNotFoundStyleName: "ignore",
 });

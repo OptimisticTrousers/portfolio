@@ -91,5 +91,5 @@ const About: FC = () => {
 
 export default CSSModules(About, styles, {
   allowMultiple: true,
-  handleNotFoundStyleName: "log",
+  handleNotFoundStyleName: "ignore",
 });
