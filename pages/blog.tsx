@@ -22,12 +22,17 @@ export async function getStaticProps() {
 const Blog = ({
   allPostsData,
 }: {
-  allPostsData: { date: string; title: string; id: string, contentHtml: string }[];
+  allPostsData: {
+    date: string;
+    title: string;
+    id: string;
+    contentHtml: string;
+  }[];
 }) => {
   return (
     <BlogLayout>
       <h2 styleName="blog__title">Recent Posts</h2>
-      {allPostsData?.map(({id, contentHtml, date, title}) => {
+      {allPostsData?.map(({ id, contentHtml, date, title }) => {
         return (
           <BlogExcerpt
             key={id}

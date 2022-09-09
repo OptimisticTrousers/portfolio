@@ -49,10 +49,10 @@ const BlogPost = ({
       </p>
       <nav styleName="blog__pagination">
         <button styleName="blog__button">
-          <Link href="/">Previous</Link>
+          <Link href="/posts">Previous</Link>
         </button>
         <button styleName="blog__button">
-          <Link href="/">Next</Link>
+          <Link href="/posts">Next</Link>
         </button>
       </nav>
     </BlogLayout>
