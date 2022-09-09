@@ -7,7 +7,7 @@
     gap: 8px;
 }
 
-@media(max-width: 710px) {
+@media(max-width: 910px) {
     .blog {
         flex-direction: column;
     }

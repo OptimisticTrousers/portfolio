@@ -23,9 +23,16 @@
   border-radius: 4px;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
+  text-align: center;
 }
 
 .blog__button:hover {
     background-color: #eeeeee;
     color: #3d4144;
+}
+
+@media(max-width: 600px) {
+    .blog__button {
+        width: 100%;
+    }
 }
