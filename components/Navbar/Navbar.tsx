@@ -6,11 +6,10 @@ import styles from "./Navbar.module.css";
 import { FaBars } from "react-icons/fa";
 
 const Navbar: FC = () => {
-
-  const [toggleMenu, setToggleMenu] = useState(false)
+  const [toggleMenu, setToggleMenu] = useState(false);
 
   function handleMenuClick() {
-    setToggleMenu(prevValue => !prevValue)
+    setToggleMenu((prevValue) => !prevValue);
   }
 
   return (
@@ -22,10 +21,28 @@ const Navbar: FC = () => {
           </Link>
         </div>
         <div styleName="pages">
-          <button styleName={`hamburger ${toggleMenu && "active"}`} onClick={handleMenuClick}>
+          <button
+            styleName={`hamburger ${toggleMenu && "active"}`}
+            onClick={handleMenuClick}
+          >
             <div styleName="bar"></div>
           </button>
-          <ul styleName="list">
+          <ul styleName={`list`}>
+            <li styleName="item">
+              <Link href="/projects" tabIndex={0} aria-label="projects page">
+                Projects
+              </Link>
+            </li>
+            <li styleName="item">
+              <Link href="/contact" tabIndex={0} aria-label="contact page">
+                Contact
+              </Link>
+            </li>
+            <li styleName="item">
+              <Link href="/blog">Blog</Link>
+            </li>
+          </ul>
+          <ul styleName={`mobile-nav ${toggleMenu && "menu-active"}`}>
             <li styleName="item">
               <Link href="/projects" tabIndex={0} aria-label="projects page">
                 Projects
