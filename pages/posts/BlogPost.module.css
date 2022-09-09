@@ -1,0 +1,31 @@
+.blog__updated-at {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.blog__pagination {
+  margin-top: 2em;
+  padding-top: 2em;
+  border-top: 1px solid #51555d;
+}
+
+.blog__button {
+  color: #699ea0;
+  background-color: transparent;
+  padding: 1em 2em;
+  width: 50%;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: bold;
+  border: 1px solid #3d4046;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.blog__button:hover {
+    background-color: #eeeeee;
+    color: #3d4144;
+}
