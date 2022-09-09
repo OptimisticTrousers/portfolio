@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { FC } from "react";
 import CSSModules from "react-css-modules";
+import ButtonLinks from "../ButtonLinks/ButtonLinks";
 import styles from "./Sidebar.module.css";
 
 const Sidebar: FC = () => {
@@ -14,11 +15,7 @@ const Sidebar: FC = () => {
         <h3 styleName="aside__author">Tony Isern</h3>
         <p styleName="aside__description">Aspiring full stack web developer. Be different.</p>
       </div>
-      <div styleName="aside__buttons">
-        <button>Email</button>
-        <button>Github</button>
-        <button>LinkedIn</button>
-      </div>
+      <ButtonLinks />
     </aside>
   );
 };
