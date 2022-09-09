@@ -38,7 +38,7 @@ const About: FC = () => {
           <br />
           When I'm not coding, I'm usually debating with my uncle about
           economics, browsing Reddit, or reading my favorite manga, One Piece!
-          On a good day, I might play basketball with some friends!🏀
+          On a good day, I might play basketball with some friends! 🏀
         </p>
       </div>
       <div styleName="about__icons">
