@@ -39,7 +39,7 @@ const Hero: FC = () => {
         <BackgroundAnimation />
       </div>
       <div styleName="hero__links">
-        <a href="https://www.linkedin.com/in/tony-isern-9717a0189" target="_blank" rel="noreferrer">
+        <a href="https://www.linkedin.com/in/tony-isern-9717a0189" target="_blank" rel="noreferrer" aria-label="open linkedin page(new tab)">
           <button styleName="hero__button">
             <Image
               src="/svg/linkedin.svg"
@@ -51,7 +51,7 @@ const Hero: FC = () => {
             LinkedIn
           </button>
         </a>
-        <a href="https://github.com/OptimisticTrousers" target="_blank" rel="noreferrer">
+        <a href="https://github.com/OptimisticTrousers" target="_blank" rel="noreferrer" aria-label="open github page(new tab)">
           <button styleName="hero__button">
             <Image
               src="/svg/github.svg"
@@ -63,7 +63,7 @@ const Hero: FC = () => {
             Github
           </button>
         </a>
-        <a href="malito:tony.isern@yahoo.com" target="_blank" rel="noreferrer">
+        <a href="malito:tony.isern@yahoo.com" target="_blank" rel="noreferrer" aria-label="send me an email(popup)">
           <button styleName="hero__button">
             <Image
               src="/svg/email.svg"
