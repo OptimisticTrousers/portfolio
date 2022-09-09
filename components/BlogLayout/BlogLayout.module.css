@@ -1,0 +1,14 @@
+.blog__blogs {
+    width: 100%;
+}
+
+.blog {
+    display: flex;
+    gap: 8px;
+}
+
+@media(max-width: 710px) {
+    .blog {
+        flex-direction: column;
+    }
+}
