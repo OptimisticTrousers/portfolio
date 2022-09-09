@@ -22,7 +22,7 @@ const BlogExcerpt: FC<Props> = ({ render, onPage }) => {
       </h3>
       <p styleName="excerpt__date">
         <BsCalendar3 />
-        <time>March 1, 2022</time>
+        <time>Sep 09, 2022</time>
       </p>
       <p
         styleName={`excerpt__description ${

@@ -16,7 +16,7 @@ const BlogPost: NextPage = () => {
         <BsCalendar3 />
         <span>
           <strong>Updated: </strong>
-          <time>March 01, 2022</time>
+          <time>Sep 09, 2022</time>
         </span>
       </p>
       <nav styleName="blog__pagination">
