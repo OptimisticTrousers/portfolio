@@ -9,9 +9,11 @@ import { BsCalendar3 } from "react-icons/bs";
 import Link from "next/link";
 import { getAllPostIds, getPostData } from "../../lib/posts";
 import Date from "../../components/Date/Date";
+import { useRouter } from "next/router";
 
 export async function getStaticProps({ params }: { params: { id: string } }) {
   const postData = await getPostData(params.id as string);
+
   return {
     props: {
       postData,
@@ -30,8 +32,12 @@ export async function getStaticPaths() {
 const BlogPost = ({
   postData,
 }: {
-  postData: { title: string; date: string; contentHtml: string };
+  postData: { title: string; date: string; contentHtml: string; id: string };
 }) => {
+
+  const previousLink = `/posts/${Number(postData.id) - 1}`
+  const nextLink = `/posts/${Number(postData.id) + 1}`
+
   return (
     <BlogLayout>
       <BlogExcerpt
@@ -49,10 +55,10 @@ const BlogPost = ({
       </p>
       <nav styleName="blog__pagination">
         <button styleName="blog__button">
-          <Link href="/posts">Previous</Link>
+          <Link href={previousLink}>Previous</Link>
         </button>
         <button styleName="blog__button">
-          <Link href="/posts">Next</Link>
+          <Link href={nextLink}>Next</Link>
         </button>
       </nav>
     </BlogLayout>
