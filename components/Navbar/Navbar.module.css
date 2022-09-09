@@ -72,7 +72,7 @@
 }
 
 .hamburger {
-  display: none;
+  display: block;
 }
 
 .mobile-nav {
@@ -84,7 +84,7 @@
   min-height: 100vh;
   display: block;
   z-index: 1;
-  background-color: #12002f;
+  background-color: #303030;
   padding-top: 180px;
   transition: 0.4s;
 }
@@ -100,7 +100,7 @@
   text-align: center;
   width: fit-content;
   padding: 12px 16px;
-  background-color: #1f103f;
+  background-color: #121212;
   color: #fff;
 }
 
@@ -112,7 +112,13 @@
   .list {
     display: none;
   }
+}
+
+@media(min-width: 620px) {
+  .mobile-nav {
+    display: none;
+  }
   .hamburger {
-    display: block;
+    display: none;
   }
 }
