@@ -11,7 +11,7 @@ import { getPostData, getSortedPostsData } from "../lib/posts";
 import styles from "../styles/Blog.module.css";
 
 export async function getStaticProps() {
-  const allPostsData = getSortedPostsData();
+  const allPostsData = await getSortedPostsData();
   return {
     props: {
       allPostsData,
@@ -27,14 +27,14 @@ const Blog = ({
   return (
     <BlogLayout>
       <h2 styleName="blog__title">Recent Posts</h2>
-      {allPostsData?.map(({id, title, date, contentHtml}) => {
+      {allPostsData?.map(({id, contentHtml, date, title}) => {
         return (
           <BlogExcerpt
             key={id}
             contentHtml={contentHtml}
             date={date}
             onPage={false}
-            render={() => <Link href={`/posts/${title}`}>{title}</Link>}
+            render={() => <Link href={`/posts/${id}`}>{title}</Link>}
           />
         );
       })}

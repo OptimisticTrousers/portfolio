@@ -6,10 +6,10 @@ import html from "remark-html";
 
 const postsDirectory = path.join(process.cwd(), "posts");
 
-export function getSortedPostsData() {
+export async function getSortedPostsData() {
   // Get file names under /posts
   const fileNames = fs.readdirSync(postsDirectory);
-  const allPostsData = fileNames.map((fileName) => {
+  const allPostsData = fileNames.map(async (fileName) => {
     // Remove ".md" from file name to get id
     const id = fileName.replace(/\.md$/, "");
 
@@ -21,13 +21,20 @@ export function getSortedPostsData() {
     const matterResult = matter(fileContents);
 
     // Combine the data with the id
+  const processedContent = await remark()
+    .use(html)
+    .process(matterResult.content);
+  const contentHtml = processedContent.toString();
     return {
       id,
+      contentHtml,
       ...(matterResult.data as { date: string; title: string }),
     };
   });
   // Sort posts by date
-  return allPostsData.sort((a, b) => {
+
+  const resolvedAllPostsData = await Promise.all(allPostsData)
+  return resolvedAllPostsData.sort((a, b) => {
     if (a.date < b.date) {
       return 1;
     } else {
@@ -47,7 +54,7 @@ export function getAllPostIds() {
   });
 }
 
-export async function getPostData(id) {
+export async function getPostData(id: string) {
   const fullPath = path.join(postsDirectory, `${id}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
 

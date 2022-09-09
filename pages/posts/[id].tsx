@@ -8,6 +8,7 @@ import styles from "./BlogPost.module.css";
 import { BsCalendar3 } from "react-icons/bs";
 import Link from "next/link";
 import { getAllPostIds, getPostData } from "../../lib/posts";
+import Date from "../../components/Date/Date";
 
 export async function getStaticProps({ params }: { params: { id: string } }) {
   const postData = await getPostData(params.id as string);
@@ -43,7 +44,7 @@ const BlogPost = ({
         <BsCalendar3 />
         <span>
           <strong>Updated: </strong>
-          <time>Sep 09, 2022</time>
+          <Date dateString={postData.date} />
         </span>
       </p>
       <nav styleName="blog__pagination">

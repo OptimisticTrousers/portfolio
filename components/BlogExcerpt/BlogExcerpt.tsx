@@ -5,6 +5,7 @@ import styles from "./BlogExcerpt.module.css";
 import { BsCalendar3 } from "react-icons/bs";
 import Link from "next/link";
 import Date from "../Date/Date";
+import parse from "html-react-parser"
 
 interface Props {
   render: () => JSX.Element | string;
@@ -32,7 +33,7 @@ const BlogExcerpt: FC<Props> = ({ render, onPage, date, contentHtml }) => {
           onPage === false && "excerpt__ellipsis"
         }`}
       >
-        {contentHtml}
+        {parse(contentHtml)}
       </p>
     </article>
   );
