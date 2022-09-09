@@ -5,7 +5,7 @@ import styles from "./BlogExcerpt.module.css";
 const BlogExcerpt: FC = () => {
   return (
     <div>
-      <h1></h1>
+      <h3></h3>
     </div>
   );
 };
