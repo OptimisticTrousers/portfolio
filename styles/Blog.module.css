@@ -8,3 +8,11 @@
     line-height: 1.2;
     color: #fff;
 }
+
+.blog__blogs {
+    width: 100%;
+}
+
+.blog {
+    display: flex;
+}
