@@ -11,7 +11,7 @@ import Link from "next/link";
 const BlogPost: NextPage = () => {
   return (
     <BlogLayout>
-      <BlogExcerpt />
+      <BlogExcerpt render={() => "New Post"} onPage={true}/>
       <p styleName="blog__updated-at">
         <BsCalendar3 />
         <span>

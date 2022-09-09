@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unknown-property */
 import { NextPage } from "next";
+import Link from "next/link";
 import CSSModules from "react-css-modules";
 import BlogExcerpt from "../components/BlogExcerpt/BlogExcerpt";
 import BlogLayout from "../components/BlogLayout/BlogLayout";
@@ -12,7 +13,14 @@ const Blog: NextPage = () => {
   return (
     <BlogLayout>
       <h2 styleName="blog__title">Recent Posts</h2>
-      <BlogExcerpt />
+      <BlogExcerpt
+        render={() => <Link href="/posts/bob">New Post</Link>}
+        onPage={false}
+      />
+      <BlogExcerpt
+        render={() => <Link href="/posts/bob">New Post</Link>}
+        onPage={false}
+      />
     </BlogLayout>
   );
 };
