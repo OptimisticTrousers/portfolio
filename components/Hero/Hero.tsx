@@ -11,6 +11,7 @@ import { HiOutlineMail } from "react-icons/hi";
 import animation from "../../public/svg/animation.svg";
 import BackgroundAnimation from "../BackgroundImage/BackgroundImage";
 import { CSSTransition } from "react-transition-group";
+import ButtonLinks from "../ButtonLinks/ButtonLinks";
 
 const Hero: FC = () => {
   return (
@@ -38,44 +39,7 @@ const Hero: FC = () => {
         </div>
         <BackgroundAnimation />
       </div>
-      <div styleName="hero__links">
-        <a href="https://www.linkedin.com/in/tony-isern-9717a0189" target="_blank" rel="noreferrer" aria-label="open linkedin page(new tab)">
-          <button styleName="hero__button">
-            <Image
-              src="/svg/linkedin.svg"
-              styleName="hero__icon"
-              alt="linkedin logo"
-              width={24}
-              height={24}
-            />
-            LinkedIn
-          </button>
-        </a>
-        <a href="https://github.com/OptimisticTrousers" target="_blank" rel="noreferrer" aria-label="open github page(new tab)">
-          <button styleName="hero__button">
-            <Image
-              src="/svg/github.svg"
-              styleName="hero__icon"
-              alt="github logo"
-              width={24}
-              height={24}
-            />
-            Github
-          </button>
-        </a>
-        <a href="malito:tony.isern@yahoo.com" target="_blank" rel="noreferrer" aria-label="send me an email(popup)">
-          <button styleName="hero__button">
-            <Image
-              src="/svg/email.svg"
-              styleName="hero__icon"
-              width={24}
-              height={24}
-              alt="email logo"
-            />
-            Email
-          </button>
-        </a>
-      </div>
+      <ButtonLinks />
     </div>
   );
 };
