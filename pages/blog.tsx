@@ -17,10 +17,6 @@ const Blog: NextPage = () => {
         render={() => <Link href="/posts/bob">New Post</Link>}
         onPage={false}
       />
-      <BlogExcerpt
-        render={() => <Link href="/posts/bob">New Post</Link>}
-        onPage={false}
-      />
     </BlogLayout>
   );
 };
