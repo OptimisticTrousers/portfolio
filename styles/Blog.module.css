@@ -16,3 +16,9 @@
 .blog {
     display: flex;
 }
+
+@media(max-width: 710px) {
+    .blog {
+        flex-direction: column;
+    }
+}
