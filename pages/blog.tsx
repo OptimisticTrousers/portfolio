@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unknown-property */
-import { NextPage } from "next";
+import { GetStaticProps, NextPage } from "next";
 import Link from "next/link";
 import CSSModules from "react-css-modules";
 import BlogExcerpt from "../components/BlogExcerpt/BlogExcerpt";
@@ -7,16 +7,37 @@ import BlogLayout from "../components/BlogLayout/BlogLayout";
 import Footer from "../components/Footer/Footer";
 import Layout from "../components/Layout/Layout";
 import Sidebar from "../components/Sidebar/Sidebar";
+import { getPostData, getSortedPostsData } from "../lib/posts";
 import styles from "../styles/Blog.module.css";
 
-const Blog: NextPage = () => {
+export async function getStaticProps() {
+  const allPostsData = getSortedPostsData();
+  return {
+    props: {
+      allPostsData,
+    },
+  };
+}
+
+const Blog = ({
+  allPostsData,
+}: {
+  allPostsData: { date: string; title: string; id: string, contentHtml: string }[];
+}) => {
   return (
     <BlogLayout>
       <h2 styleName="blog__title">Recent Posts</h2>
-      <BlogExcerpt
-        render={() => <Link href="/posts/bob">New Post</Link>}
-        onPage={false}
-      />
+      {allPostsData?.map(({id, title, date, contentHtml}) => {
+        return (
+          <BlogExcerpt
+            key={id}
+            contentHtml={contentHtml}
+            date={date}
+            onPage={false}
+            render={() => <Link href={`/posts/${title}`}>{title}</Link>}
+          />
+        );
+      })}
     </BlogLayout>
   );
 };

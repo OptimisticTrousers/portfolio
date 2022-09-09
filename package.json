@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@emailjs/browser": "^3.7.0",
+    "date-fns": "^2.29.2",
     "devicon": "^2.15.1",
     "gray-matter": "^4.0.3",
     "nanoid": "^4.0.0",

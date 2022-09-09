@@ -6,7 +6,7 @@ import Sidebar from "../Sidebar/Sidebar";
 import styles from "./BlogLayout.module.css";
 
 interface Props {
-  children: JSX.Element | JSX.Element[];
+  children: any;
 }
 
 const BlogLayout: FC<Props> = ({ children }) => {
