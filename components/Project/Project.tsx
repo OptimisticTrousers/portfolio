@@ -40,7 +40,7 @@ const Project: FC<Props> = ({
             href={liveLink}
             target="_blank"
             rel="noreferrer"
-            aria-label="open hosted live project"
+            aria-label={`open live ${title} project(opens in new tab)`}
           >
             <div styleName="project__button-container">
               <Image
@@ -56,7 +56,7 @@ const Project: FC<Props> = ({
             href={codeLink}
             target="_blank"
             rel="noreferrer"
-            aria-label="open code repository on Github"
+            aria-label={`open code repository for ${title}(opens in new tab to Github)`}
           >
             <div styleName="project__button-container">
               <Image

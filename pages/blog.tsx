@@ -31,7 +31,7 @@ const Blog = ({
 }) => {
   return (
     <BlogLayout>
-      <h2 styleName="blog__title">Recent Posts</h2>
+      <h1 styleName="blog__title">Blog Posts</h1>
       {allPostsData?.map(({ id, contentHtml, date, title }) => {
         return (
           <BlogExcerpt

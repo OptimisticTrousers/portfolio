@@ -56,7 +56,7 @@ const BlogPost = ({ postData }: Props) => {
           <Date dateString={postData.date} />
         </span>
       </p>
-      <nav styleName="blog__pagination">
+      <nav styleName="blog__pagination" aria-label="blog pagination">
         <button
           styleName={`blog__button ${
             postData.previousContents === null && "blog__button--disabled"

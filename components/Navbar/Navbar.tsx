@@ -14,7 +14,7 @@ const Navbar: FC = () => {
 
   return (
     <header>
-      <nav styleName="nav">
+      <nav styleName="nav" aria-label="main navigation">
         <div styleName="home">
           <Link href="/" aria-label="home page">
             Tony Isern
@@ -24,6 +24,8 @@ const Navbar: FC = () => {
           <button
             styleName={`hamburger ${toggleMenu && "active"}`}
             onClick={handleMenuClick}
+            aria-hidden={toggleMenu ? false : true}
+            aria-label="hamburger menu"
           >
             <div styleName="bar"></div>
           </button>

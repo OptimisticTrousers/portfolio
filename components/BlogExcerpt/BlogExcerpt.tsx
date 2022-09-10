@@ -17,13 +17,13 @@ interface Props {
 const BlogExcerpt: FC<Props> = ({ render, onPage, date, contentHtml }) => {
   return (
     <article styleName="excerpt">
-      <h3
+      <h2
         styleName={`excerpt__title ${
           onPage === false && "excerpt__title--link"
         }`}
       >
         {render()}
-      </h3>
+      </h2>
       <p styleName="excerpt__date">
         <BsCalendar3 />
         <Date dateString={date} />

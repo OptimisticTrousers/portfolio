@@ -12,7 +12,7 @@ const Alert: FC<Props> = ({ errorMessage, error }) => {
   return (
     <div
       styleName={`alert ${error === true ? "error" : "success"}`}
-      aria-label="form feedback message"
+      aria-details="form feedback message"
     >
       {errorMessage}
     </div>
