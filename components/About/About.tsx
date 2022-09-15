@@ -25,20 +25,20 @@ const About: FC = () => {
           <br />
           <br />
           Web development is a space where things are constantly changing. Hell,
-          a new JS framework seems to come out every week! I love learning new
-          technologies and new skills. I pride myself in my persistance and
-          dedication to pursuing my goals. One thing I would like to do in the
-          future is to teach others the things I am currently learning! To me,
-          programming is the most relaxing and soothing thing I can do. No
-          distractions, I can collect my thoughts, and I can do it anywhere with
-          an internet connection! I'm planning on applying for internships this
-          summer of 2023 to get more experience from more senior developers.
-          Currently learning more about Data Structures and Algorithms.
+          a new JavaScript framework seems to come out every week! I love
+          learning new technologies and new skills. I pride myself in my
+          persistance and dedication to pursuing my goals. One thing I would
+          like to do in the future is to teach others the things I am currently
+          learning! Programming is also pretty fun! It's pretty cool the stuff
+          you can build with just a computer and internet connection. I'm
+          planning on applying for internships this summer of 2023 to get more
+          experience from more senior developers. Currently learning more about
+          Data Structures and Algorithms.
           <br />
           <br />
           When I'm not coding, I'm usually debating with my uncle about
-          economics, browsing Reddit, or reading my favorite manga, One Piece!
-          On a good day, I might play basketball with some friends! 🏀
+          economics, browsing Reddit, eating lots of food, or reading my
+          favorite manga, One Piece!
         </p>
       </div>
       <div styleName="about__icons">
