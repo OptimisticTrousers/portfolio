@@ -57,28 +57,44 @@ const BlogPost = ({ postData }: Props) => {
         </span>
       </p>
       <nav styleName="blog__pagination" aria-label="blog pagination">
-        <button
-          styleName={`blog__button ${
-            postData.previousContents === null && "blog__button--disabled"
-          }`}
-        >
-          {postData.previousContents !== null ? (
-            <Link href={`/posts/${Number(postData.id) - 1}`}>Previous</Link>
-          ) : (
-            "Previous"
-          )}
-        </button>
-        <button
-          styleName={`blog__button ${
-            postData.nextContents === null && "blog__button--disabled"
-          }`}
-        >
-          {postData.nextContents !== null ? (
-            <Link href={`/posts/${Number(postData.id) + 1}`}>Next</Link>
-          ) : (
-            "Next"
-          )}
-        </button>
+        {postData.previousContents !== null ? (
+          <Link href={`/posts/${Number(postData.id) - 1}`}>
+            <button
+              styleName={`blog__button ${
+                postData.previousContents === null && "blog__button--disabled"
+              }`}
+            >
+              Previous
+            </button>
+          </Link>
+        ) : (
+          <button
+            styleName={`blog__button ${
+              postData.previousContents === null && "blog__button--disabled"
+            }`}
+          >
+            Previous
+          </button>
+        )}
+        {postData.nextContents !== null ? (
+          <Link href={`/posts/${Number(postData.id) + 1}`}>
+            <button
+              styleName={`blog__button ${
+                postData.nextContents === null && "blog__button--disabled"
+              }`}
+            >
+              Next
+            </button>
+          </Link>
+        ) : (
+          <button
+            styleName={`blog__button ${
+              postData.nextContents === null && "blog__button--disabled"
+            }`}
+          >
+            Next
+          </button>
+        )}
       </nav>
     </BlogLayout>
   );
