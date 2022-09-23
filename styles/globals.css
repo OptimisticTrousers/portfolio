@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 
 @font-face {
-  font-family: Inter;
+  font-family: "Inter";
   src: url("/fonts/Inter-Regular.ttf");
   font-display: swap;
 }
@@ -10,7 +10,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   color: rgb(255, 255, 255);
   background-color: #121212;
