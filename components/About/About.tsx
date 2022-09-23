@@ -17,6 +17,7 @@ const About: FC = () => {
           alt="a picture of myself"
           width={300}
           height={300}
+          priority
         />
         <p styleName="about__description">
           Hi! I'm Tony Isern. I love building things and the freedom that
