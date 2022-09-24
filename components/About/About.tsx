@@ -81,10 +81,12 @@ const About: FC = () => {
           styleName="about__icon"
         ></i>
         <i className="devicon-vim-plain colored" styleName="about__icon"></i>
-        <i
-          className="devicon-nextjs-original-wordmark colored"
-          styleName="about__icon"
-        ></i>
+        <div styleName="about__background">
+          <i
+            className="devicon-nextjs-original-wordmark colored"
+            styleName="about__icon"
+          ></i>
+        </div>
       </div>
     </section>
   );

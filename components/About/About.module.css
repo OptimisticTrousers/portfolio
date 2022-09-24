@@ -43,6 +43,11 @@
   align-items: center;
 }
 
+.about__background {
+  background-color: white;
+  border-radius: 5px;
+}
+
 @keyframes slideUp {
   from {
     transform: translateY(100px);
