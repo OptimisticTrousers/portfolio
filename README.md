@@ -48,6 +48,7 @@ Beyond that, other learning outcomes were:
 
 * [ ] Use MDX for blogs instead of markdown
 * [ ] Allow users to comment on blogs
+* [ ] Have CSS animations occur as the user scrolls into view instead of on the page load
 
 ## Known Bugs
 
