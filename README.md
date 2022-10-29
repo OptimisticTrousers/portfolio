@@ -1,34 +1,54 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Portfolio Website
 
-## Getting Started
+## Description
 
-First, run the development server:
+[App] Creating my own personal portfolio
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+> See it live on [tonyisern.com](tonyisern.com)
+> Or clone repo, cd into repo, then run "npm run start"
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Purpose
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Creating a portfolio to showcase my projects, as well as a place for contact information and a blog.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Beyond that, other learning outcomes were:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- Designing reusable components
+- Creating a blog using local markdown files
+- Using EmailJS to send emails
+- Using CSS animations
+- Typescript for types
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+## Features
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Allows users to see a list of all my projects
+2. Users can see all of my contact information, including Github, LinkedIn, and email.
+3. Allows can see blogs
+4. Users can navigate between blogs on a blog page using the 'Next' and 'Previous' buttons
+5. Users can see a video snippet of each project, as well as the hosted project and code.
+6. Allow users to send an email with EmailJS using the contact page
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Development
 
-## Deploy on Vercel
+### Javascript Framework(s)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- [React](https://github.com/facebook/create-react-app)
+- [Next](https://nextjs.org/)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Technologies used
+
+- [Netlify](https://www.netlify.com/) - Hosting
+- [React CSS Modules](https://github.com/gajus/react-css-modules) - CSS with local scoping
+- [Typescript](https://www.typescriptlang.org/) - Static typing in JavaScript
+- [EmailJS](https://www.emailjs.com/) - Sending emails
+
+
+## Areas for Improvement
+
+* [ ] Use MDX for blogs instead of markdown
+* [ ] Allow users to comment on blogs
+
+## Known Bugs
+
+1. Navigation menu font cannot be changed
