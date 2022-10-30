@@ -80,6 +80,18 @@ const About: FC = () => {
           className="devicon-graphql-plain-wordmark colored"
           styleName="about__icon"
         ></i>
+        <i
+          className="devicon-express-original-wordmark"
+          styleName="about__icon"
+        ></i>
+        <i
+          className="devicon-mongodb-plain-wordmark colored"
+          styleName="about__icon"
+        ></i>
+        <i
+          className="devicon-nodejs-plain-wordmark colored"
+          styleName="about__icon"
+        ></i>
         <i className="devicon-vim-plain colored" styleName="about__icon"></i>
         <div styleName="about__background">
           <i
