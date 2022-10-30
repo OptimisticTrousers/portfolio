@@ -52,4 +52,4 @@ Beyond that, other learning outcomes were:
 
 ## Known Bugs
 
-1. Navigation menu font cannot be changed
+1. <s> Navigation menu font cannot be changed </s>
