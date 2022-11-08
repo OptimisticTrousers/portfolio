@@ -36,6 +36,13 @@ function reducer(state: State, action: Action) {
       return { ...state, message: action.payload };
     case "SUBJECT_CHANGE":
       return { ...state, subject: action.payload };
+    case "DELETE_FORM":
+      return {
+        name: action.payload,
+        email: action.payload,
+        message: action.payload,
+        subject: action.payload,
+      };
     default:
       return state;
   }
@@ -72,13 +79,14 @@ const Contact: NextPage = () => {
         "service_wzqv2km",
         "template_s69p9bq",
         form.current,
-        "sEnOyFn4MC3uJY6Vw"
+        process.env.NEXT_PUBLIC_EMAILJS_KEY
       )
       .then(
         (result) => {
           console.log(result.text);
           setErrorMessage("Sucesss. The form has been submitted");
           setError(false);
+          dispatch({ type: "DELETE_FORM", payload: "" });
         },
         (error) => {
           console.log(error.text);
