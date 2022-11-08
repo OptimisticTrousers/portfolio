@@ -42,16 +42,16 @@ const featuredProjects = [
   },
   {
     id: "2",
-    title: "Where's Waldo?",
+    title: "Inventory Application",
     description:
-      "A game based on the British game, 'Where's Waldo', where you are on a quest to find Waldo and his friends! Drag your mouse around the image to find them! A game built with React.js and Firebase.",
-    liveLink: "https://optimistictrousers.github.io/TOP-wheres-waldo/",
-    codeLink: "https://github.com/OptimisticTrousers/TOP-wheres-waldo",
-    video: "/video/waldo.webm",
+      "Creating an Express application using MongoDB, Mongoose and Pug. Learned how Express works with routing, middleware, and rendering. Using MongoDB for database and Mongoose to query data. Using Pug for templating. Using the MVC pattern to design the application. Application generated with the express-application-generator command. ",
+    liveLink: "https://rocky-tundra-71808.herokuapp.com/",
+    codeLink: "https://github.com/OptimisticTrousers/inventory-application",
+    video: "/video/inventory-application.webm",
     render: () => (
       <>
         <i
-          className="devicon-react-original colored"
+          className="devicon-express-original colored"
           styleName="project__icon"
         ></i>
         <i className="devicon-css3-plain colored" styleName="project__icon"></i>
@@ -59,11 +59,7 @@ const featuredProjects = [
           className="devicon-javascript-plain colored"
           styleName="project__icon"
         ></i>
-        <i className="devicon-jest-plain colored" styleName="project__icon"></i>
-        <i
-          styleName="project__icon"
-          className="devicon-firebase-plain colored"
-        ></i>
+        <i className="devicon-mongodb-plain" styleName="project__icon"></i>
       </>
     ),
   },
