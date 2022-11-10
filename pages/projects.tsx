@@ -23,12 +23,20 @@ const projects = [
           className="devicon-react-original colored"
           styleName="project__icon"
         ></i>
-        <i className="devicon-css3-plain colored" styleName="project__icon"></i>
         <i
-          className="devicon-javascript-plain colored"
+          styleName="project__icon"
+          className="devicon-firebase-plain colored"
+        ></i>
+        <i className="devicon-css3-plain colored" styleName="project__icon"></i>
+        <i className="devicon-jest-plain colored" styleName="project__icon"></i>
+        <i
+          className="devicon-typescript-plain colored"
           styleName="project__icon"
         ></i>
-        <i className="devicon-jest-plain colored" styleName="project__icon"></i>
+        <i
+          className="devicon-redux-original colored"
+          styleName="project__icon"
+        ></i>
       </>
     ),
   },
@@ -66,7 +74,7 @@ const projects = [
     render: () => (
       <>
         <i
-          className="devicon-react-original colored"
+          className="devicon-html5-plain-wordmark colored"
           styleName="project__icon"
         ></i>
         <i className="devicon-css3-plain colored" styleName="project__icon"></i>
@@ -140,6 +148,10 @@ const projects = [
           className="devicon-react-original colored"
           styleName="project__icon"
         ></i>
+        <i
+          className="devicon-javascript-plain colored"
+          styleName="project__icon"
+        ></i>
         <i className="devicon-css3-plain colored" styleName="project__icon"></i>
         <i className="devicon-jest-plain colored" styleName="project__icon"></i>
       </>
@@ -202,6 +214,10 @@ const projects = [
           className="devicon-react-original colored"
           styleName="project__icon"
         ></i>
+        <i
+          className="devicon-javascript-plain colored"
+          styleName="project__icon"
+        ></i>
         <i className="devicon-css3-plain colored" styleName="project__icon"></i>
       </>
     ),
@@ -231,8 +247,7 @@ const projects = [
   {
     id: nanoid(),
     title: "Rock, Paper, Scissors",
-    description:
-      "Creating a Minecraft style Rock Paper Scissors.",
+    description: "Creating a Minecraft style Rock Paper Scissors.",
     liveLink: "https://optimistictrousers.github.io/TOP-rock-paper-scissors/",
     codeLink: "https://github.com/OptimisticTrousers/TOP-rock-paper-scissors",
     video: "/video/rock-paper-scissors.webm",
