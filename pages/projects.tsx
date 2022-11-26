@@ -136,6 +136,28 @@ const projects = [
   },
   {
     id: nanoid(),
+    title: "Members Only",
+    description: `Creating an members only, which is an exclusive clubhouse-like application. Allows users to sign in, log in, make posts, and view posts. If the user is able to enter a special passcode, they will be members of the club! If the user is also able to enter another password, they will be admins of the application, allowing them to delete posts.`,
+    liveLink: "https://powerful-dusk-69121.herokuapp.com/",
+    codeLink: "https://github.com/OptimisticTrousers/members-only",
+    video: "/video/members-only.webm",
+    render: () => (
+      <>
+        <i
+          className="devicon-express-original colored"
+          styleName="project__icon"
+        ></i>
+        <i className="devicon-css3-plain colored" styleName="project__icon"></i>
+        <i
+          className="devicon-javascript-plain colored"
+          styleName="project__icon"
+        ></i>
+        <i className="devicon-mongodb-plain" styleName="project__icon"></i>
+      </>
+    ),
+  },
+  {
+    id: nanoid(),
     title: "Shopping Cart",
     description:
       "Creating a multi-page application with react-router-dom, using Testing Library and Jest to test, and learning how to use context. Not functional when it comes to checkout.",
