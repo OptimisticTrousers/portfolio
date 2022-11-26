@@ -42,6 +42,8 @@ const About: FC = () => {
           favorite manga, One Piece!
         </p>
       </div>
+      <div styleName="about__technologies">
+        <h2 styleName="about__title">Technologies</h2>
       <div styleName="about__icons">
         <i
           className="devicon-html5-plain-wordmark colored"
@@ -99,6 +101,8 @@ const About: FC = () => {
             styleName="about__icon"
           ></i>
         </div>
+
+      </div>
       </div>
     </section>
   );
