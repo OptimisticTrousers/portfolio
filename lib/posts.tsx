@@ -1,4 +1,3 @@
-
 import Error from "next/error";
 export interface Post {
   _id: string;
@@ -11,7 +10,9 @@ export interface Post {
 
 function apiDomain() {
   const production = process.env.NODE_ENV === "production";
-  return production ? "" : "http://localhost:5000";
+  return production
+    ? "https://radiant-ocean-64037.herokuapp.com"
+    : "http://localhost:5000";
 }
 
 export async function getSortedPostsData() {
