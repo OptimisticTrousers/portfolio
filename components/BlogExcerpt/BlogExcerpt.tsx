@@ -3,18 +3,17 @@ import { FC } from "react";
 import CSSModules from "react-css-modules";
 import styles from "./BlogExcerpt.module.css";
 import { BsCalendar3 } from "react-icons/bs";
-import Link from "next/link";
 import Date from "../Date/Date";
 import parse from "html-react-parser";
 
 interface Props {
   render: () => JSX.Element | string;
   onPage: boolean;
-  date: string;
+  createdAt: string;
   contentHtml: string;
 }
 
-const BlogExcerpt: FC<Props> = ({ render, onPage, date, contentHtml }) => {
+const BlogExcerpt: FC<Props> = ({ render, onPage, createdAt, contentHtml }) => {
   return (
     <article styleName="excerpt">
       <h2
@@ -26,7 +25,7 @@ const BlogExcerpt: FC<Props> = ({ render, onPage, date, contentHtml }) => {
       </h2>
       <p styleName="excerpt__date">
         <BsCalendar3 />
-        <Date dateString={date} />
+        <Date dateString={createdAt} />
       </p>
       <section
         styleName={`excerpt__description ${

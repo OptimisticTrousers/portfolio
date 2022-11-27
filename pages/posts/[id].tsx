@@ -1,18 +1,21 @@
 /* eslint-disable react/no-unknown-property */
-import { GetStaticProps, NextPage } from "next";
-import { FC } from "react";
 import CSSModules from "react-css-modules";
 import BlogExcerpt from "../../components/BlogExcerpt/BlogExcerpt";
 import BlogLayout from "../../components/BlogLayout/BlogLayout";
 import styles from "./BlogPost.module.css";
 import { BsCalendar3 } from "react-icons/bs";
 import Link from "next/link";
-import { getAllPostIds, getPostData } from "../../lib/posts";
+import { getAllPostIds, getPostData, Post } from "../../lib/posts";
 import Date from "../../components/Date/Date";
-import { useRouter } from "next/router";
 
 export async function getStaticProps({ params }: { params: { id: string } }) {
   const postData = await getPostData(params.id as string);
+
+  if(!postData) {
+    return {
+      notFound: true
+    }
+  }
 
   return {
     props: {
@@ -22,7 +25,7 @@ export async function getStaticProps({ params }: { params: { id: string } }) {
 }
 
 export async function getStaticPaths() {
-  const paths = getAllPostIds();
+  const paths = await getAllPostIds();
   return {
     paths,
     fallback: false,
@@ -31,37 +34,36 @@ export async function getStaticPaths() {
 
 interface Props {
   postData: {
-    title: string;
-    date: string;
-    contentHtml: string;
-    id: string;
-    nextContents: any;
-    previousContents: any;
+    currentPost: Post;
+    previousPost: Post;
+    nextPost: Post;
   };
 }
 
-const BlogPost = ({ postData }: Props) => {
+const BlogPost = ({
+  postData: { currentPost, previousPost, nextPost },
+}: Props) => {
   return (
     <BlogLayout>
       <BlogExcerpt
-        date={postData.date}
-        contentHtml={postData.contentHtml}
-        render={() => `${postData.title}`}
+        createdAt={currentPost.createdAt}
+        contentHtml={currentPost.contentHtml}
+        render={() => `${currentPost.title}`}
         onPage={true}
       />
       <p styleName="blog__updated-at">
         <BsCalendar3 />
         <span>
           <strong>Updated: </strong>
-          <Date dateString={postData.date} />
+          <Date dateString={currentPost.updatedAt} />
         </span>
       </p>
       <nav styleName="blog__pagination" aria-label="blog pagination">
-        {postData.previousContents !== null ? (
-          <Link href={`/posts/${Number(postData.id) - 1}`}>
+        {previousPost !== null ? (
+          <Link href={`/posts/${previousPost._id}`}>
             <button
               styleName={`blog__button ${
-                postData.previousContents === null && "blog__button--disabled"
+                previousPost === null && "blog__button--disabled"
               }`}
             >
               Previous
@@ -70,17 +72,17 @@ const BlogPost = ({ postData }: Props) => {
         ) : (
           <button
             styleName={`blog__button ${
-              postData.previousContents === null && "blog__button--disabled"
+              previousPost === null && "blog__button--disabled"
             }`}
           >
             Previous
           </button>
         )}
-        {postData.nextContents !== null ? (
-          <Link href={`/posts/${Number(postData.id) + 1}`}>
+        {nextPost !== null ? (
+          <Link href={`/posts/${nextPost._id}`}>
             <button
               styleName={`blog__button ${
-                postData.nextContents === null && "blog__button--disabled"
+                nextPost === null && "blog__button--disabled"
               }`}
             >
               Next
@@ -89,7 +91,7 @@ const BlogPost = ({ postData }: Props) => {
         ) : (
           <button
             styleName={`blog__button ${
-              postData.nextContents === null && "blog__button--disabled"
+              nextPost === null && "blog__button--disabled"
             }`}
           >
             Next

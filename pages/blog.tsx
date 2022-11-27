@@ -9,37 +9,33 @@ import Layout from "../components/Layout/Layout";
 import Sidebar from "../components/Sidebar/Sidebar";
 import { getPostData, getSortedPostsData } from "../lib/posts";
 import styles from "../styles/Blog.module.css";
+import { Post } from "../lib/posts";
 
 export async function getStaticProps() {
-  const allPostsData = await getSortedPostsData();
+  const posts = await getSortedPostsData();
   return {
     props: {
-      allPostsData,
+      posts,
     },
   };
 }
 
-const Blog = ({
-  allPostsData,
-}: {
-  allPostsData: {
-    date: string;
-    title: string;
-    id: string;
-    contentHtml: string;
-  }[];
-}) => {
+interface Props {
+  posts: Post[];
+}
+
+const Blog = ({ posts }: Props) => {
   return (
     <BlogLayout>
       <h1 styleName="blog__title">Blog Posts</h1>
-      {allPostsData?.map(({ id, contentHtml, date, title }) => {
+      {posts.map(({ _id, contentHtml, createdAt, title }) => {
         return (
           <BlogExcerpt
-            key={id}
+            key={_id}
             contentHtml={contentHtml}
-            date={date}
+            createdAt={createdAt}
             onPage={false}
-            render={() => <Link href={`/posts/${id}`}>{title}</Link>}
+            render={() => <Link href={`/posts/${_id}`}>{title}</Link>}
           />
         );
       })}

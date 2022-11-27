@@ -1,100 +1,85 @@
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
-import { remark } from "remark";
-import html from "remark-html";
-
-const postsDirectory = path.join(process.cwd(), "posts");
-
-export async function getSortedPostsData() {
-  // Get file names under /posts
-  const fileNames = fs.readdirSync(postsDirectory);
-  const allPostsData = fileNames.map(async (fileName) => {
-    // Remove ".md" from file name to get id
-    const id = fileName.replace(/\.md$/, "");
-
-    // Read markdown file as string
-    const fullPath = path.join(postsDirectory, fileName);
-    const fileContents = fs.readFileSync(fullPath, "utf8");
-
-    // Use gray-matter to parse the post metadata section
-    const matterResult = matter(fileContents);
-
-    // Combine the data with the id
-    const processedContent = await remark()
-      .use(html)
-      .process(matterResult.content);
-    const contentHtml = processedContent.toString();
-    return {
-      id,
-      contentHtml,
-      ...(matterResult.data as { date: string; title: string }),
-    };
-  });
-  // Sort posts by date
-
-  const resolvedAllPostsData = await Promise.all(allPostsData);
-  return resolvedAllPostsData.sort((a, b) => {
-    if (a.date < b.date) {
-      return 1;
-    } else {
-      return -1;
-    }
-  });
+export interface Post {
+  _id: string;
+  createdAt: string;
+  updatedAt: string;
+  title: string;
+  published: boolean;
+  contentHtml: string;
 }
 
-export function getAllPostIds() {
-  const fileNames = fs.readdirSync(postsDirectory);
-  return fileNames.map((fileName) => {
-    return {
-      params: {
-        id: fileName.replace(/\.md$/, ""),
-      },
-    };
-  });
+export async function getSortedPostsData() {
+  try {
+    const response = await fetch("http://localhost:5000/posts");
+
+    const { posts } = await response.json();
+
+    const sortedPosts = posts.sort((a: Post, b: Post) => {
+      if (a.createdAt < b.createdAt) {
+        return 1;
+      } else {
+        return -1;
+      }
+    });
+
+    return sortedPosts;
+  } catch (err) {
+    console.log(err);
+  }
+}
+export async function getAllPostIds() {
+  try {
+    const response = await fetch("http://localhost:5000/posts");
+
+    const { posts } = await response.json();
+
+    const sortedPosts = posts.sort((a: Post, b: Post) => {
+      if (a.createdAt < b.createdAt) {
+        return 1;
+      } else {
+        return -1;
+      }
+    });
+
+    return sortedPosts.map((post: Post) => {
+      return {
+        params: {
+          id: post._id,
+        },
+      };
+    });
+  } catch (err) {
+    console.log(err);
+  }
 }
 
 export async function getPostData(id: string) {
-  const fullPath = path.join(postsDirectory, `${id}.md`);
-  const fileContents = fs.readFileSync(fullPath, "utf8");
-  const nextPath = path.join(postsDirectory, `${Number(id) + 1}.md`);
-  const previousPath = path.join(postsDirectory, `${Number(id) - 1}.md`);
+  try {
+    const response = await fetch("http://localhost:5000/posts");
 
-  const doesNextExist = fs.existsSync(nextPath);
-  const doesPreviousNext = fs.existsSync(previousPath);
+    const { posts } = await response.json();
 
-  let nextContents = null;
-  let previousContents = null;
+    const sortedPosts = posts.sort((a: Post, b: Post) => {
+      if (a.createdAt < b.createdAt) {
+        return 1;
+      } else {
+        return -1;
+      }
+    });
 
-  if (doesNextExist) {
-    try {
-      nextContents = fs.readFileSync(nextPath, "utf-8");
-    } catch (error) {
-      console.log(`Could not find nextContents: ${error}`);
-    }
+    const currentIndex = sortedPosts.findIndex((post: Post) => post._id === id);
+
+    const currentPost = sortedPosts[currentIndex] || null;
+
+    const previousPost = sortedPosts[currentIndex - 1] || null;
+
+    const nextPost = sortedPosts[currentIndex + 1] || null;
+
+    return {
+      currentPost,
+      previousPost,
+      nextPost,
+    };
+  } catch (err) {
+    console.log(err);
   }
-  if (doesPreviousNext) {
-    try {
-      previousContents = fs.readFileSync(previousPath, "utf-8");
-    } catch (error) {
-      console.log(`Could not find previousContents: ${error}`);
-    }
-  }
-
-  // Use gray-matter to parse the post metadata section
-  const matterResult = matter(fileContents);
-
-  const processedContent = await remark()
-    .use(html)
-    .process(matterResult.content);
-  const contentHtml = processedContent.toString();
-
-  // Combine the data with the id
-  return {
-    id,
-    contentHtml,
-    nextContents,
-    previousContents,
-    ...(matterResult.data as { date: string; title: string }),
-  };
 }
