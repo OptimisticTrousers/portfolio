@@ -9,7 +9,7 @@
 
 ## Purpose
 
-Creating a portfolio to showcase my projects, as well as a place for contact information and a blog.
+Creating a portfolio to showcase my projects, as well as a place for contact information and a blog. Blog fetches data from an Express server with API endpoints for the blog posts
 
 Beyond that, other learning outcomes were:
 
