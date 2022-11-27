@@ -11,10 +11,10 @@ import Date from "../../components/Date/Date";
 export async function getStaticProps({ params }: { params: { id: string } }) {
   const postData = await getPostData(params.id as string);
 
-  if(!postData) {
+  if (!postData) {
     return {
-      notFound: true
-    }
+      notFound: true,
+    };
   }
 
   return {
@@ -60,7 +60,7 @@ const BlogPost = ({
       </p>
       <nav styleName="blog__pagination" aria-label="blog pagination">
         {previousPost !== null ? (
-          <Link href={`/posts/${previousPost._id}`}>
+          <Link href={`/blog/${previousPost._id}`}>
             <button
               styleName={`blog__button ${
                 previousPost === null && "blog__button--disabled"
@@ -79,7 +79,7 @@ const BlogPost = ({
           </button>
         )}
         {nextPost !== null ? (
-          <Link href={`/posts/${nextPost._id}`}>
+          <Link href={`/blog/${nextPost._id}`}>
             <button
               styleName={`blog__button ${
                 nextPost === null && "blog__button--disabled"

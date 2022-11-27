@@ -35,7 +35,7 @@ const Blog = ({ posts }: Props) => {
             contentHtml={contentHtml}
             createdAt={createdAt}
             onPage={false}
-            render={() => <Link href={`/posts/${_id}`}>{title}</Link>}
+            render={() => <Link href={`/blog/${_id}`}>{title}</Link>}
           />
         );
       })}
