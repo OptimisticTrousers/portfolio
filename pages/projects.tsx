@@ -113,7 +113,7 @@ const projects = [
     id: nanoid(),
     title: "IWANCIW Functional Funware",
     description: `Built an ecommerce site for a fashion business. Technologies used are React.js, Next.js, TailwindCSS, GraphQL(Shopify Storefront API), Typescript, EmailJS, the Typeform Embedded SDK and the Omnisend API. Deployed with Netlify. Currently not open-source. Will be in the future. `,
-    liveLink: "iwanciw.com",
+    liveLink: "https://iwanciw.com",
     codeLink: "https://github.com/OptimisticTrousers",
     media: "/images/iwanciw.webp",
     render: () => (
