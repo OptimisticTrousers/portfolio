@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: "Ubuntu";
-  src: local("../../public/fonts/Ubuntu-Regular.woff2");
+  src: local("/fonts/Ubuntu-Regular.woff2");
   font-display: swap;
 }
 

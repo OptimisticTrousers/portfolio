@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: "Space Grotesk";
-  src: local("../../public/fonts/SpaceGrotesk-Regular.woff2");
+  src: local("/fonts/SpaceGrotesk-Regular.woff2");
   font-display: swap;
 }
 
