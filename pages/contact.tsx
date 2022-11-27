@@ -9,6 +9,7 @@ import { GoLocation } from "react-icons/go";
 import emailjs from "@emailjs/browser";
 import React, { useReducer, useRef, useState } from "react";
 import Alert from "../components/Alert/Alert";
+import Error from "next/error";
 
 interface State {
   name: string;
@@ -82,14 +83,13 @@ const Contact: NextPage = () => {
         process.env.NEXT_PUBLIC_EMAILJS_KEY
       )
       .then(
-        (result) => {
-          console.log(result.text);
+        () => {
           setErrorMessage("Sucesss. The form has been submitted");
           setError(false);
           dispatch({ type: "DELETE_FORM", payload: "" });
         },
         (error) => {
-          console.log(error.text);
+          return <Error {...error} />;
         }
       );
   };

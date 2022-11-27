@@ -21,7 +21,7 @@ export async function getStaticProps() {
 }
 
 interface Props {
-  posts: Post[];
+  posts: Post[]
 }
 
 const Blog = ({ posts }: Props) => {

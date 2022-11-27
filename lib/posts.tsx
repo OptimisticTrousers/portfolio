@@ -1,3 +1,5 @@
+
+import Error from "next/error";
 export interface Post {
   _id: string;
   createdAt: string;
@@ -7,9 +9,14 @@ export interface Post {
   contentHtml: string;
 }
 
+function apiDomain() {
+  const production = process.env.NODE_ENV === "production";
+  return production ? "" : "http://localhost:5000";
+}
+
 export async function getSortedPostsData() {
   try {
-    const response = await fetch("http://localhost:5000/posts");
+    const response = await fetch(`${apiDomain()}/posts`);
 
     const { posts } = await response.json();
 
@@ -28,7 +35,7 @@ export async function getSortedPostsData() {
 }
 export async function getAllPostIds() {
   try {
-    const response = await fetch("http://localhost:5000/posts");
+    const response = await fetch(`${apiDomain()}/posts`);
 
     const { posts } = await response.json();
 
@@ -54,7 +61,7 @@ export async function getAllPostIds() {
 
 export async function getPostData(id: string) {
   try {
-    const response = await fetch("http://localhost:5000/posts");
+    const response = await fetch(`${apiDomain()}/posts`);
 
     const { posts } = await response.json();
 
