@@ -269,7 +269,8 @@ const projects = [
   {
     id: nanoid(),
     title: "Rock, Paper, Scissors",
-    description: "Creating a Minecraft style Rock Paper Scissors.",
+    description:
+      "Creating a Minecraft style Rock, Paper, Scissors. You play against the CPU. First to five wins!",
     liveLink: "https://optimistictrousers.github.io/TOP-rock-paper-scissors/",
     codeLink: "https://github.com/OptimisticTrousers/TOP-rock-paper-scissors",
     video: "/video/rock-paper-scissors.webm",
