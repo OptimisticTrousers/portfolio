@@ -16,7 +16,7 @@ const featuredProjects = [
       "A clone based on Reddit. Users can create communities, create posts, comment on posts, and like posts. Users can also view their profile to see which posts they saved and upvoted. Built with React.js and Firebase and works well on mobile devices.",
     codeLink: "https://github.com/OptimisticTrousers/reddit-clone",
     liveLink: "http://optimistictrousers.github.io/reddit-clone",
-    video: "/video/reddit.webm",
+    media: "/images/reddit-clone.png",
     render: () => (
       <>
         <i
@@ -47,7 +47,7 @@ const featuredProjects = [
       "Creating an Express application using MongoDB, Mongoose and Pug. Learned how Express works with routing, middleware, and rendering. Using MongoDB for database and Mongoose to query data. Using Pug for templating. Using the MVC pattern to design the application. Application generated with the express-application-generator command. ",
     liveLink: "https://rocky-tundra-71808.herokuapp.com/",
     codeLink: "https://github.com/OptimisticTrousers/inventory-application",
-    video: "/video/inventory-application.webm",
+    media: "/images/inventory-application.png",
     render: () => (
       <>
         <i
@@ -70,7 +70,7 @@ const featuredProjects = [
       "A game based on Battleship, a turn-based game. One of the more challenging projects. Built with HTML, CSS, and Javascript. Using Jest for unit testing. Users can drag their ships onto the board and play with an AI. Users can also randomize their board selection.",
     liveLink: "https://optimistictrousers.github.io/TOP-battleship/",
     codeLink: "https://github.com/OptimisticTrousers/TOP-battleship",
-    video: "/video/battleship.webm",
+    media: "/images/battleship.png",
     render: () => (
       <>
         <i

@@ -13,7 +13,7 @@ interface Props {
   description: string;
   liveLink: string;
   codeLink: string;
-  video?: string;
+  media?: string;
   reverse: boolean;
   render: () => any;
 }
@@ -23,7 +23,7 @@ const Project: FC<Props> = ({
   description,
   liveLink,
   codeLink,
-  video,
+  media,
   reverse,
   render,
 }) => {
@@ -71,9 +71,10 @@ const Project: FC<Props> = ({
         </div>
       </div>
       <div>
-        <video styleName="project__image" autoPlay muted loop>
-          <source src={video} type="video/webm" />{" "}
-        </video>
+        <img styleName="project__image" src={media!} alt={title} />
+        {/* <video styleName="project__image" autoPlay muted loop>
+          <source src={media} type="video/png" />{" "}
+        </video> */}
       </div>
     </section>
   );
