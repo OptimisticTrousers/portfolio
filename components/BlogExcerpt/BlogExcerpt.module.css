@@ -28,7 +28,7 @@
   text-decoration: underline;
 }
 
-.excerpt__title:hover {
+.excerpt__title--link:hover {
   color: #a9dde0;
   outline: 0;
 }
