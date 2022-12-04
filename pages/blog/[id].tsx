@@ -7,6 +7,8 @@ import { BsCalendar3 } from "react-icons/bs";
 import Link from "next/link";
 import { getAllPostIds, getPostData, Post } from "../../lib/posts";
 import Date from "../../components/Date/Date";
+import Comment from "../../components/Comment/Comment";
+import CommentForm from "../../components/CommentForm/CommentForm";
 
 export async function getStaticProps({ params }: { params: { id: string } }) {
   const postData = await getPostData(params.id as string);
@@ -58,6 +60,11 @@ const BlogPost = ({
           <Date dateString={currentPost.updatedAt} />
         </span>
       </p>
+      <section styleName="blog__comments">
+        <h3>Comments</h3>
+        <Comment />
+      </section>
+      <CommentForm />
       <nav styleName="blog__pagination" aria-label="blog pagination">
         {previousPost !== null ? (
           <Link href={`/blog/${previousPost._id}`}>
