@@ -62,9 +62,9 @@
   }
 }
 
-@media (max-width: 1030px) {
+@media (max-width: 1220px) {
   .about {
-    flex-wrap: wrap;
+    flex-direction: column;
   }
 }
 
