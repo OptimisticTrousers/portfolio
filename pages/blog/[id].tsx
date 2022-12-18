@@ -61,8 +61,6 @@ const BlogPost = ({
           <Date dateString={currentPost.updatedAt} />
         </span>
       </p>
-      <hr />
-      <CommentsSection comments={sortedComments} postId={currentPost._id} />
       <nav styleName="blog__pagination" aria-label="blog pagination">
         {previousPost !== null ? (
           <Link href={`/blog/${previousPost._id}`}>
@@ -103,6 +101,8 @@ const BlogPost = ({
           </button>
         )}
       </nav>
+      <hr />
+      <CommentsSection comments={sortedComments} postId={currentPost._id} />
     </BlogLayout>
   );
 };
