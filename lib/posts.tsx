@@ -17,7 +17,7 @@ export interface Comment {
   contentHtml: string;
 }
 
-function apiDomain() {
+export function apiDomain() {
   const production = process.env.NODE_ENV === "production";
   return production
     ? "https://radiant-ocean-64037.herokuapp.com"

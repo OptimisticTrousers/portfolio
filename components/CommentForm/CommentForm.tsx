@@ -3,18 +3,45 @@ import { FC, useRef } from "react";
 import CSSModules from "react-css-modules";
 import styles from "./CommentForm.module.css";
 import { Editor } from "@tinymce/tinymce-react";
+import { Editor as TinyMCEEditor } from "tinymce";
+import useFetch from "../../hooks/useFetch";
+import { apiDomain } from "../../lib/posts";
+import axios from "axios";
 
-const CommentForm: FC = () => {
-  const editorRef = useRef(null);
+interface Props {
+  postId: string;
+}
+
+const CommentForm = ({ postId }: Props) => {
+  const editorRef = useRef<TinyMCEEditor | null>(null);
+  const nameRef = useRef<HTMLInputElement | null>(null);
+  const emailRef = useRef<HTMLInputElement | null>(null);
+
+  const log = async () => {
+    try {
+      if (editorRef.current && nameRef.current && emailRef.current) {
+        const { data } = await axios.post(`${apiDomain()}/${postId}/comments`, {
+          name: nameRef.current.value,
+          email: emailRef.current.value,
+          postId,
+          contentHtml: editorRef.current.getContent(),
+        });
+        console.log(data)
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  };
   return (
     <form styleName="form">
       <h2 styleName="form__title">Leave a comment</h2>
       <div styleName="form__group">
         <label styleName="form__label" htmlFor="message">
-          MESSAGE 
+          MESSAGE
         </label>
         <Editor
-          apiKey="your-api-key"
+          onInit={(evt, editor) => (editorRef.current = editor)}
+          apiKey="8285m4z241eb5qr9vs1xokxlufq5ozru9ce5im2pj01vl2my"
           initialValue="<p>This is the initial content of the editor.</p>"
           init={{
             height: 500,
@@ -58,7 +85,7 @@ const CommentForm: FC = () => {
           id="name"
           name="name"
           placeholder="Bob Jones"
-          required={true}
+          ref={nameRef}
         />
       </div>
       <div styleName="form__group">
@@ -71,7 +98,7 @@ const CommentForm: FC = () => {
           name="email"
           type="email"
           placeholder="Bob Jones"
-          required={true}
+          ref={emailRef}
         />
       </div>
       {/* <div styleName="form__group">
@@ -87,7 +114,7 @@ const CommentForm: FC = () => {
           comment.
         </label>
       </div> */}
-      <button styleName="form__button" type="submit">
+      <button styleName="form__button" onClick={log}>
         POST COMMENT
       </button>
     </form>
