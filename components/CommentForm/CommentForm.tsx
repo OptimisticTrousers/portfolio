@@ -7,48 +7,51 @@ import { Editor } from "@tinymce/tinymce-react";
 const CommentForm: FC = () => {
   const editorRef = useRef(null);
   return (
-    <form>
-      <label styleName="form__label" htmlFor="message">
-        Message
-      </label>
-      <Editor
-        apiKey="your-api-key"
-        initialValue="<p>This is the initial content of the editor.</p>"
-        init={{
-          height: 500,
-          menubar: false,
-          plugins: [
-            "advlist",
-            "autolink",
-            "lists",
-            "link",
-            "image",
-            "charmap",
-            "preview",
-            "anchor",
-            "searchreplace",
-            "visualblocks",
-            "code",
-            "fullscreen",
-            "insertdatetime",
-            "media",
-            "table",
-            "code",
-            "help",
-            "wordcount",
-          ],
-          toolbar:
-            "undo redo | blocks | " +
-            "bold italic forecolor | alignleft aligncenter " +
-            "alignright alignjustify | bullist numlist outdent indent | " +
-            "removeformat | help",
-          content_style:
-            "body { font-family:Helvetica,Arial,sans-serif; font-size:14px }",
-        }}
-      />
+    <form styleName="form">
+      <h2 styleName="form__title">Leave a comment</h2>
+      <div styleName="form__group">
+        <label styleName="form__label" htmlFor="message">
+          MESSAGE 
+        </label>
+        <Editor
+          apiKey="your-api-key"
+          initialValue="<p>This is the initial content of the editor.</p>"
+          init={{
+            height: 500,
+            menubar: false,
+            plugins: [
+              "advlist",
+              "autolink",
+              "lists",
+              "link",
+              "image",
+              "charmap",
+              "preview",
+              "anchor",
+              "searchreplace",
+              "visualblocks",
+              "code",
+              "fullscreen",
+              "insertdatetime",
+              "media",
+              "table",
+              "code",
+              "help",
+              "wordcount",
+            ],
+            toolbar:
+              "undo redo | blocks | " +
+              "bold italic forecolor | alignleft aligncenter " +
+              "alignright alignjustify | bullist numlist outdent indent | " +
+              "removeformat | help",
+            content_style:
+              "body { font-family:Helvetica,Arial,sans-serif; font-size:14px }",
+          }}
+        />
+      </div>
       <div styleName="form__group">
         <label styleName="form__label" htmlFor="name">
-          Name
+          NAME
         </label>
         <input
           styleName="form__control"
@@ -60,7 +63,7 @@ const CommentForm: FC = () => {
       </div>
       <div styleName="form__group">
         <label styleName="form__label" htmlFor="email">
-          Email
+          EMAIL
         </label>
         <input
           styleName="form__control"
@@ -71,7 +74,7 @@ const CommentForm: FC = () => {
           required={true}
         />
       </div>
-      <div styleName="form__group">
+      {/* <div styleName="form__group">
         <input
           styleName="form__control"
           id="consent"
@@ -83,7 +86,7 @@ const CommentForm: FC = () => {
           Save my name, email, and website in this browser for the next time I
           comment.
         </label>
-      </div>
+      </div> */}
       <button styleName="form__button" type="submit">
         POST COMMENT
       </button>
