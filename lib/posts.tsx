@@ -8,6 +8,15 @@ export interface Post {
   contentHtml: string;
 }
 
+export interface Comment {
+  _id: string;
+  createdAt: string;
+  postId: string;
+  name: string;
+  email: string;
+  contentHtml: string;
+}
+
 function apiDomain() {
   const production = process.env.NODE_ENV === "production";
   return production
@@ -87,6 +96,26 @@ export async function getPostData(id: string) {
       previousPost,
       nextPost,
     };
+  } catch (err) {
+    console.log(err);
+  }
+}
+
+export async function getComments(id: string) {
+  try {
+    const response = await fetch(`${apiDomain()}/posts/${id}/comments`);
+
+    const { comments } = await response.json();
+
+    const sortedComments = comments.sort((a: Comment, b: Comment) => {
+      if (a.createdAt < b.createdAt) {
+        return 1;
+      } else {
+        return -1;
+      }
+    });
+
+    return sortedComments;
   } catch (err) {
     console.log(err);
   }
