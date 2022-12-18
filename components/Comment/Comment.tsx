@@ -10,28 +10,31 @@ import moment from "moment";
 
 const Comment = ({ name, contentHtml, createdAt }: CommentInterface) => {
   return (
-    <article styleName="post">
-      <div styleName="post__image-container">
+    <article styleName="comment">
+      <div styleName="comment__image-container">
         <Image
-          styleName="post__image"
+          styleName="comment__image"
           src={`/images/optimistictrousers.jpg`}
           alt="me"
           width={130}
           height={130}
         />
       </div>
-      <div styleName="post__container">
-        <span styleName="post__author">
+      <div styleName="comment__container">
+        <span styleName="comment__author">
           Comment by: <strong>{name}</strong>
         </span>
-        <div styleName="post__details">
-          <p styleName="post__date">
+        <div styleName="comment__details">
+          <p styleName="comment__date">
             # <Date dateString={createdAt} />
           </p>
+          <div styleName="comment__block">
+
           around
-          <span styleName="post__fromnow">{moment(createdAt).fromNow()}</span>
+          <p styleName="comment__fromnow">{moment(createdAt).fromNow()}</p>
+          </div>
         </div>
-        <section styleName="post__content">{parse(contentHtml)}</section>
+        <section styleName="comment__content">{parse(contentHtml)}</section>
       </div>
     </article>
   );

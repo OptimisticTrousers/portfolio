@@ -1,26 +1,26 @@
-.post {
+.comment {
   padding: 0.75rem;
   padding-top: 1.25rem;
   border: 1px solid rgb(188, 174, 174);
   border-radius: 7px;
   background-color: #343536;
-  margin-top: 0.5rem;
+  margin-top: 1rem;
   height: fit-content;
   display: flex;
 }
 
-.post__container {
+.comment__container {
   flex: 1;
 }
 
-.post__image-container {
+.comment__image-container {
   width: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.post__image {
+.comment__image {
   width: 130px;
   height: 130px;
   border-radius: 100%;
@@ -30,42 +30,45 @@
   border: 2px solid black;
 }
 
-.post__details {
-  display: flex;
-  align-items: center;
+.comment__details {
   padding-bottom: 0.5rem;
   padding-top: 0.5rem;
   border-bottom: 1px solid lightgrey;
 }
 
-.post__author{
+.comment__block {
+  display: flex;
+  align-items: center;
+}
+
+.comment__author {
   font-style: normal;
   font-weight: 400;
   font-size: 1.4rem;
   margin-right: auto;
 }
 
-.post__content {
+.comment__content {
   margin-top: 10px;
 }
 
-.post__date {
-  margin-right: 8px;
+.comment__date {
   font-size: 1.2rem;
+  margin-bottom: 0;
 }
 
-.post__fromnow{
+.comment__fromnow {
   margin-left: 4px;
   font-style: italic;
   margin-right: 8px;
 }
 
-.post__content {
+.comment__content {
   font-weight: 400;
   line-height: 1.7;
 }
 
-.post__link {
+.comment__link {
   display: inline-block;
   background: transparent;
   border: 1px solid #cdcdcd;
@@ -79,25 +82,25 @@
   color: white;
 }
 
-.post__link:hover {
+.comment__link:hover {
   border: 1px solid #818181;
 }
 
-.post__link--delete {
+.comment__link--delete {
   background-color: #dc6068;
   border: 1px solid #dc6068;
 }
 
-.post__link--delete:hover {
+.comment__link--delete:hover {
   background-color: #f16770;
 }
 
 @media (max-width: 570px) {
-  .post {
+  .comment {
     flex-direction: column;
     gap: 16px;
   }
-  .post__image-container {
+  .comment__image-container {
     align-self: center;
   }
 }
