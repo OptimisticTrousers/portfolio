@@ -5,14 +5,13 @@ import BlogLayout from "../../components/BlogLayout/BlogLayout";
 import styles from "./BlogPost.module.css";
 import { BsCalendar3 } from "react-icons/bs";
 import Link from "next/link";
-import { Comment, getAllPostIds, getComments, getPostData, Post } from "../../lib/posts";
+import { Comment, getAllPostIds, getPostData, Post } from "../../lib/posts";
 import Date from "../../components/Date/Date";
 import CommentForm from "../../components/CommentForm/CommentForm";
 import CommentsSection from "../../components/CommentsSection/CommentsSection";
 
 export async function getStaticProps({ params }: { params: { id: string } }) {
   const postData = await getPostData(params.id as string);
-  // const comments = await getComments(params.id as string);
 
   if (!postData) {
     return {
@@ -40,12 +39,12 @@ interface Props {
     currentPost: Post;
     previousPost: Post;
     nextPost: Post;
+    sortedComments: Comment[];
   };
-  comments: Comment[]
 }
 
 const BlogPost = ({
-  postData: { currentPost, previousPost, nextPost }, comments
+  postData: { currentPost, previousPost, nextPost, sortedComments},
 }: Props) => {
   return (
     <BlogLayout>
@@ -63,7 +62,7 @@ const BlogPost = ({
         </span>
       </p>
       <hr />
-      <CommentsSection comments={comments} postId={currentPost._id} />
+      <CommentsSection comments={sortedComments} postId={currentPost._id} />
       <nav styleName="blog__pagination" aria-label="blog pagination">
         {previousPost !== null ? (
           <Link href={`/blog/${previousPost._id}`}>

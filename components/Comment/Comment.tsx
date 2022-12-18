@@ -3,8 +3,12 @@ import { FC } from "react";
 import CSSModules from "react-css-modules";
 import styles from "./Comment.module.css";
 import Image from "next/image";
+import parse from "html-react-parser";
+import { Comment as CommentInterface } from "../../lib/posts";
+import Date from "../Date/Date";
+import moment from "moment";
 
-const Comment: FC = () => {
+const Comment = ({ name, contentHtml, createdAt }: CommentInterface) => {
   return (
     <article styleName="post">
       <div styleName="post__image-container">
@@ -17,19 +21,17 @@ const Comment: FC = () => {
         />
       </div>
       <div styleName="post__container">
-        <h3 styleName="post__title">I like this post</h3>
+        <span styleName="post__author">
+          Comment by: <strong>{name}</strong>
+        </span>
         <div styleName="post__details">
-          <span styleName="post__author">by Bob Jones</span>
-          <p styleName="post__content">
-            about <span styleName="post__date">November 26, 2022</span>
+          <p styleName="post__date">
+            # <Date dateString={createdAt} />
           </p>
+          around
+          <span styleName="post__fromnow">{moment(createdAt).fromNow()}</span>
         </div>
-        <p styleName="post__content">
-          Incididunt consequat occaecat cupidatat eu qui irure commodo ullamco
-          anim officia aliquip mollit laborum. Veniam nisi sit exercitation qui.
-          Non ipsum ea consequat Lorem labore minim duis eiusmod proident in
-          nulla est.
-        </p>
+        <section styleName="post__content">{parse(contentHtml)}</section>
       </div>
     </article>
   );

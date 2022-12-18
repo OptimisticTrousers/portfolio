@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unknown-property */
-import { FC, useRef } from "react";
+import { FC, Ref, useEffect, useRef, useState } from "react";
 import CSSModules from "react-css-modules";
 import styles from "./CommentForm.module.css";
 import { Editor } from "@tinymce/tinymce-react";
@@ -17,19 +17,41 @@ const CommentForm = ({ postId }: Props) => {
   const nameRef = useRef<HTMLInputElement | null>(null);
   const emailRef = useRef<HTMLInputElement | null>(null);
 
-  const log = async () => {
-    try {
-      if (editorRef.current && nameRef.current && emailRef.current) {
-        const { data } = await axios.post(`${apiDomain()}/${postId}/comments`, {
-          name: nameRef.current.value,
-          email: emailRef.current.value,
-          postId,
-          contentHtml: editorRef.current.getContent(),
-        });
-        console.log(data)
+  const [dirty, setDirty] = useState(false);
+  const [editorKey, setEditorKey] = useState(4);
+
+  useEffect(() => setDirty(false), []);
+
+  const clearEditor = () => {
+    const newKey = editorKey * 43;
+    setEditorKey(newKey);
+  };
+
+  const onSubmit = async () => {
+    if (!editorRef.current?.getContent()) {
+      alert("Please enter content inside of the editor");
+      return;
+    } else if (nameRef.current?.value && emailRef.current?.value) {
+      try {
+        const { data } = await axios.post(
+          `${apiDomain()}/posts/${postId}/comments`,
+          {
+            name: nameRef.current.value,
+            email: emailRef.current.value,
+            postId,
+            contentHtml: editorRef.current.getContent(),
+          }
+        );
+        setDirty(false);
+        editorRef.current.setDirty(false);
+        // Clearing form data
+        clearEditor();
+        nameRef.current.value = "";
+        emailRef.current.value = "";
+        location.reload();
+      } catch (err) {
+        console.log(err);
       }
-    } catch (err) {
-      console.log(err);
     }
   };
   return (
@@ -40,9 +62,12 @@ const CommentForm = ({ postId }: Props) => {
           MESSAGE
         </label>
         <Editor
+          id="FIXED_ID"
+          key={editorKey}
           onInit={(evt, editor) => (editorRef.current = editor)}
-          apiKey="8285m4z241eb5qr9vs1xokxlufq5ozru9ce5im2pj01vl2my"
+          apiKey={process.env.TINY_API_KEY}
           initialValue="<p>This is the initial content of the editor.</p>"
+          onDirty={() => setDirty(true)}
           init={{
             height: 500,
             menubar: false,
@@ -75,6 +100,7 @@ const CommentForm = ({ postId }: Props) => {
               "body { font-family:Helvetica,Arial,sans-serif; font-size:14px }",
           }}
         />
+        {dirty && <p>You have unsaved content!</p>}
       </div>
       <div styleName="form__group">
         <label styleName="form__label" htmlFor="name">
@@ -85,6 +111,7 @@ const CommentForm = ({ postId }: Props) => {
           id="name"
           name="name"
           placeholder="Bob Jones"
+          required={true}
           ref={nameRef}
         />
       </div>
@@ -98,6 +125,7 @@ const CommentForm = ({ postId }: Props) => {
           name="email"
           type="email"
           placeholder="Bob Jones"
+          required={true}
           ref={emailRef}
         />
       </div>
@@ -114,7 +142,7 @@ const CommentForm = ({ postId }: Props) => {
           comment.
         </label>
       </div> */}
-      <button styleName="form__button" onClick={log}>
+      <button styleName="form__button" type="button" onClick={onSubmit}>
         POST COMMENT
       </button>
     </form>

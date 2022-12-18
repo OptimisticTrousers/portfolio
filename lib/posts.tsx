@@ -85,6 +85,18 @@ export async function getPostData(id: string) {
 
     const currentIndex = sortedPosts.findIndex((post: Post) => post._id === id);
 
+    const commentsResponse = await fetch(`${apiDomain()}/posts/${id}`);
+
+    const { comments } = await commentsResponse.json();
+
+    const sortedComments = comments.sort((a: Comment, b: Comment) => {
+      if (a.createdAt < b.createdAt) {
+        return 1;
+      } else {
+        return -1;
+      }
+    });
+
     const currentPost = sortedPosts[currentIndex] || null;
 
     const previousPost = sortedPosts[currentIndex - 1] || null;
@@ -95,27 +107,8 @@ export async function getPostData(id: string) {
       currentPost,
       previousPost,
       nextPost,
+      sortedComments,
     };
-  } catch (err) {
-    console.log(err);
-  }
-}
-
-export async function getComments(id: string) {
-  try {
-    const response = await fetch(`${apiDomain()}/posts/${id}/comments`);
-
-    const { comments } = await response.json();
-
-    const sortedComments = comments.sort((a: Comment, b: Comment) => {
-      if (a.createdAt < b.createdAt) {
-        return 1;
-      } else {
-        return -1;
-      }
-    });
-
-    return sortedComments;
   } catch (err) {
     console.log(err);
   }

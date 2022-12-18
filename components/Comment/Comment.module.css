@@ -1,5 +1,6 @@
 .post {
   padding: 0.75rem;
+  padding-top: 1.25rem;
   border: 1px solid rgb(188, 174, 174);
   border-radius: 7px;
   background-color: #343536;
@@ -31,16 +32,17 @@
 
 .post__details {
   display: flex;
-  justify-content: space-between;
-  padding-bottom: 0.5rem;
   align-items: center;
+  padding-bottom: 0.5rem;
   padding-top: 0.5rem;
   border-bottom: 1px solid lightgrey;
 }
 
-.post__title {
-  margin: 0;
-  font-size: 2rem;
+.post__author{
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  margin-right: auto;
 }
 
 .post__content {
@@ -48,8 +50,19 @@
 }
 
 .post__date {
+  margin-right: 8px;
+  font-size: 1.2rem;
+}
+
+.post__fromnow{
   margin-left: 4px;
   font-style: italic;
+  margin-right: 8px;
+}
+
+.post__content {
+  font-weight: 400;
+  line-height: 1.7;
 }
 
 .post__link {
