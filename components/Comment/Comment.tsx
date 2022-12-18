@@ -2,20 +2,35 @@
 import { FC } from "react";
 import CSSModules from "react-css-modules";
 import styles from "./Comment.module.css";
+import Image from "next/image";
 
 const Comment: FC = () => {
   return (
-    <article>
-      <h4>
-        John Doe - <time dateTime="2015-05-16 19:00">May 16</time>
-      </h4>
-      <p>
-        Irure proident elit veniam excepteur esse ea cillum. Velit nulla sit eu
-        ipsum adipisicing ex. Nostrud labore in ad dolor laboris aute irure
-        veniam enim. Culpa cupidatat aliqua eiusmod duis labore. Occaecat dolore
-        reprehenderit ex cillum in aute exercitation culpa.
-      </p>
-      <button>Reply</button>
+    <article styleName="post">
+      <div styleName="post__image-container">
+        <Image
+          styleName="post__image"
+          src={`/images/optimistictrousers.jpg`}
+          alt="me"
+          width={130}
+          height={130}
+        />
+      </div>
+      <div styleName="post__container">
+        <h3 styleName="post__title">I like this post</h3>
+        <div styleName="post__details">
+          <span styleName="post__author">by Bob Jones</span>
+          <p styleName="post__content">
+            about <span styleName="post__date">November 26, 2022</span>
+          </p>
+        </div>
+        <p styleName="post__content">
+          Incididunt consequat occaecat cupidatat eu qui irure commodo ullamco
+          anim officia aliquip mollit laborum. Veniam nisi sit exercitation qui.
+          Non ipsum ea consequat Lorem labore minim duis eiusmod proident in
+          nulla est.
+        </p>
+      </div>
     </article>
   );
 };
