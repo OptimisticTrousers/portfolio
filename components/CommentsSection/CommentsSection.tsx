@@ -18,7 +18,7 @@ const CommentsSection = ({ comments, postId }: Props) => {
         <h2 styleName="blog__title" id="title">
           Comments
         </h2>
-        {comments ? (
+        {comments.length ? (
           comments.map((comment) => {
             return <Comment key={comment._id} {...comment} />;
           })

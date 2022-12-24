@@ -1,7 +1,13 @@
-
-.blog__title{
+.blog__title {
   font-size: 2rem;
 }
+
+.blog__notfound {
+  font-weight: 100;
+  font-size: 1.5rem;
+  font-style: italic;
+}
+
 .blog__comments {
   margin-bottom: 2rem;
 }
