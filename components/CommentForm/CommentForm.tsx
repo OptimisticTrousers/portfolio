@@ -16,6 +16,7 @@ const CommentForm = ({ postId }: Props) => {
   const editorRef = useRef<TinyMCEEditor | null>(null);
   const nameRef = useRef<HTMLInputElement | null>(null);
   const emailRef = useRef<HTMLInputElement | null>(null);
+  const fileRef = useRef<HTMLInputElement | null>(null);
 
   const [dirty, setDirty] = useState(false);
   const [editorKey, setEditorKey] = useState(4);
@@ -127,6 +128,20 @@ const CommentForm = ({ postId }: Props) => {
           placeholder="Bob Jones"
           required={true}
           ref={emailRef}
+        />
+      </div>
+      <div styleName="form__group">
+        <label styleName="form__label" htmlFor="avatar">
+          AVATAR
+        </label>
+        <input
+          styleName="form__control form__control--file"
+          id="avatar"
+          name="avatar"
+          type="file"
+          placeholder="Upload avatar..."
+          required={true}
+          ref={fileRef}
         />
       </div>
       {/* <div styleName="form__group">

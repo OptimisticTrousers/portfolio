@@ -41,6 +41,15 @@
   background-color: white;
 }
 
+.form__control--file {
+  background-color: rgb(42, 48, 60);
+}
+
+.form__control--file:active {
+  background-color: rgb(42, 48, 60);
+  outline: 5px solid rgba(166, 173, 186, 0.2);
+}
+
 .form__button {
   display: inline-flex;
   cursor: pointer;
