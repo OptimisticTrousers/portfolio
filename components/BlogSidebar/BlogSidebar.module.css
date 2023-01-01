@@ -1,0 +1,38 @@
+.blog-sidebar__card {
+  background: #1f1f1f;
+  border: 1px solid #2c2c2c;
+  border-radius: 6px;
+  margin: 1rem 0;
+  width: 90%;
+  padding: 1.5rem;
+}
+
+.blog-sidebar__title {
+  border: none;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  margin: 0 0 1rem;
+  text-transform: uppercase;
+}
+
+.blog-sidebar__link {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-decoration: none;
+  background-color: transparent;
+  border-radius: 6px;
+  color: #e6e6e6;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 -0.3rem;
+  padding: 0.2rem 1rem;
+}
+
+.blog-sidebar__link:hover {
+  background: hsla(0,0%,100%,.05);
+  color: #5eddac;
+  text-decoration: none;
+}
