@@ -71,7 +71,6 @@ const Contact: NextPage = () => {
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
     if (!form.current) return;
 
     emailjs
@@ -83,8 +82,6 @@ const Contact: NextPage = () => {
       )
       .then(
         () => {
-          setErrorMessage("Sucesss. The form has been submitted");
-          setError(false);
           alert("Message sent! Thank you!");
           dispatch({ type: "DELETE_FORM", payload: "" });
         },
@@ -110,10 +107,10 @@ const Contact: NextPage = () => {
 
   return (
     <section styleName="contact">
-      <h1 styleName="contact__title">CONTACT ME</h1>
+      <h1 styleName="contact__title">Keep In Touch!</h1>
       <div styleName="contact__content">
         <div styleName="contact__left">
-          <h2>Get In Touch</h2>
+          <h2>Contact Form</h2>
           <form styleName="contact__form" onSubmit={sendEmail} ref={form}>
             <div styleName="contact__field">
               <label styleName="contact__label" htmlFor="name">
@@ -172,7 +169,6 @@ const Contact: NextPage = () => {
               Send Mail
             </button>
           </form>
-          {handleAlerts()}
         </div>
         <div styleName="contact__right">
           <ul styleName="contact__list">
