@@ -53,23 +53,24 @@ interface Props {
 }
 
 const BlogPost = ({
-  postData: { currentPost, previousPost, nextPost }
+  postData: { currentPost, previousPost, nextPost },
 }: Props) => {
-
-
   return (
-    <><Head>
-      <title>{currentPost.title}</title>
-    </Head><BlogLayout>
+    <>
+      <Head>
+        <title>{currentPost.title}</title>
+      </Head>
+      <BlogLayout>
         <SidebarLayout>
           <AboutSidebar />
-          <PostSidebar category={currentPost.category} tags={currentPost.tags} />
+          <PostSidebar
+            category={currentPost.category}
+            tags={currentPost.tags}
+          />
         </SidebarLayout>
         <BlogContentLayout>
           <article styleName="blog">
-            <a href={`/blog/${currentPost._id}`} styleName="blog__title">
-              {currentPost.title}
-            </a>
+            <h1 styleName="blog__title">{currentPost.title}</h1>
             <p styleName="blog__date">
               <BsCalendar3 />
               <Date dateString={currentPost.createdAt} />
@@ -89,14 +90,18 @@ const BlogPost = ({
             {previousPost !== null ? (
               <Link href={`/blog/${previousPost._id}`}>
                 <button
-                  styleName={`blog__button ${previousPost === null && "blog__button--disabled"}`}
+                  styleName={`blog__button ${
+                    previousPost === null && "blog__button--disabled"
+                  }`}
                 >
                   Previous
                 </button>
               </Link>
             ) : (
               <button
-                styleName={`blog__button ${previousPost === null && "blog__button--disabled"}`}
+                styleName={`blog__button ${
+                  previousPost === null && "blog__button--disabled"
+                }`}
               >
                 Previous
               </button>
@@ -104,14 +109,18 @@ const BlogPost = ({
             {nextPost !== null ? (
               <Link href={`/blog/${nextPost._id}`}>
                 <button
-                  styleName={`blog__button ${nextPost === null && "blog__button--disabled"}`}
+                  styleName={`blog__button ${
+                    nextPost === null && "blog__button--disabled"
+                  }`}
                 >
                   Next
                 </button>
               </Link>
             ) : (
               <button
-                styleName={`blog__button ${nextPost === null && "blog__button--disabled"}`}
+                styleName={`blog__button ${
+                  nextPost === null && "blog__button--disabled"
+                }`}
               >
                 Next
               </button>
@@ -120,11 +129,12 @@ const BlogPost = ({
           <hr />
           {/* <CommentsSection comments={sortedComments} postId={currentPost._id} /> */}
           <section>
-            <h3>Comments</h3>
+            <h3 styleName="blog__subtitle">Comments</h3>
             <Comments />
           </section>
         </BlogContentLayout>
-      </BlogLayout></>
+      </BlogLayout>
+    </>
   );
 };
 

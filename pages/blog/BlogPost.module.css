@@ -16,6 +16,15 @@
   line-height: 1.5;
 }
 
+.blog__subtitle{
+  font-size: 2rem;
+  text-align: center;
+}
+
+.blog__comments {
+  margin-right: auto;
+}
+
 .blog__title {
   margin-bottom: 0.5rem;
   line-height: initial;
