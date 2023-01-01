@@ -85,6 +85,7 @@ const Contact: NextPage = () => {
         () => {
           setErrorMessage("Sucesss. The form has been submitted");
           setError(false);
+          alert("Message sent! Thank you!");
           dispatch({ type: "DELETE_FORM", payload: "" });
         },
         (error) => {
