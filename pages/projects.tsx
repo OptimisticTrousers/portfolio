@@ -1,12 +1,8 @@
 /* eslint-disable react/no-unknown-property */
 import { NextPage } from "next";
-import { FC } from "react";
 import CSSModules from "react-css-modules";
-import Layout from "../components/Layout/Layout";
 import Project from "../components/Project/Project";
 import styles from "../styles/Projects.module.css";
-import { nanoid } from "nanoid";
-import Footer from "../components/Footer/Footer";
 import projects from "../data/projects";
 
 const Projects: NextPage = () => {

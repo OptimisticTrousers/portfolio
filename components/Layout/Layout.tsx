@@ -1,6 +1,5 @@
 /* eslint-disable react/no-unknown-property */
-import Head from "next/head";
-import { FC, PropsWithChildren } from "react";
+import { FC } from "react";
 import CSSModules from "react-css-modules";
 import Footer from "../Footer/Footer";
 import Navbar from "../Navbar/Navbar";

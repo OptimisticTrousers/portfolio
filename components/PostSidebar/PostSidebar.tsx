@@ -1,9 +1,15 @@
 /* eslint-disable react/no-unknown-property */
-import React from "react";
+import React, { FC } from "react";
 import CSSModules from "react-css-modules";
+import { Category, Tag } from "../../atoms";
 import styles from "./PostSidebar.module.css";
 
-const PostSidebar = ({ category, tags }) => {
+interface Props {
+  category: Category;
+  tags: Tag[];
+}
+
+const PostSidebar: FC<Props> = ({ category, tags }) => {
   return (
     <div styleName="post-sidebar">
       <div styleName="post-sidebar__section">
@@ -17,7 +23,7 @@ const PostSidebar = ({ category, tags }) => {
       <div styleName="post-sidebar__section">
         <h2 styleName="post-sidebar__title">Tags</h2>
         <div styleName="post-sidebar__tags">
-          {tags.map((tag: any) => {
+          {tags.map((tag: Tag) => {
             return (
               <a
                 key={tag._id}

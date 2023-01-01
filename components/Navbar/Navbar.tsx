@@ -3,7 +3,6 @@ import Link from "next/link";
 import { FC, useState } from "react";
 import CSSModules from "react-css-modules";
 import styles from "./Navbar.module.css";
-import { FaBars } from "react-icons/fa";
 
 const Navbar: FC = () => {
   const [toggleMenu, setToggleMenu] = useState(false);

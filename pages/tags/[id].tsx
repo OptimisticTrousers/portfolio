@@ -1,4 +1,5 @@
 import { FC } from "react";
+import { Post } from "../../atoms";
 import BlogContentLayout from "../../components/BlogContentLayout/BlogContentLayout";
 import BlogHero from "../../components/BlogHero/BlogHero";
 import BlogLayout from "../../components/BlogLayout/BlogLayout";
@@ -39,20 +40,24 @@ export async function getStaticPaths() {
   };
 }
 
-const Tag:FC<any> = ({tagData: {tag, posts}, categories, tags}) => {
+const Tag: FC<any> = ({ tagData: { tag, posts }, categories, tags }) => {
   return (
     <BlogLayout>
       <SidebarLayout>
         <BlogSidebar categories={categories} tags={tags} />
       </SidebarLayout>
       <BlogContentLayout>
-        <BlogHero count={posts.length} name={tag.name} subTitle={"posts tagged:"}/>
-        {posts.map((post) => {
-          return <BlogSnippet key={post._id} {...post} />
+        <BlogHero
+          count={posts.length}
+          name={tag.name}
+          subTitle={"posts tagged:"}
+        />
+        {posts.map((post: Post) => {
+          return <BlogSnippet key={post._id} {...post} />;
         })}
       </BlogContentLayout>
     </BlogLayout>
-  )
-}
+  );
+};
 
 export default Tag;

@@ -1,11 +1,11 @@
-import React from "react"
+import React, { FC } from "react";
 
-const SidebarLayout = ({children}) => {
-  return (
-    <div>
-      {children}
-    </div>
-  )
+interface Props {
+  children: JSX.Element | JSX.Element[];
 }
+
+const SidebarLayout: FC<Props> = ({ children }) => {
+  return <div>{children}</div>;
+};
 
 export default SidebarLayout;

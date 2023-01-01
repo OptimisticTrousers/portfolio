@@ -1,23 +1,19 @@
 /* eslint-disable react/no-unknown-property */
 import CSSModules from "react-css-modules";
-import BlogExcerpt from "../../components/BlogExcerpt/BlogExcerpt";
 import BlogLayout from "../../components/BlogLayout/BlogLayout";
 import styles from "./BlogPost.module.css";
 import { BsCalendar3 } from "react-icons/bs";
 import Link from "next/link";
-import { Comment, getAllPostIds, getPostData, Post } from "../../lib/posts";
+import { getAllPostIds, getPostData } from "../../lib/posts";
 import Date from "../../components/Date/Date";
 import SidebarLayout from "../../components/SidebarLayout/SidebarLayout";
 import AboutSidebar from "../../components/AboutSidebar/AboutSidebar";
 import PostSidebar from "../../components/PostSidebar/PostSidebar";
 import BlogContentLayout from "../../components/BlogContentLayout/BlogContentLayout";
 import parse from "html-react-parser";
-import { useRef } from "react";
 import Comments from "../../components/Comments/Comments";
 import Head from "next/head";
-import Category from "../category/[id]";
-// import CommentForm from "../../components/CommentForm/CommentForm";
-// import CommentsSection from "../../components/CommentsSection/CommentsSection";
+import { Post } from "../../atoms";
 
 export async function getStaticProps({ params }: { params: { id: string } }) {
   const postData = await getPostData(params.id as string);
@@ -48,7 +44,6 @@ interface Props {
     currentPost: Post;
     previousPost: Post;
     nextPost: Post;
-    // sortedComments: Comment[];
   };
 }
 
@@ -127,7 +122,6 @@ const BlogPost = ({
             )}
           </nav>
           <hr />
-          {/* <CommentsSection comments={sortedComments} postId={currentPost._id} /> */}
           <section>
             <h3 styleName="blog__subtitle">Comments</h3>
             <Comments />

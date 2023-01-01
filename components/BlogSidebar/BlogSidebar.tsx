@@ -1,12 +1,12 @@
 /* eslint-disable react/no-unknown-property */
-import Link from "next/link";
 import React, { FC } from "react";
 import CSSModules from "react-css-modules";
+import { Category, Tag } from "../../atoms";
 import styles from "./BlogSidebar.module.css";
 
 interface Props {
-  categories: any;
-  tags: any;
+  categories: Category[];
+  tags: Tag[];
 }
 
 const BlogSidebar: FC<Props> = ({ categories, tags }) => {

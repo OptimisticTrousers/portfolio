@@ -1,7 +1,6 @@
 /* eslint-disable react/no-unknown-property */
 import { NextPage } from "next";
 import CSSModules from "react-css-modules";
-import Layout from "../components/Layout/Layout";
 import styles from "../styles/Contact.module.css";
 import { BsTelephone } from "react-icons/bs";
 import { HiOutlineMail } from "react-icons/hi";

@@ -1,10 +1,10 @@
 import { FC } from "react";
+import { Post } from "../../atoms";
 import BlogContentLayout from "../../components/BlogContentLayout/BlogContentLayout";
 import BlogHero from "../../components/BlogHero/BlogHero";
 import BlogLayout from "../../components/BlogLayout/BlogLayout";
 import BlogSidebar from "../../components/BlogSidebar/BlogSidebar";
 import BlogSnippet from "../../components/BlogSnippet/BlogSnippet";
-import PostSidebar from "../../components/PostSidebar/PostSidebar";
 import SidebarLayout from "../../components/SidebarLayout/SidebarLayout";
 import {
   getAllCategoriesAndTags,
@@ -56,7 +56,7 @@ const Category: FC<any> = ({
           subTitle={"posts categorized as:"}
         />
 
-        {posts.map((post) => {
+        {posts.map((post: Post) => {
           return <BlogSnippet key={post._id} {...post} />;
         })}
       </BlogContentLayout>

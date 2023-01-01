@@ -1,12 +1,10 @@
 /* eslint-disable react/no-unknown-property */
-import { FC } from "react";
+import { FC, ReactNode } from "react";
 import CSSModules from "react-css-modules";
-import Layout from "../Layout/Layout";
-import Sidebar from "../AboutSidebar/AboutSidebar";
 import styles from "./BlogLayout.module.css";
 
 interface Props {
-  children: any;
+  children: ReactNode[];
 }
 
 const BlogLayout: FC<Props> = ({ children }) => {

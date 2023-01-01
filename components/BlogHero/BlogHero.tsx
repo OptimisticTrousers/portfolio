@@ -1,9 +1,15 @@
 /* eslint-disable react/no-unknown-property */
-import React from "react";
+import React, { FC } from "react";
 import CSSModules from "react-css-modules";
 import styles from "./BlogHero.module.css";
 
-const BlogHero = ({count, name, subTitle}) => {
+interface Props {
+  count: number;
+  name: string;
+  subTitle: string;
+}
+
+const BlogHero: FC<Props> = ({ count, name, subTitle }) => {
   return (
     <header styleName="blog-hero">
       <div styleName="blog-hero__subtitle">

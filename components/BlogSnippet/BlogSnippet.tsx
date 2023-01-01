@@ -2,13 +2,12 @@
 import { FC } from "react";
 import CSSModules from "react-css-modules";
 import { BsCalendar3 } from "react-icons/bs";
-import { Post } from "../../lib/posts";
 import Date from "../Date/Date";
 import styles from "./BlogSnippet.module.css";
 import parse from "html-react-parser";
-import Link from "next/link";
+import { Post } from "../../atoms";
 
-const BlogSnippet: FC<any> = ({ _id, title, createdAt, contentHtml }) => {
+const BlogSnippet: FC<Post> = ({ _id, title, createdAt, contentHtml }) => {
   return (
     <article styleName="snippet">
       <a href={`/blog/${_id}`} styleName="snippet__title">

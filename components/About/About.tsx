@@ -4,7 +4,6 @@ import Image from "next/image";
 import { FC } from "react";
 import CSSModules from "react-css-modules";
 import styles from "./About.module.css";
-import { CSSTransition } from "react-transition-group";
 
 const About: FC = () => {
   return (

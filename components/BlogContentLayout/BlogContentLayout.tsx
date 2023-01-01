@@ -1,6 +1,10 @@
-import React from "react";
+import React, { FC, ReactNode } from "react";
 
-const BlogContentLayout = ({ children }) => {
+interface Props {
+  children: ReactNode | ReactNode[];
+}
+
+const BlogContentLayout: FC<Props> = ({ children }) => {
   return <div>{children}</div>;
 };
 

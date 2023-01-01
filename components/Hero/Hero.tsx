@@ -1,16 +1,9 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable react/no-unknown-property */
-import Image from "next/image";
-import Link from "next/link";
 import { FC } from "react";
 import CSSModules from "react-css-modules";
 import styles from "./Hero.module.css";
-import { GrLinkedinOption } from "react-icons/gr";
-import { AiFillGithub } from "react-icons/ai";
-import { HiOutlineMail } from "react-icons/hi";
-import animation from "../../public/svg/animation.svg";
 import BackgroundAnimation from "../BackgroundImage/BackgroundImage";
-import { CSSTransition } from "react-transition-group";
 import ButtonLinks from "../ButtonLinks/ButtonLinks";
 
 const Hero: FC = () => {
