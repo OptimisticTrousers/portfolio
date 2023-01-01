@@ -4,7 +4,7 @@
 
 .blog {
     display: flex;
-    gap: 8px;
+    gap: 32px;
 }
 
 @media(max-width: 910px) {

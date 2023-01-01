@@ -17,6 +17,12 @@
   text-transform: uppercase;
 }
 
+.post-sidebar__tags {
+    display: flex;
+    gap: 0.3rem;
+    flex-wrap: wrap;
+}
+
 .post-sidebar__list {
   font-size: 0.9rem;
   padding-left: 1.5rem;
@@ -52,10 +58,11 @@
   font-size: 0.8rem;
   font-weight: 400;
   padding: 0.4rem 0.8rem;
+  border: 1px solid transparent;
   cursor: pointer;
 }
 
 .post-sidebar__tag:hover {
-  border: 2px solid #5eddac;
+  border: 1px solid #5eddac;
   color: white;
 }

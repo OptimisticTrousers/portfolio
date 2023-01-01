@@ -4,7 +4,7 @@ import BlogLayout from "../../components/BlogLayout/BlogLayout";
 import styles from "./BlogPost.module.css";
 import { BsCalendar3 } from "react-icons/bs";
 import Link from "next/link";
-import { getAllPostIds, getPostData } from "../../lib/posts";
+import { apiDomain, getAllPostIds, getPostData } from "../../lib/posts";
 import Date from "../../components/Date/Date";
 import SidebarLayout from "../../components/SidebarLayout/SidebarLayout";
 import AboutSidebar from "../../components/AboutSidebar/AboutSidebar";
@@ -14,6 +14,7 @@ import parse from "html-react-parser";
 import Comments from "../../components/Comments/Comments";
 import Head from "next/head";
 import { Post } from "../../atoms";
+import Image from "next/image";
 
 export async function getStaticProps({ params }: { params: { id: string } }) {
   const postData = await getPostData(params.id as string);
@@ -66,6 +67,19 @@ const BlogPost = ({
         <BlogContentLayout>
           <article styleName="blog">
             <h1 styleName="blog__title">{currentPost.title}</h1>
+            {currentPost.image && (
+              <figure styleName="blog__container">
+                <img
+                  styleName="blog__image"
+                  src={`${apiDomain()}/images/${currentPost.image.filename}`}
+                  width="100%"
+                  alt={currentPost.title}
+                />
+                <figcaption styleName="blog__caption">
+                  {currentPost.caption}
+                </figcaption>
+              </figure>
+            )}
             <p styleName="blog__date">
               <BsCalendar3 />
               <Date dateString={currentPost.createdAt} />
