@@ -2,7 +2,7 @@
 import { FC } from "react";
 import CSSModules from "react-css-modules";
 import Layout from "../Layout/Layout";
-import Sidebar from "../Sidebar/Sidebar";
+import Sidebar from "../AboutSidebar/AboutSidebar";
 import styles from "./BlogLayout.module.css";
 
 interface Props {
@@ -11,12 +11,10 @@ interface Props {
 
 const BlogLayout: FC<Props> = ({ children }) => {
   return (
-    <Layout>
-      <div styleName="blog">
-        <Sidebar />
-        <div styleName="blog__blogs">{children}</div>
-      </div>
-    </Layout>
+    <div styleName="blog">
+      <aside>{children[0]}</aside>
+      <section styleName="blog__blogs">{children[1]}</section>
+    </div>
   );
 };
 
