@@ -12,6 +12,10 @@ import AboutSidebar from "../../components/AboutSidebar/AboutSidebar";
 import PostSidebar from "../../components/PostSidebar/PostSidebar";
 import BlogContentLayout from "../../components/BlogContentLayout/BlogContentLayout";
 import parse from "html-react-parser";
+import { useRef } from "react";
+import Comments from "../../components/Comments/Comments";
+import Head from "next/head";
+import Category from "../category/[id]";
 // import CommentForm from "../../components/CommentForm/CommentForm";
 // import CommentsSection from "../../components/CommentsSection/CommentsSection";
 
@@ -49,79 +53,78 @@ interface Props {
 }
 
 const BlogPost = ({
-  postData: { currentPost, previousPost, nextPost },
+  postData: { currentPost, previousPost, nextPost }
 }: Props) => {
-  console.log(currentPost);
+
+
   return (
-    <BlogLayout>
-      <SidebarLayout>
-        <AboutSidebar />
-        <PostSidebar category={currentPost.category} tags={currentPost.tags} />
-      </SidebarLayout>
-      <BlogContentLayout>
-        <article styleName="blog">
-          <a href={`/blog/${currentPost._id}`} styleName="blog__title">
-            {currentPost.title}
-          </a>
-          <p styleName="blog__date">
+    <><Head>
+      <title>{currentPost.title}</title>
+    </Head><BlogLayout>
+        <SidebarLayout>
+          <AboutSidebar />
+          <PostSidebar category={currentPost.category} tags={currentPost.tags} />
+        </SidebarLayout>
+        <BlogContentLayout>
+          <article styleName="blog">
+            <a href={`/blog/${currentPost._id}`} styleName="blog__title">
+              {currentPost.title}
+            </a>
+            <p styleName="blog__date">
+              <BsCalendar3 />
+              <Date dateString={currentPost.createdAt} />
+            </p>
+            <section styleName="blog__description">
+              {parse(currentPost.contentHtml)}
+            </section>
+          </article>
+          <p styleName="blog__updated-at">
             <BsCalendar3 />
-            <Date dateString={currentPost.createdAt} />
+            <span>
+              <strong>Updated: </strong>
+              <Date dateString={currentPost.updatedAt} />
+            </span>
           </p>
-          <section styleName="blog__description">
-            {parse(currentPost.contentHtml)}
-          </section>
-        </article>
-        <p styleName="blog__updated-at">
-          <BsCalendar3 />
-          <span>
-            <strong>Updated: </strong>
-            <Date dateString={currentPost.updatedAt} />
-          </span>
-        </p>
-        <nav styleName="blog__pagination" aria-label="blog pagination">
-          {previousPost !== null ? (
-            <Link href={`/blog/${previousPost._id}`}>
+          <nav styleName="blog__pagination" aria-label="blog pagination">
+            {previousPost !== null ? (
+              <Link href={`/blog/${previousPost._id}`}>
+                <button
+                  styleName={`blog__button ${previousPost === null && "blog__button--disabled"}`}
+                >
+                  Previous
+                </button>
+              </Link>
+            ) : (
               <button
-                styleName={`blog__button ${
-                  previousPost === null && "blog__button--disabled"
-                }`}
+                styleName={`blog__button ${previousPost === null && "blog__button--disabled"}`}
               >
                 Previous
               </button>
-            </Link>
-          ) : (
-            <button
-              styleName={`blog__button ${
-                previousPost === null && "blog__button--disabled"
-              }`}
-            >
-              Previous
-            </button>
-          )}
-          {nextPost !== null ? (
-            <Link href={`/blog/${nextPost._id}`}>
+            )}
+            {nextPost !== null ? (
+              <Link href={`/blog/${nextPost._id}`}>
+                <button
+                  styleName={`blog__button ${nextPost === null && "blog__button--disabled"}`}
+                >
+                  Next
+                </button>
+              </Link>
+            ) : (
               <button
-                styleName={`blog__button ${
-                  nextPost === null && "blog__button--disabled"
-                }`}
+                styleName={`blog__button ${nextPost === null && "blog__button--disabled"}`}
               >
                 Next
               </button>
-            </Link>
-          ) : (
-            <button
-              styleName={`blog__button ${
-                nextPost === null && "blog__button--disabled"
-              }`}
-            >
-              Next
-            </button>
-          )}
-        </nav>
-        <hr />
-        {/* <CommentsSection comments={sortedComments} postId={currentPost._id} /> */}
-      </BlogContentLayout>
-    </BlogLayout>
+            )}
+          </nav>
+          <hr />
+          {/* <CommentsSection comments={sortedComments} postId={currentPost._id} /> */}
+          <section>
+            <h3>Comments</h3>
+            <Comments />
+          </section>
+        </BlogContentLayout>
+      </BlogLayout></>
   );
 };
 
