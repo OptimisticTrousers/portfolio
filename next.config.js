@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ["localhost"]
+    domains: ["localhost", "still-brushlands-93140.herokuapp.com"]
   },
   reactStrictMode: true,
   swcMinify: true,
