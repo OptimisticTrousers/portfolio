@@ -24,5 +24,5 @@ const Layout: FC<Props> = ({ children }) => {
 
 export default CSSModules(Layout, styles, {
   allowMultiple: true,
-  handleNotFoundStyleName: "log",
+  handleNotFoundStyleName: "ignore",
 });

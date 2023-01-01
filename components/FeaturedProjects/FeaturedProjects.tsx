@@ -34,5 +34,5 @@ const FeaturedProjects: FC = () => {
 
 export default CSSModules(FeaturedProjects, styles, {
   allowMultiple: true,
-  handleNotFoundStyleName: "log",
+  handleNotFoundStyleName: "ignore",
 });

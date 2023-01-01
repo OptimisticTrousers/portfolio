@@ -1,3 +1,4 @@
+import axios from "axios";
 import Error from "next/error";
 export interface Post {
   _id: string;
@@ -21,14 +22,29 @@ export function apiDomain() {
   const production = process.env.NODE_ENV === "production";
   return production
     ? "https://radiant-ocean-64037.herokuapp.com"
-    : "http://localhost:5000";
+    : "http://localhost:5000/api";
 }
 
-export async function getSortedPostsData() {
+export async function getAllCategoriesAndTags() {
   try {
-    const response = await fetch(`${apiDomain()}/posts`);
+    const {
+      data: { categories },
+    } = await axios.get(`${apiDomain()}/categories`);
+    const {
+      data: { tags },
+    } = await axios.get(`${apiDomain()}/tags`);
 
-    const { posts } = await response.json();
+    return { categories, tags };
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+export async function getAllPosts() {
+  try {
+    const {
+      data: { posts },
+    } = await axios.get(`${apiDomain()}/posts`);
 
     const sortedPosts = posts.sort((a: Post, b: Post) => {
       if (a.createdAt < b.createdAt) {
@@ -39,10 +55,73 @@ export async function getSortedPostsData() {
     });
 
     return sortedPosts;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+export async function getBlogData() {
+  try {
+    const {
+      data: { posts },
+    } = await axios.get(`${apiDomain()}/posts`);
+    const {
+      data: { categories },
+    } = await axios.get(`${apiDomain()}/categories`);
+    const {
+      data: { tags },
+    } = await axios.get(`${apiDomain()}/tags`);
+
+    const sortedPosts = posts.sort((a: Post, b: Post) => {
+      if (a.createdAt < b.createdAt) {
+        return 1;
+      } else {
+        return -1;
+      }
+    });
+
+    return { posts: sortedPosts, categories, tags };
   } catch (err) {
     console.log(err);
   }
 }
+
+export async function getAllCategoryIds() {
+  try {
+    const {
+      data: { categories },
+    } = await axios.get(`${apiDomain()}/categories`);
+
+    return categories.map((category: any) => {
+      return {
+        params: {
+          id: category._id,
+        },
+      };
+    });
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+export async function getAllTagIds() {
+  try {
+    const {
+      data: { tags },
+    } = await axios.get(`${apiDomain()}/tags`);
+
+    return tags.map((tag: any) => {
+      return {
+        params: {
+          id: tag._id
+        }
+      }
+    })
+  } catch (error) {
+    console.log(error);
+  }
+}
+
 export async function getAllPostIds() {
   try {
     const response = await fetch(`${apiDomain()}/posts`);
@@ -69,11 +148,51 @@ export async function getAllPostIds() {
   }
 }
 
+export async function getCategoryData(id: string) {
+  try {
+    const {
+      data: { category, posts },
+    } = await axios.get(`${apiDomain()}/categories/${id}`);
+
+    const sortedPosts = posts.sort((a: Post, b: Post) => {
+      if (a.createdAt < b.createdAt) {
+        return 1;
+      } else {
+        return -1;
+      }
+    });
+
+    return { posts: sortedPosts, category };
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+export async function getTagData(id: string) {
+  try {
+    const {
+      data: { tag, posts },
+    } = await axios.get(`${apiDomain()}/tags/${id}`);
+
+    const sortedPosts = posts.sort((a: Post, b: Post) => {
+      if (a.createdAt < b.createdAt) {
+        return 1;
+      } else {
+        return -1;
+      }
+    });
+
+    return { posts: sortedPosts, tag };
+  } catch (error) {
+    console.log(error);
+  }
+}
+
 export async function getPostData(id: string) {
   try {
-    const response = await fetch(`${apiDomain()}/posts`);
-
-    const { posts } = await response.json();
+    const {
+      data: { posts },
+    } = await axios.get(`${apiDomain()}/posts`);
 
     const sortedPosts = posts.sort((a: Post, b: Post) => {
       if (a.createdAt < b.createdAt) {
@@ -85,17 +204,17 @@ export async function getPostData(id: string) {
 
     const currentIndex = sortedPosts.findIndex((post: Post) => post._id === id);
 
-    const commentsResponse = await fetch(`${apiDomain()}/posts/${id}`);
+    // const commentsResponse = await fetch(`${apiDomain()}/posts/${id}`);
 
-    const { comments } = await commentsResponse.json();
+    // const { comments } = await commentsResponse.json();
 
-    const sortedComments = comments.sort((a: Comment, b: Comment) => {
-      if (a.createdAt < b.createdAt) {
-        return 1;
-      } else {
-        return -1;
-      }
-    });
+    // const sortedComments = comments.sort((a: Comment, b: Comment) => {
+    //   if (a.createdAt < b.createdAt) {
+    //     return 1;
+    //   } else {
+    //     return -1;
+    //   }
+    // });
 
     const currentPost = sortedPosts[currentIndex] || null;
 
@@ -107,7 +226,7 @@ export async function getPostData(id: string) {
       currentPost,
       previousPost,
       nextPost,
-      sortedComments,
+      // sortedComments,
     };
   } catch (err) {
     console.log(err);

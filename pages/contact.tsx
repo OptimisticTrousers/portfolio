@@ -212,5 +212,5 @@ const Contact: NextPage = () => {
 
 export default CSSModules(Contact, styles, {
   allowMultiple: true,
-  handleNotFoundStyleName: "log",
+  handleNotFoundStyleName: "ignore",
 });

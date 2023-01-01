@@ -82,5 +82,5 @@ const Project: FC<Props> = ({
 
 export default CSSModules(Project, styles, {
   allowMultiple: true,
-  handleNotFoundStyleName: "log",
+  handleNotFoundStyleName: "ignore",
 });

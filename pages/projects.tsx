@@ -22,5 +22,5 @@ const Projects: NextPage = () => {
 
 export default CSSModules(Projects, styles, {
   allowMultiple: true,
-  handleNotFoundStyleName: "log",
+  handleNotFoundStyleName: "ignore",
 });

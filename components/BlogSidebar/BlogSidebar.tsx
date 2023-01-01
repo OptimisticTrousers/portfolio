@@ -9,12 +9,12 @@ interface Props {
   tags: any;
 }
 
-const BlogSidebar: FC<Props> = ({categories, tags})=> {
+const BlogSidebar: FC<Props> = ({ categories, tags }) => {
   const renderedCategories = categories.map((category: any) => {
     return (
       <a
         key={category.name}
-        href={`/categories/${category.name}`}
+        href={`/category/${category._id}`}
         styleName="blog-sidebar__link"
       >
         <div styleName="blog-sidebar__name">{category.name}</div>
@@ -23,13 +23,15 @@ const BlogSidebar: FC<Props> = ({categories, tags})=> {
   });
 
   const renderedTags = tags.map((tag: any) => {
-    <a
-      key={tag.name}
-      href={`/categories/${tag.name}`}
-      styleName="blog-sidebar__link"
-    >
-      <div styleName="blog-sidebar__name">{tag.name}</div>
-    </a>;
+    return (
+      <a
+        key={tag.name}
+        href={`/tags/${tag._id}`}
+        styleName="blog-sidebar__link"
+      >
+        <div styleName="blog-sidebar__name">{tag.name}</div>
+      </a>
+    );
   });
 
   return (
@@ -48,5 +50,5 @@ const BlogSidebar: FC<Props> = ({categories, tags})=> {
 
 export default CSSModules(BlogSidebar, styles, {
   allowMultiple: true,
-  handleNotFoundStyleName: "log",
+  handleNotFoundStyleName: "ignore",
 });

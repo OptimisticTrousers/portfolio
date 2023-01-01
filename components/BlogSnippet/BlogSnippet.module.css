@@ -1,0 +1,39 @@
+.snippet {
+    border-bottom: 1px solid #E1E1E1;
+}
+
+.snippet__date {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  font-size: 1.2rem;
+  margin-bottom: 0;
+}
+
+.snippet__title {
+  margin-bottom: 0.5rem;
+  line-height: initial;
+  overflow: hidden;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 2em 0 0.5em;
+  transition: all 0.2s ease-in-out;
+  color: #699ea0;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.snippet__title:hover {
+  color: #a9dde0;
+  outline: 0;
+}
+
+.snippet__description {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  max-height: 150px;
+  -webkit-box-orient: vertical;
+}

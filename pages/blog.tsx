@@ -6,44 +6,58 @@ import BlogExcerpt from "../components/BlogExcerpt/BlogExcerpt";
 import BlogLayout from "../components/BlogLayout/BlogLayout";
 import Footer from "../components/Footer/Footer";
 import Layout from "../components/Layout/Layout";
-import Sidebar from "../components/Sidebar/Sidebar";
-import { getPostData, getSortedPostsData } from "../lib/posts";
+import Sidebar from "../components/AboutSidebar/AboutSidebar";
+import {
+  getPostData,
+  getBlogData,
+  getAllPosts,
+  getAllCategoriesAndTags,
+} from "../lib/posts";
 import styles from "../styles/Blog.module.css";
 import { Post } from "../lib/posts";
+import SidebarLayout from "../components/SidebarLayout/SidebarLayout";
+import SidebarAbout from "../components/AboutSidebar/AboutSidebar";
+import BlogContentLayout from "../components/BlogContentLayout/BlogContentLayout";
+import BlogSidebar from "../components/BlogSidebar/BlogSidebar";
+import BlogSnippet from "../components/BlogSnippet/BlogSnippet";
 
 export async function getStaticProps() {
-  const posts = await getSortedPostsData();
+  const posts = await getAllPosts();
+  const { categories, tags }: any = await getAllCategoriesAndTags();
+
   return {
     props: {
       posts,
+      categories,
+      tags,
     },
   };
 }
 
 interface Props {
   posts: Post[];
+  categories: any;
+  tags: any;
 }
 
-const Blog = ({ posts }: Props) => {
+const Blog = ({ posts, categories, tags }: Props) => {
   return (
     <BlogLayout>
-      <h1 styleName="blog__title">Blog Posts</h1>
-      {posts.map(({ _id, contentHtml, createdAt, title }) => {
-        return (
-          <BlogExcerpt
-            key={_id}
-            contentHtml={contentHtml}
-            createdAt={createdAt}
-            onPage={false}
-            render={() => <Link href={`/blog/${_id}`}>{title}</Link>}
-          />
-        );
-      })}
+      <SidebarLayout>
+        <SidebarAbout />
+        <BlogSidebar categories={categories} tags={tags} />
+      </SidebarLayout>
+      <BlogContentLayout>
+        <h1 styleName="blog__title">Blog Posts</h1>
+        {posts.map((post: any) => {
+          return <BlogSnippet key={post._id} {...post} />;
+        })}
+      </BlogContentLayout>
     </BlogLayout>
   );
 };
 
 export default CSSModules(Blog, styles, {
   allowMultiple: true,
-  handleNotFoundStyleName: "log",
+  handleNotFoundStyleName: "ignore",
 });

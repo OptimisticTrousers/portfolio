@@ -64,5 +64,5 @@ const ButtonLinks: FC = () => {
 
 export default CSSModules(ButtonLinks, styles, {
   allowMultiple: true,
-  handleNotFoundStyleName: "log",
+  handleNotFoundStyleName: "ignore",
 });
