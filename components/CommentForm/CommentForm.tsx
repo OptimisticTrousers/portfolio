@@ -166,5 +166,5 @@ const CommentForm = ({ postId }: Props) => {
 
 export default CSSModules(CommentForm, styles, {
   allowMultiple: true,
-  handleNotFoundStyleName: "ignore",
+  handleNotFoundStyleName: "log",
 });

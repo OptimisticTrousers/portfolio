@@ -109,110 +109,108 @@ const Contact: NextPage = () => {
   }
 
   return (
-    <Layout>
-      <section styleName="contact">
-        <h1 styleName="contact__title">CONTACT ME</h1>
-        <div styleName="contact__content">
-          <div styleName="contact__left">
-            <h2>Get In Touch</h2>
-            <form styleName="contact__form" onSubmit={sendEmail} ref={form}>
-              <div styleName="contact__field">
-                <label styleName="contact__label" htmlFor="name">
-                  Enter your name*
-                </label>
-                <input
-                  onChange={handleName}
-                  value={name}
-                  id="name"
-                  name="name"
-                  styleName="contact__input"
-                  required
-                />
-              </div>
-              <div styleName="contact__field">
-                <label styleName="contact__label" htmlFor="email">
-                  Enter your email*
-                </label>
-                <input
-                  onChange={handleEmail}
-                  value={email}
-                  id="email"
-                  name="email"
-                  styleName="contact__input"
-                  required
-                />
-              </div>
-              <div styleName="contact__field">
-                <label styleName="contact__label" htmlFor="subject">
-                  Enter your subject*
-                </label>
-                <input
-                  onChange={handleSubject}
-                  value={subject}
-                  name="subject"
-                  id="subject"
-                  styleName="contact__input"
-                  required
-                />
-              </div>
-              <div styleName="contact__field">
-                <label styleName="contact__label" htmlFor="message">
-                  Enter your message*
-                </label>
-                <textarea
-                  onChange={handleMessage}
-                  value={message}
-                  required
-                  name="message"
-                  id="message"
-                  styleName="contact__textarea"
-                />
-              </div>
+    <section styleName="contact">
+      <h1 styleName="contact__title">CONTACT ME</h1>
+      <div styleName="contact__content">
+        <div styleName="contact__left">
+          <h2>Get In Touch</h2>
+          <form styleName="contact__form" onSubmit={sendEmail} ref={form}>
+            <div styleName="contact__field">
+              <label styleName="contact__label" htmlFor="name">
+                Enter your name*
+              </label>
+              <input
+                onChange={handleName}
+                value={name}
+                id="name"
+                name="name"
+                styleName="contact__input"
+                required
+              />
+            </div>
+            <div styleName="contact__field">
+              <label styleName="contact__label" htmlFor="email">
+                Enter your email*
+              </label>
+              <input
+                onChange={handleEmail}
+                value={email}
+                id="email"
+                name="email"
+                styleName="contact__input"
+                required
+              />
+            </div>
+            <div styleName="contact__field">
+              <label styleName="contact__label" htmlFor="subject">
+                Enter your subject*
+              </label>
+              <input
+                onChange={handleSubject}
+                value={subject}
+                name="subject"
+                id="subject"
+                styleName="contact__input"
+                required
+              />
+            </div>
+            <div styleName="contact__field">
+              <label styleName="contact__label" htmlFor="message">
+                Enter your message*
+              </label>
+              <textarea
+                onChange={handleMessage}
+                value={message}
+                required
+                name="message"
+                id="message"
+                styleName="contact__textarea"
+              />
+            </div>
 
-              <button styleName="contact__button" type="submit">
-                Send Mail
-              </button>
-            </form>
-            {handleAlerts()}
-          </div>
-          <div styleName="contact__right">
-            <ul styleName="contact__list">
-              <li styleName="contact__card">
-                <span styleName="contact__span">
-                  <BsTelephone styleName="contact__icon" />
-                </span>
-                <div styleName="card__card-content">
-                  <h3>Phone</h3>
-                  <p>201-702-0093</p>
-                </div>
-              </li>
-              <li styleName="contact__card">
-                <span styleName="contact__span">
-                  <HiOutlineMail styleName="contact__icon" />
-                </span>
-                <div styleName="card__card-content">
-                  <h3>Email</h3>
-                  <p styleName="contact__text">tony.isern@yahoo.com</p>
-                </div>
-              </li>
-              <li styleName="contact__card">
-                <span styleName="contact__span">
-                  <GoLocation styleName="contact__icon" />
-                </span>
-                <div styleName="card__card-content">
-                  <h3>Address</h3>
-                  <p>Secaucus, New Jersey</p>
-                </div>
-              </li>
-            </ul>
-          </div>
+            <button styleName="contact__button" type="submit">
+              Send Mail
+            </button>
+          </form>
+          {handleAlerts()}
         </div>
-      </section>
-    </Layout>
+        <div styleName="contact__right">
+          <ul styleName="contact__list">
+            <li styleName="contact__card">
+              <span styleName="contact__span">
+                <BsTelephone styleName="contact__icon" />
+              </span>
+              <div styleName="card__card-content">
+                <h3>Phone</h3>
+                <p>201-702-0093</p>
+              </div>
+            </li>
+            <li styleName="contact__card">
+              <span styleName="contact__span">
+                <HiOutlineMail styleName="contact__icon" />
+              </span>
+              <div styleName="card__card-content">
+                <h3>Email</h3>
+                <p styleName="contact__text">tony.isern@yahoo.com</p>
+              </div>
+            </li>
+            <li styleName="contact__card">
+              <span styleName="contact__span">
+                <GoLocation styleName="contact__icon" />
+              </span>
+              <div styleName="card__card-content">
+                <h3>Address</h3>
+                <p>Secaucus, New Jersey</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
   );
 };
 
 export default CSSModules(Contact, styles, {
   allowMultiple: true,
-  handleNotFoundStyleName: "ignore",
+  handleNotFoundStyleName: "log",
 });

@@ -46,5 +46,5 @@ const Hero: FC = () => {
 
 export default CSSModules(Hero, styles, {
   allowMultiple: true,
-  handleNotFoundStyleName: "ignore",
+  handleNotFoundStyleName: "log",
 });

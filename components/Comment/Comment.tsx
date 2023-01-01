@@ -29,9 +29,8 @@ const Comment = ({ name, contentHtml, createdAt }: CommentInterface) => {
             # <Date dateString={createdAt} />
           </p>
           <div styleName="comment__block">
-
-          around
-          <p styleName="comment__fromnow">{moment(createdAt).fromNow()}</p>
+            around
+            <p styleName="comment__fromnow">{moment(createdAt).fromNow()}</p>
           </div>
         </div>
         <section styleName="comment__content">{parse(contentHtml)}</section>
@@ -42,5 +41,5 @@ const Comment = ({ name, contentHtml, createdAt }: CommentInterface) => {
 
 export default CSSModules(Comment, styles, {
   allowMultiple: true,
-  handleNotFoundStyleName: "ignore",
+  handleNotFoundStyleName: "log",
 });

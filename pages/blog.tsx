@@ -21,7 +21,7 @@ export async function getStaticProps() {
 }
 
 interface Props {
-  posts: Post[]
+  posts: Post[];
 }
 
 const Blog = ({ posts }: Props) => {
@@ -45,5 +45,5 @@ const Blog = ({ posts }: Props) => {
 
 export default CSSModules(Blog, styles, {
   allowMultiple: true,
-  handleNotFoundStyleName: "ignore",
+  handleNotFoundStyleName: "log",
 });

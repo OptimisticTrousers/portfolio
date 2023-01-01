@@ -22,5 +22,5 @@ const BlogLayout: FC<Props> = ({ children }) => {
 
 export default CSSModules(BlogLayout, styles, {
   allowMultiple: true,
-  handleNotFoundStyleName: "ignore",
+  handleNotFoundStyleName: "log",
 });

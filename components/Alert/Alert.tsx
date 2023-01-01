@@ -21,5 +21,5 @@ const Alert: FC<Props> = ({ errorMessage, error }) => {
 
 export default CSSModules(Alert, styles, {
   allowMultiple: true,
-  handleNotFoundStyleName: "ignore",
+  handleNotFoundStyleName: "log",
 });

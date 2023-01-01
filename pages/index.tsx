@@ -10,11 +10,11 @@ import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
   return (
-    <Layout>
+    <>
       <Hero />
       <About />
       <FeaturedProjects />
-    </Layout>
+    </>
   );
 };
 

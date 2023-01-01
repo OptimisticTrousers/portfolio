@@ -40,5 +40,5 @@ const BlogExcerpt: FC<Props> = ({ render, onPage, createdAt, contentHtml }) => {
 
 export default CSSModules(BlogExcerpt, styles, {
   allowMultiple: true,
-  handleNotFoundStyleName: "ignore",
+  handleNotFoundStyleName: "log",
 });

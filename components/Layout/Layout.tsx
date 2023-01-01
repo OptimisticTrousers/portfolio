@@ -14,9 +14,6 @@ const Layout: FC<Props> = ({ children }) => {
   return (
     <>
       <div styleName="container">
-        <Head>
-          <title>Tony Isern | Web Developer</title>
-        </Head>
         <Navbar />
         <main styleName="main">{children}</main>
       </div>
@@ -27,5 +24,5 @@ const Layout: FC<Props> = ({ children }) => {
 
 export default CSSModules(Layout, styles, {
   allowMultiple: true,
-  handleNotFoundStyleName: "ignore",
+  handleNotFoundStyleName: "log",
 });

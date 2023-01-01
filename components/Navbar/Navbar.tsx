@@ -67,5 +67,5 @@ const Navbar: FC = () => {
 
 export default CSSModules(Navbar, styles, {
   allowMultiple: true,
-  handleNotFoundStyleName: "ignore",
+  handleNotFoundStyleName: "log",
 });

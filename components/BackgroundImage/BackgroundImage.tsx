@@ -367,5 +367,5 @@ const BackgroundAnimation: FC = () => (
 
 export default CSSModules(BackgroundAnimation, styles, {
   allowMultiple: true,
-  handleNotFoundStyleName: "ignore",
+  handleNotFoundStyleName: "log",
 });

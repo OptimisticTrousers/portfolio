@@ -44,65 +44,64 @@ const About: FC = () => {
       </div>
       <div styleName="about__technologies">
         <h2 styleName="about__title">Technologies</h2>
-      <div styleName="about__icons">
-        <i
-          className="devicon-html5-plain-wordmark colored"
-          styleName="about__icon"
-        ></i>
-        <i
-          className="devicon-css3-plain-wordmark colored"
-          styleName="about__icon"
-        ></i>
-        <i
-          className="devicon-javascript-plain colored"
-          styleName="about__icon"
-        ></i>
-        <i
-          className="devicon-react-original-wordmark colored"
-          styleName="about__icon"
-        ></i>
-        <i className="devicon-jest-plain colored" styleName="about__icon"></i>
-        <i
-          className="devicon-typescript-plain colored"
-          styleName="about__icon"
-        ></i>
-        <i
-          className="devicon-redux-original colored"
-          styleName="about__icon"
-        ></i>
-        <i
-          className="devicon-git-plain-wordmark colored"
-          styleName="about__icon"
-        ></i>
-        <i
-          className="devicon-firebase-plain-wordmark colored"
-          styleName="about__icon"
-        ></i>
-        <i
-          className="devicon-graphql-plain-wordmark colored"
-          styleName="about__icon"
-        ></i>
-        <i
-          className="devicon-express-original-wordmark"
-          styleName="about__icon"
-        ></i>
-        <i
-          className="devicon-mongodb-plain-wordmark colored"
-          styleName="about__icon"
-        ></i>
-        <i
-          className="devicon-nodejs-plain-wordmark colored"
-          styleName="about__icon"
-        ></i>
-        <i className="devicon-vim-plain colored" styleName="about__icon"></i>
-        <div styleName="about__background">
+        <div styleName="about__icons">
           <i
-            className="devicon-nextjs-original-wordmark colored"
+            className="devicon-html5-plain-wordmark colored"
             styleName="about__icon"
           ></i>
+          <i
+            className="devicon-css3-plain-wordmark colored"
+            styleName="about__icon"
+          ></i>
+          <i
+            className="devicon-javascript-plain colored"
+            styleName="about__icon"
+          ></i>
+          <i
+            className="devicon-react-original-wordmark colored"
+            styleName="about__icon"
+          ></i>
+          <i className="devicon-jest-plain colored" styleName="about__icon"></i>
+          <i
+            className="devicon-typescript-plain colored"
+            styleName="about__icon"
+          ></i>
+          <i
+            className="devicon-redux-original colored"
+            styleName="about__icon"
+          ></i>
+          <i
+            className="devicon-git-plain-wordmark colored"
+            styleName="about__icon"
+          ></i>
+          <i
+            className="devicon-firebase-plain-wordmark colored"
+            styleName="about__icon"
+          ></i>
+          <i
+            className="devicon-graphql-plain-wordmark colored"
+            styleName="about__icon"
+          ></i>
+          <i
+            className="devicon-express-original-wordmark"
+            styleName="about__icon"
+          ></i>
+          <i
+            className="devicon-mongodb-plain-wordmark colored"
+            styleName="about__icon"
+          ></i>
+          <i
+            className="devicon-nodejs-plain-wordmark colored"
+            styleName="about__icon"
+          ></i>
+          <i className="devicon-vim-plain colored" styleName="about__icon"></i>
+          <div styleName="about__background">
+            <i
+              className="devicon-nextjs-original-wordmark colored"
+              styleName="about__icon"
+            ></i>
+          </div>
         </div>
-
-      </div>
       </div>
     </section>
   );
@@ -110,5 +109,5 @@ const About: FC = () => {
 
 export default CSSModules(About, styles, {
   allowMultiple: true,
-  handleNotFoundStyleName: "ignore",
+  handleNotFoundStyleName: "log",
 });

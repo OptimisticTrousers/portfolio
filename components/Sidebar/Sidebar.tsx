@@ -30,5 +30,5 @@ const Sidebar: FC = () => {
 
 export default CSSModules(Sidebar, styles, {
   allowMultiple: true,
-  handleNotFoundStyleName: "ignore",
+  handleNotFoundStyleName: "log",
 });

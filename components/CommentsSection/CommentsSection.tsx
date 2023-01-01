@@ -33,5 +33,5 @@ const CommentsSection = ({ comments, postId }: Props) => {
 
 export default CSSModules(CommentsSection, styles, {
   allowMultiple: true,
-  handleNotFoundStyleName: "ignore",
+  handleNotFoundStyleName: "log",
 });

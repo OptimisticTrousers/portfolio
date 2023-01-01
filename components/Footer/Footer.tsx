@@ -13,5 +13,5 @@ const Footer: FC = () => {
 
 export default CSSModules(Footer, styles, {
   allowMultiple: true,
-  handleNotFoundStyleName: "ignore",
+  handleNotFoundStyleName: "log",
 });

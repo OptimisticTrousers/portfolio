@@ -44,7 +44,7 @@ interface Props {
 }
 
 const BlogPost = ({
-  postData: { currentPost, previousPost, nextPost, sortedComments},
+  postData: { currentPost, previousPost, nextPost, sortedComments },
 }: Props) => {
   return (
     <BlogLayout>
@@ -102,12 +102,12 @@ const BlogPost = ({
         )}
       </nav>
       <hr />
-      <CommentsSection comments={sortedComments} postId={currentPost._id} />
+      {/* <CommentsSection comments={sortedComments} postId={currentPost._id} /> */}
     </BlogLayout>
   );
 };
 
 export default CSSModules(BlogPost, styles, {
   allowMultiple: true,
-  handleNotFoundStyleName: "ignore",
+  handleNotFoundStyleName: "log",
 });
