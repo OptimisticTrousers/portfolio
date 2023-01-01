@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 
-const Comments: FC<any> = () => {
+const Comments: FC = () => {
   return (
     <div
       ref={(elem) => {

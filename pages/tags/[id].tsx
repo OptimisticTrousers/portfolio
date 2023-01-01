@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Post } from "../../atoms";
+import { Category, Post, Tag } from "../../atoms";
 import BlogContentLayout from "../../components/BlogContentLayout/BlogContentLayout";
 import BlogHero from "../../components/BlogHero/BlogHero";
 import BlogLayout from "../../components/BlogLayout/BlogLayout";
@@ -13,14 +13,17 @@ import {
 } from "../../lib/posts";
 
 export async function getStaticProps({ params }: { params: { id: string } }) {
-  const { categories, tags }: any = await getAllCategoriesAndTags();
+  const categoriesAndTags = await getAllCategoriesAndTags();
   const tagData = await getTagData(params.id as string);
 
-  if (!tagData) {
+  if (!tagData || !categoriesAndTags) {
     return {
       notFound: true,
     };
   }
+
+  const categories = categoriesAndTags.categories;
+  const tags = categoriesAndTags.tags;
 
   return {
     props: {
@@ -40,7 +43,16 @@ export async function getStaticPaths() {
   };
 }
 
-const Tag: FC<any> = ({ tagData: { tag, posts }, categories, tags }) => {
+interface Props {
+  tagData: {
+    tag: Tag;
+    posts: Post[];
+  };
+  categories: Category[];
+  tags: Tag[];
+}
+
+const Tag: FC<Props> = ({ tagData: { tag, posts }, categories, tags }) => {
   return (
     <BlogLayout>
       <SidebarLayout>

@@ -8,11 +8,20 @@ import SidebarAbout from "../components/AboutSidebar/AboutSidebar";
 import BlogContentLayout from "../components/BlogContentLayout/BlogContentLayout";
 import BlogSidebar from "../components/BlogSidebar/BlogSidebar";
 import BlogSnippet from "../components/BlogSnippet/BlogSnippet";
-import { Category, Post, Tag } from "../atoms";
+import { Category, FetchAllCategoriesAndTags, Post, Tag } from "../atoms";
 
 export async function getStaticProps() {
   const posts = await getAllPosts();
-  const { categories, tags }: any = await getAllCategoriesAndTags();
+  const categoriesAndTags = await getAllCategoriesAndTags();
+
+  if (!categoriesAndTags) {
+    return {
+      notFound: true,
+    };
+  }
+
+  const categories = categoriesAndTags.categories;
+  const tags = categoriesAndTags.tags;
 
   return {
     props: {

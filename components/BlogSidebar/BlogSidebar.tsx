@@ -10,7 +10,7 @@ interface Props {
 }
 
 const BlogSidebar: FC<Props> = ({ categories, tags }) => {
-  const renderedCategories = categories.map((category: any) => {
+  const renderedCategories = categories.map((category: Category) => {
     return (
       <a
         key={category.name}
@@ -22,7 +22,7 @@ const BlogSidebar: FC<Props> = ({ categories, tags }) => {
     );
   });
 
-  const renderedTags = tags.map((tag: any) => {
+  const renderedTags = tags.map((tag: Tag) => {
     return (
       <a
         key={tag.name}

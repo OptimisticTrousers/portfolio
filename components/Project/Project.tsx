@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unknown-property */
 import Image from "next/image";
 import Link from "next/link";
-import { FC, ReactElement } from "react";
+import { FC, ReactElement, ReactNode } from "react";
 import greenDot from "../../public/svg/green-dot.svg";
 import code from "../../public/svg/code.svg";
 import styles from "./Project.module.css";
@@ -15,7 +15,7 @@ interface Props {
   codeLink: string;
   media?: string;
   reverse: boolean;
-  render: () => any;
+  render: () => ReactNode;
 }
 
 const Project: FC<Props> = ({

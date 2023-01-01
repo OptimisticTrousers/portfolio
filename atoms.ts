@@ -5,6 +5,11 @@ export interface Category {
   updatedAt: string;
 }
 
+export interface FetchAllCategoriesAndTags {
+  categories: Category[] | undefined;
+  tags: Tag[] | undefined;
+}
+
 export interface Post {
   _id: string;
   title: string;

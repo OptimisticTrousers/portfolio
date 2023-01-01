@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Post } from "../../atoms";
+import { Category, Post, Tag } from "../../atoms";
 import BlogContentLayout from "../../components/BlogContentLayout/BlogContentLayout";
 import BlogHero from "../../components/BlogHero/BlogHero";
 import BlogLayout from "../../components/BlogLayout/BlogLayout";
@@ -13,14 +13,17 @@ import {
 } from "../../lib/posts";
 
 export async function getStaticProps({ params }: { params: { id: string } }) {
-  const { categories, tags }: any = await getAllCategoriesAndTags();
+  const categoriesAndTags = await getAllCategoriesAndTags();
   const categoryData = await getCategoryData(params.id as string);
 
-  if (!categoryData) {
+  if (!categoryData || !categoriesAndTags) {
     return {
       notFound: true,
     };
   }
+
+  const categories = categoriesAndTags.categories;
+  const tags = categoriesAndTags.tags;
 
   return {
     props: {
@@ -39,7 +42,16 @@ export async function getStaticPaths() {
   };
 }
 
-const Category: FC<any> = ({
+interface Props {
+  categoryData: {
+    category: Category;
+    posts: Post[];
+  };
+  categories: Category[];
+  tags: Tag[];
+}
+
+const Category: FC<Props> = ({
   categoryData: { category, posts },
   categories,
   tags,

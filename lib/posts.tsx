@@ -17,7 +17,10 @@ export async function getAllCategoriesAndTags() {
       data: { tags },
     } = await axios.get(`${apiDomain()}/tags`);
 
-    return { categories, tags };
+    const typedCategories = categories as Category[]
+    const typedTags = categories as Tag[]
+
+    return { categories: typedCategories, tags : typedTags};
   } catch (error) {
     console.log(error);
   }
