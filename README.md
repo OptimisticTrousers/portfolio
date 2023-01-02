@@ -6,6 +6,7 @@
 
 > See it live on [tonyisern.com](tonyisern.com)
 > Or clone repo, cd into repo, then run "npm run start"
+> See my API endpoints at https://optimistic-blog-api.herokuapp.com/api/posts
 
 ## Purpose
 
