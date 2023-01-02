@@ -39,7 +39,7 @@ const projects = [
     title: "Inventory Application",
     description:
       "Creating an Express application using MongoDB, Mongoose and Pug. Learned how Express works with routing, middleware, and rendering. Using MongoDB for database and Mongoose to query data. Using Pug for templating. Using the MVC pattern to design the application. Application generated with the express-application-generator command. ",
-    liveLink: "https://rocky-tundra-71808.herokuapp.com/",
+    liveLink: "https://optimistic-inventory.herokuapp.com/",
     codeLink: "https://github.com/OptimisticTrousers/inventory-application",
     media: "/images/inventory-application.webp",
     render: () => (
@@ -132,7 +132,7 @@ const projects = [
     id: nanoid(),
     title: "Members Only",
     description: `Creating an members only, which is an exclusive clubhouse-like application. Allows users to sign in, log in, make posts, and view posts. If the user is able to enter a special passcode, they will be members of the club! If the user is also able to enter another password, they will be admins of the application, allowing them to delete posts.`,
-    liveLink: "https://powerful-dusk-69121.herokuapp.com/",
+    liveLink: "https://optimistic-members.herokuapp.com/",
     codeLink: "https://github.com/OptimisticTrousers/members-only",
     media: "/images/members-only.webp",
     render: () => (

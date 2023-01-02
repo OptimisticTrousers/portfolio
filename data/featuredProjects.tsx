@@ -39,7 +39,7 @@ const featuredProjects = [
     title: "Inventory Application",
     description:
       "Creating an Express application using MongoDB, Mongoose and Pug. Learned how Express works with routing, middleware, and rendering. Using MongoDB for database and Mongoose to query data. Using Pug for templating. Using the MVC pattern to design the application. Application generated with the express-application-generator command. ",
-    liveLink: "https://rocky-tundra-71808.herokuapp.com/",
+    liveLink: "https://polar-atoll-55566.herokuapp.com/",
     codeLink: "https://github.com/OptimisticTrousers/inventory-application",
     media: "/images/inventory-application.webp",
     render: () => (
