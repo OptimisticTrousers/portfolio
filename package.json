@@ -14,7 +14,6 @@
     "axios": "^1.2.2",
     "date-fns": "^2.29.2",
     "devicon": "^2.15.1",
-    "gray-matter": "^4.0.3",
     "html-react-parser": "^3.0.4",
     "moment": "^2.29.4",
     "nanoid": "^4.0.0",
@@ -22,10 +21,7 @@
     "react": "18.2.0",
     "react-css-modules": "^4.7.11",
     "react-dom": "18.2.0",
-    "react-icons": "^4.4.0",
-    "react-transition-group": "^4.4.5",
-    "remark": "^14.0.2",
-    "remark-html": "^15.0.1"
+    "react-icons": "^4.4.0"
   },
   "devDependencies": {
     "@svgr/webpack": "^6.3.1",
