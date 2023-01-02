@@ -100,7 +100,11 @@ export async function getAllPostIds() {
       }
     });
 
-    return sortedPosts.map((post: Post) => {
+    const filteredPosts = sortedPosts.filter(
+      (post: Post) => post.published === true
+    );
+
+    return filteredPosts.map((post: Post) => {
       return {
         params: {
           id: post._id,
