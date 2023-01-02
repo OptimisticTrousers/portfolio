@@ -174,9 +174,9 @@ export async function getPostData(id: string) {
 
     const currentPost = sortedPosts[currentIndex] || null;
 
-    const previousPost = sortedPosts[currentIndex - 1] || null;
+    const previousPost = sortedPosts[currentIndex - 1]?.published ? sortedPosts[currentIndex - 1] : null;
 
-    const nextPost = sortedPosts[currentIndex + 1] || null;
+    const nextPost = sortedPosts[currentIndex + 1]?.published ? sortedPosts[currentIndex + 1] : null;
 
     return {
       currentPost,
