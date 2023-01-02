@@ -67,7 +67,7 @@ const BlogPost = ({
         <BlogContentLayout>
           <article styleName="blog">
             <h1 styleName="blog__title">{currentPost.title}</h1>
-            {currentPost.image && (
+            {/* {currentPost.image && (
               <figure styleName="blog__container">
                 <img
                   styleName="blog__image"
@@ -79,7 +79,7 @@ const BlogPost = ({
                   {currentPost.caption}
                 </figcaption>
               </figure>
-            )}
+            )} */}
             <p styleName="blog__date">
               <BsCalendar3 />
               <Date dateString={currentPost.createdAt} />
