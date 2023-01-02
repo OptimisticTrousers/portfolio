@@ -40,7 +40,11 @@ export async function getAllPosts() {
       }
     });
 
-    return sortedPosts;
+    const filteredPosts = sortedPosts.filter(
+      (post: Post) => post.published === true
+    );
+
+    return filteredPosts;
   } catch (error) {
     console.log(error);
   }

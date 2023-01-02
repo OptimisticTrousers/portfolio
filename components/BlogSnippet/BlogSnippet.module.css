@@ -1,6 +1,7 @@
 .snippet {
   border-bottom: 1px solid #e1e1e1;
   padding-bottom: 1rem;
+  padding-top: 1rem;
 }
 
 .snippet__date {
