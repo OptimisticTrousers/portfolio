@@ -51,6 +51,7 @@ interface Props {
 const BlogPost = ({
   postData: { currentPost, previousPost, nextPost },
 }: Props) => {
+  console.log(apiDomain())
   return (
     <>
       <Head>
