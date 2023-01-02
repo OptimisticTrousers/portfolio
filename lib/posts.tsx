@@ -3,9 +3,7 @@ import { Category, Post, Tag } from "../atoms";
 
 export function apiDomain() {
   const production = process.env.NODE_ENV === "production";
-  return production
-    ? "https://optimistic-blog-api.herokuapp.com/api"
-    : "http://localhost:5000/api";
+  return production ? process.env.API_DOMAIN : "http://localhost:5000/api";
 }
 
 export async function getAllCategoriesAndTags() {
