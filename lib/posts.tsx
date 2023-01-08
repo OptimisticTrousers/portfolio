@@ -134,7 +134,11 @@ export async function getCategoryData(id: string) {
       }
     });
 
-    return { posts: sortedPosts, category };
+    const filteredPosts = sortedPosts.filter(
+      (post: Post) => post.published === true
+    );
+
+    return { posts: filteredPosts, category };
   } catch (error) {
     console.log(error);
   }
@@ -154,7 +158,11 @@ export async function getTagData(id: string) {
       }
     });
 
-    return { posts: sortedPosts, tag };
+    const filteredPosts = sortedPosts.filter(
+      (post: Post) => post.published === true
+    );
+
+    return { posts: filteredPosts, tag };
   } catch (error) {
     console.log(error);
   }
