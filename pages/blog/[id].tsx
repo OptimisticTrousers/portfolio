@@ -4,7 +4,12 @@ import BlogLayout from "../../components/BlogLayout/BlogLayout";
 import styles from "./BlogPost.module.css";
 import { BsCalendar3 } from "react-icons/bs";
 import Link from "next/link";
-import { apiDomain, getAllPostIds, getPostData } from "../../lib/posts";
+import {
+  apiDomain,
+  getAllPostIds,
+  getPostData,
+  s3Domain,
+} from "../../lib/posts";
 import Date from "../../components/Date/Date";
 import SidebarLayout from "../../components/SidebarLayout/SidebarLayout";
 import AboutSidebar from "../../components/AboutSidebar/AboutSidebar";
@@ -67,19 +72,21 @@ const BlogPost = ({
         <BlogContentLayout>
           <article styleName="blog">
             <h1 styleName="blog__title">{currentPost.title}</h1>
-            {/* {currentPost.image && (
+            {currentPost.image && (
               <figure styleName="blog__container">
-                <img
+                <Image
                   styleName="blog__image"
-                  src={`${apiDomain()}/images/${currentPost.image.filename}`}
-                  width="100%"
+                  src={`${s3Domain()}/${currentPost.image.originalname}`}
+                  width={500}
+                  height={400}
+                  objectFit={"contain"}
                   alt={currentPost.title}
                 />
                 <figcaption styleName="blog__caption">
                   {currentPost.caption}
                 </figcaption>
               </figure>
-            )} */}
+            )}
             <p styleName="blog__date">
               <BsCalendar3 />
               <Date dateString={currentPost.createdAt} />

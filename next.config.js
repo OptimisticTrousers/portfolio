@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ["localhost", "still-brushlands-93140.herokuapp.com"]
+    domains: ["localhost", "still-brushlands-93140.herokuapp.com", "optimisticbucket.s3.amazonaws.com"]
   },
   reactStrictMode: true,
   swcMinify: true,

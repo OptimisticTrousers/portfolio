@@ -8,6 +8,10 @@ export function apiDomain() {
     : "http://localhost:5000/api";
 }
 
+export function s3Domain() {
+  return "https://optimisticbucket.s3.amazonaws.com/uploads";
+}
+
 export async function getAllCategoriesAndTags() {
   try {
     const {
@@ -174,9 +178,13 @@ export async function getPostData(id: string) {
 
     const currentPost = sortedPosts[currentIndex] || null;
 
-    const previousPost = sortedPosts[currentIndex - 1]?.published ? sortedPosts[currentIndex - 1] : null;
+    const previousPost = sortedPosts[currentIndex - 1]?.published
+      ? sortedPosts[currentIndex - 1]
+      : null;
 
-    const nextPost = sortedPosts[currentIndex + 1]?.published ? sortedPosts[currentIndex + 1] : null;
+    const nextPost = sortedPosts[currentIndex + 1]?.published
+      ? sortedPosts[currentIndex + 1]
+      : null;
 
     return {
       currentPost,
