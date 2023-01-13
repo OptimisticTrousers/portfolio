@@ -107,13 +107,13 @@
   background-color: #24104f;
 }
 
-@media (max-width: 740px) {
+@media (max-width: 745px) {
   .list {
     display: none;
   }
 }
 
-@media(min-width: 740px) {
+@media(min-width: 745px) {
   .mobile-nav {
     display: none;
   }
