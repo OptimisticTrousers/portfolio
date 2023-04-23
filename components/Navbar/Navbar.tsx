@@ -45,17 +45,35 @@ const Navbar: FC = () => {
           </ul>
           <ul styleName={`mobile-nav ${toggleMenu && "menu-active"}`}>
             <li styleName="item">
-              <Link href="/projects" tabIndex={0} aria-label="projects page">
-                Projects
-              </Link>
+              <button styleName="button" onClick={handleMenuClick}>
+                <Link
+                  styleName="link"
+                  href="/projects"
+                  tabIndex={0}
+                  aria-label="projects page"
+                >
+                  Projects
+                </Link>
+              </button>
             </li>
             <li styleName="item">
-              <Link href="/contact" tabIndex={0} aria-label="contact page">
-                Contact
-              </Link>
+              <button styleName="button" onClick={handleMenuClick}>
+                <Link
+                  styleName="link"
+                  href="/contact"
+                  tabIndex={0}
+                  aria-label="contact page"
+                >
+                  Contact
+                </Link>
+              </button>
             </li>
             <li styleName="item">
-              <Link href="/blog">Blog</Link>
+              <button styleName="button" onClick={handleMenuClick}>
+                <Link styleName="link" href="/blog">
+                  Blog
+                </Link>
+              </button>
             </li>
           </ul>
         </div>
