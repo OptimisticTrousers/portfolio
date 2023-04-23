@@ -4,6 +4,15 @@
   padding-top: 1rem;
 }
 
+.snippet:first-of-type {
+  padding-bottom: 2rem;
+}
+
+.snippet:last-child {
+  padding-top: 2rem;
+  border-bottom: none;
+}
+
 .snippet__date {
   display: flex;
   gap: 6px;
