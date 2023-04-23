@@ -1,25 +1,14 @@
 import axios from "axios";
 import { Category, Post, Tag } from "../atoms";
 
-export function apiDomain() {
-  const production = process.env.NODE_ENV === "production";
-  return production
-    ? "https://optimistic-blog-api.herokuapp.com/api"
-    : "http://localhost:5000/api";
-}
-
-export function s3Domain() {
-  return "https://optimisticbucket.s3.amazonaws.com/uploads";
-}
-
 export async function getAllCategoriesAndTags() {
   try {
     const {
       data: { categories },
-    } = await axios.get(`${apiDomain()}/categories`);
+    } = await axios.get(`${process.env.NEXT_PUBLIC_API_DOMAIN}/categories`);
     const {
       data: { tags },
-    } = await axios.get(`${apiDomain()}/tags`);
+    } = await axios.get(`${process.env.NEXT_PUBLIC_API_DOMAIN}/tags`);
 
     const typedCategories = categories as Category[];
     const typedTags = tags as Tag[];
@@ -34,7 +23,7 @@ export async function getAllPosts() {
   try {
     const {
       data: { posts },
-    } = await axios.get(`${apiDomain()}/posts`);
+    } = await axios.get(`${process.env.NEXT_PUBLIC_API_DOMAIN}/posts`);
 
     const sortedPosts = posts.sort((a: Post, b: Post) => {
       if (a.createdAt < b.createdAt) {
@@ -58,7 +47,7 @@ export async function getAllCategoryIds() {
   try {
     const {
       data: { categories },
-    } = await axios.get(`${apiDomain()}/categories`);
+    } = await axios.get(`${process.env.NEXT_PUBLIC_API_DOMAIN}/categories`);
 
     return categories.map((category: Category) => {
       return {
@@ -76,7 +65,7 @@ export async function getAllTagIds() {
   try {
     const {
       data: { tags },
-    } = await axios.get(`${apiDomain()}/tags`);
+    } = await axios.get(`${process.env.NEXT_PUBLIC_API_DOMAIN}/tags`);
 
     return tags.map((tag: Tag) => {
       return {
@@ -92,7 +81,7 @@ export async function getAllTagIds() {
 
 export async function getAllPostIds() {
   try {
-    const response = await fetch(`${apiDomain()}/posts`);
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_DOMAIN}/posts`);
 
     const { posts } = await response.json();
 
@@ -124,7 +113,7 @@ export async function getCategoryData(id: string) {
   try {
     const {
       data: { category, posts },
-    } = await axios.get(`${apiDomain()}/categories/${id}`);
+    } = await axios.get(`${process.env.NEXT_PUBLIC_API_DOMAIN}/categories/${id}`);
 
     const sortedPosts = posts.sort((a: Post, b: Post) => {
       if (a.createdAt < b.createdAt) {
@@ -148,7 +137,7 @@ export async function getTagData(id: string) {
   try {
     const {
       data: { tag, posts },
-    } = await axios.get(`${apiDomain()}/tags/${id}`);
+    } = await axios.get(`${process.env.NEXT_PUBLIC_API_DOMAIN}/tags/${id}`);
 
     const sortedPosts = posts.sort((a: Post, b: Post) => {
       if (a.createdAt < b.createdAt) {
@@ -172,7 +161,7 @@ export async function getPostData(id: string) {
   try {
     const {
       data: { posts },
-    } = await axios.get(`${apiDomain()}/posts`);
+    } = await axios.get(`${process.env.NEXT_PUBLIC_API_DOMAIN}/posts`);
 
     const sortedPosts = posts.sort((a: Post, b: Post) => {
       if (a.createdAt < b.createdAt) {

@@ -5,10 +5,8 @@ import styles from "./BlogPost.module.css";
 import { BsCalendar3 } from "react-icons/bs";
 import Link from "next/link";
 import {
-  apiDomain,
   getAllPostIds,
   getPostData,
-  s3Domain,
 } from "../../lib/posts";
 import Date from "../../components/Date/Date";
 import SidebarLayout from "../../components/SidebarLayout/SidebarLayout";
@@ -76,7 +74,7 @@ const BlogPost = ({
               <figure styleName="blog__container">
                 <Image
                   styleName="blog__image"
-                  src={`${s3Domain()}/${currentPost.image.originalname}`}
+                  src={`${process.env.NEXT_PUBLIC_S3_BUCKET}/${currentPost.image.originalname}`}
                   width={500}
                   height={400}
                   objectFit={"contain"}
