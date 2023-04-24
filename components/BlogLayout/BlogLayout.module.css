@@ -1,14 +1,15 @@
 .blog__blogs {
-    width: 100%;
+  width: 100%;
 }
 
 .blog {
-    display: flex;
-    gap: 32px;
+  display: grid;
+  grid-template-columns: 300px minmax(0, 1fr);
+  gap: 3rem;
 }
 
-@media(max-width: 910px) {
-    .blog {
-        flex-direction: column;
-    }
+@media (max-width: 910px) {
+  .blog {
+    display: block;
+  }
 }
