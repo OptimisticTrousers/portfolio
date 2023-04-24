@@ -4,10 +4,7 @@ import BlogLayout from "../../components/BlogLayout/BlogLayout";
 import styles from "./BlogPost.module.css";
 import { BsCalendar3 } from "react-icons/bs";
 import Link from "next/link";
-import {
-  getAllPostIds,
-  getPostData,
-} from "../../lib/posts";
+import { getAllPostIds, getPostData } from "../../lib/posts";
 import Date from "../../components/Date/Date";
 import SidebarLayout from "../../components/SidebarLayout/SidebarLayout";
 import AboutSidebar from "../../components/AboutSidebar/AboutSidebar";
@@ -18,6 +15,9 @@ import Comments from "../../components/Comments/Comments";
 import Head from "next/head";
 import { Post } from "../../atoms";
 import Image from "next/image";
+import { useEffect } from "react";
+import Prism from "prismjs";
+import "prismjs/themes/prism-okaidia.css";
 
 export async function getStaticProps({ params }: { params: { id: string } }) {
   const postData = await getPostData(params.id as string);
@@ -54,6 +54,9 @@ interface Props {
 const BlogPost = ({
   postData: { currentPost, previousPost, nextPost },
 }: Props) => {
+  useEffect(() => {
+    Prism.highlightAll();
+  }, []);
   return (
     <>
       <Head>
