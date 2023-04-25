@@ -5,6 +5,48 @@ import { nanoid } from "nanoid";
 const featuredProjects = [
   {
     id: nanoid(),
+    title: "Skyfringe",
+    description:
+      "A fullstack social media application built using the MERN stack and Typescript. Front-end application is fully tested with Vitest and React Testing Library. Back-end application is tested with Supertest and mongodb-memory-server. AWS S3 is used to store images. Currently not finished and still in progress.",
+    codeLink: "https://github.com/OptimisticTrousers/skyfringe",
+    liveLink: "https://github.com/OptimisticTrousers/skyfringe",
+    media: "/video/skyfringe.webm",
+    render: () => (
+      <>
+        <i
+          className="devicon-mongodb-plain-wordmark colored"
+          styleName="project__icon"
+        ></i>
+        <i
+          className="devicon-express-original-wordmark"
+          styleName="project__icon"
+        ></i>
+        <i
+          className="devicon-react-original-wordmark colored"
+          styleName="project__icon"
+        ></i>
+        <i
+          className="devicon-nodejs-plain-wordmark colored"
+          styleName="project__icon"
+        ></i>
+        <i
+          className="devicon-css3-plain-wordmark colored"
+          styleName="project__icon"
+        ></i>
+        <i
+          className="devicon-typescript-plain colored"
+          styleName="project__icon"
+        ></i>
+        <i
+          className="devicon-amazonwebservices-plain-wordmark colored"
+          styleName="project__icon"
+        ></i>
+        <i className="devicon-jest-plain colored" styleName="project__icon"></i>
+      </>
+    ),
+  },
+  {
+    id: nanoid(),
     title: "Reddit Clone",
     description:
       "A clone based on Reddit. Users can create communities, create posts, comment on posts, and like posts. Users can also view their profile to see which posts they saved and upvoted. Built with React.js and Firebase and works well on mobile devices.",
@@ -14,15 +56,13 @@ const featuredProjects = [
     render: () => (
       <>
         <i
-          className="devicon-react-original colored"
+          className="devicon-react-original-wordmark colored"
           styleName="project__icon"
         ></i>
         <i
+          className="devicon-css3-plain-wordmark colored"
           styleName="project__icon"
-          className="devicon-firebase-plain colored"
         ></i>
-        <i className="devicon-css3-plain colored" styleName="project__icon"></i>
-        <i className="devicon-jest-plain colored" styleName="project__icon"></i>
         <i
           className="devicon-typescript-plain colored"
           styleName="project__icon"
@@ -31,52 +71,56 @@ const featuredProjects = [
           className="devicon-redux-original colored"
           styleName="project__icon"
         ></i>
-      </>
-    ),
-  },
-  {
-    id: "2",
-    title: "Inventory Application",
-    description:
-      "Creating an Express application using MongoDB, Mongoose and Pug. Learned how Express works with routing, middleware, and rendering. Using MongoDB for database and Mongoose to query data. Using Pug for templating. Using the MVC pattern to design the application. Application generated with the express-application-generator command. ",
-    liveLink: "https://optimistic-inventory.herokuapp.com/",
-    codeLink: "https://github.com/OptimisticTrousers/inventory-application",
-    media: "/images/inventory-application.webp",
-    render: () => (
-      <>
         <i
-          className="devicon-express-original colored"
-          styleName="project__icon"
-        ></i>
-        <i className="devicon-css3-plain colored" styleName="project__icon"></i>
-        <i
-          className="devicon-javascript-plain colored"
-          styleName="project__icon"
-        ></i>
-        <i className="devicon-mongodb-plain" styleName="project__icon"></i>
-      </>
-    ),
-  },
-  {
-    id: "3",
-    title: "Battleship",
-    description:
-      "A game based on Battleship, a turn-based game. One of the more challenging projects. Built with HTML, CSS, and Javascript. Using Jest for unit testing. Users can drag their ships onto the board and play with an AI. Users can also randomize their board selection.",
-    liveLink: "https://optimistictrousers.github.io/TOP-battleship/",
-    codeLink: "https://github.com/OptimisticTrousers/TOP-battleship",
-    media: "/images/battleship.webp",
-    render: () => (
-      <>
-        <i
-          className="devicon-html5-plain-wordmark colored"
-          styleName="project__icon"
-        ></i>
-        <i className="devicon-css3-plain colored" styleName="project__icon"></i>
-        <i
-          className="devicon-javascript-plain colored"
+          className="devicon-firebase-plain-wordmark colored"
           styleName="project__icon"
         ></i>
         <i className="devicon-jest-plain colored" styleName="project__icon"></i>
+      </>
+    ),
+  },
+  {
+    id: nanoid(),
+    title: "Cooking Recipes Application",
+    description:
+      "Fullstack web application built with SQLite, React.js and Node.js. Using Material React Table for tabular data. Using several component libraries such as Chakra, Material UI, Mantine, and Bulma for styling. Not yet deployed.",
+    liveLink: "https://github.com/OptimisticTrousers/cooking-recipe-portal",
+    codeLink: "https://github.com/OptimisticTrousers/cooking-recipe-portal",
+    media: "/images/cooking-recipes.png",
+    render: () => (
+      <>
+        <i
+          className="devicon-sqlite-plain-wordmark colored"
+          styleName="project__icon"
+        ></i>
+        <i
+          className="devicon-express-original-wordmark"
+          styleName="project__icon"
+        ></i>
+        <i
+          className="devicon-react-original-wordmark colored"
+          styleName="project__icon"
+        ></i>
+        <i
+          className="devicon-nodejs-plain-wordmark colored"
+          styleName="project__icon"
+        ></i>
+        <i
+          className="devicon-css3-plain-wordmark colored"
+          styleName="project__icon"
+        ></i>
+        <i
+          className="devicon-javascript-plain colored"
+          styleName="project__icon"
+        ></i>
+        <i
+          className="devicon-materialui-plain colored"
+          styleName="project__icon"
+        ></i>
+        <i
+          className="devicon-bulma-plain colored"
+          styleName="project__icon"
+        ></i>
       </>
     ),
   },

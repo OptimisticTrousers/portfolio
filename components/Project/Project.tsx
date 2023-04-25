@@ -71,7 +71,13 @@ const Project: FC<Props> = ({
         </div>
       </div>
       <div>
-        <img styleName="project__image" src={media!} alt={title} />
+        {media?.includes("images") ? (
+          <img styleName="project__image" src={media!} alt={title} />
+        ) : (
+          <video styleName="project__image" autoPlay muted loop>
+            <source src={media} type="video/webm" />
+          </video>
+        )}
       </div>
     </section>
   );

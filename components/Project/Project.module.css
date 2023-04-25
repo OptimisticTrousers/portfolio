@@ -4,9 +4,10 @@
   justify-content: space-around;
   margin-bottom: 3rem;
   margin-top: 60px;
-  background: #659b91;
   padding: 5rem 7rem;
   border-radius: 12px;
+  background-color: #1f1e22;
+  border: 2px solid #2d3034;
 }
 
 .reverse {
@@ -26,7 +27,7 @@
 }
 
 .project__icon {
-  font-size: 48px;
+  font-size: 60px;
   margin-right: 0.5rem;
 }
 
@@ -36,7 +37,7 @@
   line-height: 1.75;
   letter-spacing: 0.00938em;
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-  color: black;
+  color: white;
 }
 
 .project__buttons {
@@ -49,7 +50,7 @@
   font-size: 2rem;
   font-weight: bold;
   line-height: 1.2;
-  color: #292929;
+  color: white;
 }
 
 .project__button-container {
@@ -62,6 +63,7 @@
 .project__icons {
   display: flex;
   flex-wrap: wrap;
+  gap: 12px;
 }
 
 .project__button {
