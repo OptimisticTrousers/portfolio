@@ -52,7 +52,7 @@ const featuredProjects = [
       "A clone based on Reddit. Users can create communities, create posts, comment on posts, and like posts. Users can also view their profile to see which posts they saved and upvoted. Built with React.js and Firebase and works well on mobile devices.",
     codeLink: "https://github.com/OptimisticTrousers/reddit-clone",
     liveLink: "http://optimistictrousers.github.io/reddit-clone",
-    media: "/images/reddit-clone.webp",
+    media: "/video/reddit.webm",
     render: () => (
       <>
         <i
