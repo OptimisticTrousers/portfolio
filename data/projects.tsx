@@ -396,6 +396,30 @@ const projects = [
   },
   {
     id: nanoid(),
+    title: "React Trivia App",
+    description: "Fun trivia app made from Scrimba's React for Free course",
+    liveLink: "https://optimistictrousers.github.io/react-trivia-app/",
+    codeLink: "https://github.com/OptimisticTrousers/react-trivia-app",
+    media: "/video/react-trivia.webm",
+    render: () => (
+      <>
+        <i
+          className="devicon-react-original-wordmark colored"
+          styleName="project__icon"
+        ></i>
+        <i
+          className="devicon-css3-plain-wordmark colored"
+          styleName="project__icon"
+        ></i>
+        <i
+          className="devicon-javascript-plain colored"
+          styleName="project__icon"
+        ></i>
+      </>
+    ),
+  },
+  {
+    id: nanoid(),
     title: "CV Application",
     description: `Created a curriculum vitae(CV)/resume builder. User can create, read, update, and delete content. User can upload images. This CV Application allows you to create and customize your CV, along with additional information about yourself`,
     liveLink: "https://optimistictrousers.github.io/TOP-cv-project/",
