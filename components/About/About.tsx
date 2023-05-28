@@ -13,6 +13,7 @@ const About: FC = () => {
         <Image
           styleName="about__image"
           src="/images/me.jpg"
+          objectFit="cover"
           alt="a picture of myself"
           width={300}
           height={300}
