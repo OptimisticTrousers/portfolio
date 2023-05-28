@@ -118,6 +118,10 @@ const projects = [
           className="devicon-digitalocean-plain-wordmark colored"
         ></i>
         <i
+          styleName="project__icon"
+          className="devicon-nginx-original-wordmark colored"
+        ></i>
+        <i
           className="devicon-materialui-plain colored"
           styleName="project__icon"
         ></i>

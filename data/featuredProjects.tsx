@@ -115,6 +115,10 @@ const featuredProjects = [
         ></i>
         <i
           styleName="project__icon"
+          className="devicon-nginx-original-wordmark colored"
+        ></i>
+        <i
+          styleName="project__icon"
           className="devicon-digitalocean-plain-wordmark colored"
         ></i>
         <i
