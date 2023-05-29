@@ -11,7 +11,7 @@ const SidebarAbout: FC = () => {
       <div styleName="aside__avatar">
         <Image
           styleName="aside__image"
-          src="/images/me.jpg"
+          src="/images/me.png"
           objectFit="contain"
           alt="picture of me"
           width={100}

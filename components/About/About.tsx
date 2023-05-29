@@ -12,11 +12,11 @@ const About: FC = () => {
         <h2 styleName="about__title">About me</h2>
         <Image
           styleName="about__image"
-          src="/images/me.jpg"
+          src="/images/me.png"
           objectFit="contain"
           alt="a picture of myself"
-          width={300}
-          height={300}
+          width={400}
+          height={400}
           priority
         />
         <p styleName="about__description">
