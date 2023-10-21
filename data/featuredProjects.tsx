@@ -10,7 +10,13 @@ const featuredProjects = [
       "A fullstack social media application built using the MERN stack and Typescript. Front-end application is fully tested with Vitest and React Testing Library. Back-end application is tested with Supertest and mongodb-memory-server. AWS S3 is used to store images. Accessibility friendly",
     codeLink: "https://github.com/OptimisticTrousers/skyfringe",
     liveLink: "https://skyfringe.netlify.app/",
-    media: "/video/skyfringe.webm",
+    images: [
+      {
+        isPriority: true,
+        src: "/images/breakout.webp",
+        alt: "The home page of Session Hub showing the users My Hub section and recent posts of their friends",
+      },
+    ],
     render: () => (
       <>
         <i
@@ -52,7 +58,13 @@ const featuredProjects = [
       "A clone based on Reddit. Users can create communities, create posts, comment on posts, and like posts. Users can also view their profile to see which posts they saved and upvoted. Built with React.js and Firebase and works well on mobile devices.",
     codeLink: "https://github.com/OptimisticTrousers/reddit-clone",
     liveLink: "http://optimistictrousers.github.io/reddit-clone",
-    media: "/video/reddit.webm",
+    images: [
+      {
+        isPriority: true,
+        src: "/images/breakout.webp",
+        alt: "The home page of Session Hub showing the users My Hub section and recent posts of their friends",
+      },
+    ],
     render: () => (
       <>
         <i
@@ -86,7 +98,13 @@ const featuredProjects = [
       "Fullstack web application built with SQLite, React.js and Node.js. Using Material React Table for tabular data. Using several component libraries such as Chakra, Material UI, Mantine, and Bulma for styling. Deployed API with a Digital Ocean droplet, configured with an NGINX reverse proxy, added an SSL certificate using Let's Encrypt, and served over HTTPS.",
     liveLink: "https://cooking-recipes-portal.netlify.app/",
     codeLink: "https://github.com/OptimisticTrousers/cooking-recipe-portal",
-    media: "/video/cooking-recipes.webm",
+    images: [
+      {
+        isPriority: true,
+        src: "/images/breakout.webp",
+        alt: "The home page of Session Hub showing the users My Hub section and recent posts of their friends",
+      },
+    ],
     render: () => (
       <>
         <i

@@ -7,6 +7,7 @@ import code from "../../public/svg/code.svg";
 import styles from "./Project.module.css";
 import CSSModules from "react-css-modules";
 import { motion } from "framer-motion";
+import ImageCarousel from "../ImageCarousel/ImageCarousel";
 
 interface Props {
   id: string;
@@ -14,7 +15,11 @@ interface Props {
   description: string;
   liveLink: string;
   codeLink: string;
-  media?: string;
+  images: {
+    isPriority: boolean;
+    src: string;
+    alt: string;
+  }[];
   reverse: boolean;
   render: () => ReactNode;
 }
@@ -40,7 +45,7 @@ const Project: FC<Props> = ({
   description,
   liveLink,
   codeLink,
-  media,
+  images,
   reverse,
   render,
 }) => {
@@ -49,9 +54,10 @@ const Project: FC<Props> = ({
       variants={cardVariants}
       initial="offscreen"
       whileInView="onscreen"
-      viewport={{ once: false }}
+      viewport={{ once: true }}
       styleName={`project ${reverse && "reverse"}`}
     >
+      <ImageCarousel images={images} />
       <div styleName="project__details">
         <div styleName="project__content">
           <h3 styleName="project__title">{title}</h3>
@@ -69,10 +75,12 @@ const Project: FC<Props> = ({
               <Image
                 src="/svg/green-dot.svg"
                 alt="green dot"
-                width={48}
-                height={48}
+                width={56}
+                height={56}
               />
-              <button styleName="project__button">LIVE</button>
+              <div styleName="project__div">
+                <button styleName="project__button">LIVE</button>
+              </div>
             </div>
           </a>
           <a
@@ -85,22 +93,15 @@ const Project: FC<Props> = ({
               <Image
                 src="/svg/code.svg"
                 alt="terminal shell"
-                width={48}
-                height={48}
+                width={56}
+                height={56}
               />
-              <button styleName="project__button">CODE</button>
+              <div styleName="project__div">
+                <button styleName="project__button">CODE</button>
+              </div>
             </div>
           </a>
         </div>
-      </div>
-      <div>
-        {media?.includes("images") ? (
-          <img styleName="project__image" src={media!} alt={title} />
-        ) : (
-          <video styleName="project__image" autoPlay muted loop>
-            <source src={media} type="video/webm" />
-          </video>
-        )}
       </div>
     </motion.section>
   );

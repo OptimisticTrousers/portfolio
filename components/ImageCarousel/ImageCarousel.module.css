@@ -1,0 +1,50 @@
+.carousel {
+  display: grid;
+}
+
+.embla {
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.075);
+  position: relative;
+}
+
+.embla__viewport {
+  position: relative;
+}
+
+.embla__container {
+  display: flex;
+}
+
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}
+
+.embla__prev,
+.embla__next {
+  position: absolute;
+  z-index: 100;
+  top: calc(50% - 15px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.embla__prev:hover svg g g polyline,
+.embla__next:hover svg g g polyline {
+  stroke: rgb(213, 213, 213);
+}
+
+.embla__prev {
+  left: 0;
+}
+
+.embla__next {
+  right: 0em;
+}
