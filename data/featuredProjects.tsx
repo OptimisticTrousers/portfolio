@@ -13,6 +13,11 @@ const featuredProjects = [
     images: [
       {
         isPriority: true,
+        src: "/images/skyfringe/tilt.webp",
+        alt: "Screenshot of the 'Skyfringe' social media platform's navigation pane. Icons include home, friends, notifications, chat, settings, and log out.",
+      },
+      {
+        isPriority: false,
         src: "/images/skyfringe/browser.webp",
         alt: "Banner image for Monkey D. Luffy's 'Skyfringe' profile, featuring the 'One Piece' crew including Nami, Zoro, Sanji, Chopper, and others.",
       },
@@ -20,11 +25,6 @@ const featuredProjects = [
         isPriority: false,
         src: "/images/skyfringe/laptop.webp",
         alt: "Sign up page for Skyfringe",
-      },
-      {
-        isPriority: false,
-        src: "/images/skyfringe/tilt.webp",
-        alt: "Screenshot of the 'Skyfringe' social media platform's navigation pane. Icons include home, friends, notifications, chat, settings, and log out.",
       },
       {
         isPriority: false,

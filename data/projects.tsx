@@ -13,6 +13,11 @@ const projects = [
     images: [
       {
         isPriority: true,
+        src: "/images/skyfringe/tilt.webp",
+        alt: "Screenshot of the 'Skyfringe' social media platform's navigation pane. Icons include home, friends, notifications, chat, settings, and log out.",
+      },
+      {
+        isPriority: false,
         src: "/images/skyfringe/browser.webp",
         alt: "Banner image for Monkey D. Luffy's 'Skyfringe' profile, featuring the 'One Piece' crew including Nami, Zoro, Sanji, Chopper, and others.",
       },
@@ -20,11 +25,6 @@ const projects = [
         isPriority: false,
         src: "/images/skyfringe/laptop.webp",
         alt: "Sign up page for Skyfringe",
-      },
-      {
-        isPriority: false,
-        src: "/images/skyfringe/tilt.webp",
-        alt: "Screenshot of the 'Skyfringe' social media platform's navigation pane. Icons include home, friends, notifications, chat, settings, and log out.",
       },
       {
         isPriority: false,
@@ -449,8 +449,8 @@ const projects = [
     title: "Shopping Cart",
     description:
       "Creating a multi-page application with react-router-dom, using Testing Library and Jest to test, and learning how to use context. Not functional when it comes to checkout.",
-    liveLink: "https://optimistictrousers.github.io/TOP-shopping-cart/",
-    codeLink: "https://github.com/OptimisticTrousers/TOP-shopping-cart",
+    liveLink: "https://optimistictrousers.github.io/shopping-cart/",
+    codeLink: "https://github.com/OptimisticTrousers/shopping-cart",
     images: [
       {
         isPriority: false,
@@ -539,8 +539,8 @@ const projects = [
     title: "Tic Tac Toe",
     description:
       "Practicing DOM Manipulating and learned about the minimax algorithm, which is an algorithm that allows for the computer to make optimal moves in turn-based games such as tic-tac-toe or chess.",
-    liveLink: "https://optimistictrousers.github.io/TOP-tic-tac-toe/",
-    codeLink: "https://github.com/OptimisticTrousers/TOP-tic-tac-toe",
+    liveLink: "https://optimistictrousers.github.io/tic-tac-toe/",
+    codeLink: "https://github.com/OptimisticTrousers/tic-tac-toe",
     images: [
       {
         isPriority: false,
@@ -614,8 +614,8 @@ const projects = [
     id: nanoid(),
     title: "CV Application",
     description: `Created a curriculum vitae(CV)/resume builder. User can create, read, update, and delete content. User can upload images. This CV Application allows you to create and customize your CV, along with additional information about yourself`,
-    liveLink: "https://optimistictrousers.github.io/TOP-cv-project/",
-    codeLink: "https://github.com/OptimisticTrousers/TOP-cv-project",
+    liveLink: "https://optimistictrousers.github.io/cv-project/",
+    codeLink: "https://github.com/OptimisticTrousers/cv-project",
     images: [
       {
         isPriority: false,
@@ -655,8 +655,8 @@ const projects = [
     title: "Etch-a-Sketch",
     description:
       "A project that allows users to draw on the board, re-size the board, change colors, etc.",
-    liveLink: "https://optimistictrousers.github.io/TOP-etch-a-sketch/",
-    codeLink: "https://github.com/OptimisticTrousers/TOP-etch-a-sketch",
+    liveLink: "https://optimistictrousers.github.io/etch-a-sketch/",
+    codeLink: "https://github.com/OptimisticTrousers/etch-a-sketch",
     images: [
       {
         isPriority: false,
@@ -691,8 +691,8 @@ const projects = [
     title: "Weather App",
     description:
       "Learned about asynchronous programming with Javascript. Learned about the event loop, and single-threaded nature of Javascript. Learned about callbacks, promises, async and await, and fetched weather data from an API to render onto the page. Had lots of fun making this",
-    liveLink: "https://optimistictrousers.github.io/TOP-weather-app/",
-    codeLink: "https://github.com/OptimisticTrousers/TOP-weather-app",
+    liveLink: "https://optimistictrousers.github.io/weather-app/",
+    codeLink: "https://github.com/OptimisticTrousers/weather-app",
     images: [
       {
         isPriority: false,
@@ -727,8 +727,8 @@ const projects = [
     title: "Rock, Paper, Scissors",
     description:
       "Creating a Minecraft style Rock, Paper, Scissors. You play against the CPU. First to five wins!",
-    liveLink: "https://optimistictrousers.github.io/TOP-rock-paper-scissors/",
-    codeLink: "https://github.com/OptimisticTrousers/TOP-rock-paper-scissors",
+    liveLink: "https://optimistictrousers.github.io/rock-paper-scissors/",
+    codeLink: "https://github.com/OptimisticTrousers/rock-paper-scissors",
     images: [
       {
         isPriority: false,

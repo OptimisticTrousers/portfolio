@@ -57,14 +57,14 @@ const Project: FC<Props> = ({
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ once: true }}
-      styleName={`project`}
+      styleName={`project ${video && "project--row"}`}
     >
       {images && <ImageCarousel images={images} />}
-      {video && (
-        <video styleName="project__image" autoPlay muted loop>
-          <source src={video} type="video/webm" />
-        </video>
-      )}
+        {video && (
+          <video styleName="project__video" autoPlay muted loop>
+            <source src={video} type="video/webm" />
+          </video>
+        )}
       <div styleName="project__details">
         <div styleName="project__content">
           <h3 styleName="project__title">{title}</h3>
