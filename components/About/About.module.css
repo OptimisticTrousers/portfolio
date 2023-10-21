@@ -12,7 +12,7 @@
 
 .about__title {
   font-weight: 800;
-  font-size: 56px;
+  font-size: 44px;
   line-height: 56px;
   margin-bottom: 2rem;
   text-align: center;
@@ -22,6 +22,37 @@
   font-size: 24px;
   line-height: 40px;
   font-weight: 300;
+}
+
+.about__technologies {
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about__row {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+}
+
+.about__tech {
+  border: 1px solid white;
+  width: 120px;
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 8px;
+  transition: background-color 0.3s;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.about__tech:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .about__icons {
@@ -34,8 +65,7 @@
 }
 
 .about__icon {
-  font-size: 150px;
-  margin: 5px;
+  font-size: 75px;
 }
 
 .about__content {
@@ -68,14 +98,39 @@
   }
 }
 
-@media (max-width: 550px) {
-  .about__icon {
-    font-size: 100px;
+@media (max-width: 1150px) and (min-width: 801px) {
+  .about__technologies {
+    flex-direction: row;
+  }
+
+  .about__row {
+    flex-direction: column;
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 1150px) {
+  .about__technologies {
+    gap: 16px;
+  }
+  .about__row {
+    gap: 16px;
+  }
+  .about__tech {
+    width: 90px;
+    height: 100px;
+  }
+
   .about__icon {
     font-size: 50px;
+  }
+}
+
+@media (max-width: 550px) {
+  .about__technologies {
+    flex-direction: row;
+  }
+
+  .about__row {
+    flex-direction: column;
   }
 }

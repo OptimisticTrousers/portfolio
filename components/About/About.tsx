@@ -42,64 +42,84 @@ const About: FC = () => {
           favorite manga, One Piece!
         </p>
       </div>
-      <div styleName="about__technologies">
+      <div styleName="about__container">
         <h2 styleName="about__title">Technologies</h2>
-        <div styleName="about__icons">
-          <i
-            className="devicon-html5-plain-wordmark colored"
-            styleName="about__icon"
-          ></i>
-          <i
-            className="devicon-css3-plain-wordmark colored"
-            styleName="about__icon"
-          ></i>
-          <i
-            className="devicon-javascript-plain colored"
-            styleName="about__icon"
-          ></i>
-          <i
-            className="devicon-react-original-wordmark colored"
-            styleName="about__icon"
-          ></i>
-          <i className="devicon-jest-plain colored" styleName="about__icon"></i>
-          <i
-            className="devicon-typescript-plain colored"
-            styleName="about__icon"
-          ></i>
-          <i
-            className="devicon-redux-original colored"
-            styleName="about__icon"
-          ></i>
-          <i
-            className="devicon-git-plain-wordmark colored"
-            styleName="about__icon"
-          ></i>
-          <i
-            className="devicon-firebase-plain-wordmark colored"
-            styleName="about__icon"
-          ></i>
-          <i
-            className="devicon-graphql-plain-wordmark colored"
-            styleName="about__icon"
-          ></i>
-          <i
-            className="devicon-express-original-wordmark"
-            styleName="about__icon"
-          ></i>
-          <i
-            className="devicon-mongodb-plain-wordmark colored"
-            styleName="about__icon"
-          ></i>
-          <i
-            className="devicon-nodejs-plain-wordmark colored"
-            styleName="about__icon"
-          ></i>
-          <i className="devicon-vim-plain colored" styleName="about__icon"></i>
-          <div styleName="about__background">
-            <i
-              className="devicon-nextjs-original-wordmark colored"
-              styleName="about__icon"
-            ></i>
+        <div styleName="about__technologies">
+          <div styleName="about__row">
+            <div styleName="about__tech">
+              <i
+                className="devicon-html5-plain-wordmark colored"
+                styleName="about__icon"
+              ></i>
+              <div>html5</div>
+            </div>
+            <div styleName="about__tech">
+              <i
+                className="devicon-css3-plain-wordmark colored"
+                styleName="about__icon"
+              ></i>
+              <div>css3</div>
+            </div>
+            <div styleName="about__tech">
+              <i
+                className="devicon-javascript-plain colored"
+                styleName="about__icon"
+              ></i>
+              <div>javascript</div>
+            </div>
+          </div>
+          <div styleName="about__row">
+            <div styleName="about__tech">
+              <i
+                className="devicon-react-original-wordmark colored"
+                styleName="about__icon"
+              ></i>
+              <div>react</div>
+            </div>
+            <div styleName="about__tech">
+              <i
+                className="devicon-jest-plain colored"
+                styleName="about__icon"
+              ></i>
+              <div>jest</div>
+            </div>
+            <div styleName="about__tech">
+              <i
+                className="devicon-typescript-plain colored"
+                styleName="about__icon"
+              ></i>
+              <div>typescript</div>
+            </div>
+            <div styleName="about__tech">
+              <i
+                className="devicon-redux-original colored"
+                styleName="about__icon"
+              ></i>
+              <div>redux</div>
+            </div>
+          </div>
+          <div styleName="about__row">
+            <div styleName="about__tech">
+              <i
+                className="devicon-firebase-plain-wordmark colored"
+                styleName="about__icon"
+              ></i>
+              <div>firebase</div>
+            </div>
+            <div styleName="about__tech">
+              <i
+                className="devicon-express-original-wordmark"
+                styleName="about__icon"
+              ></i>
+              <div>express</div>
+            </div>
+            <div styleName="about__tech">
+              <i
+                className="devicon-mongodb-plain-wordmark colored"
+                styleName="about__icon"
+              ></i>
+              <div>mongodb</div>
+            </div>
           </div>
         </div>
       </div>
