@@ -12,9 +12,24 @@ const featuredProjects = [
     liveLink: "https://skyfringe.netlify.app/",
     images: [
       {
-        isPriority: true,
-        src: "/images/breakout.webp",
-        alt: "The home page of Session Hub showing the users My Hub section and recent posts of their friends",
+        isPriority: false,
+        src: "/images/skyfringe/browser.webp",
+        alt: "Banner image for Monkey D. Luffy's 'Skyfringe' profile, featuring the 'One Piece' crew including Nami, Zoro, Sanji, Chopper, and others.",
+      },
+      {
+        isPriority: false,
+        src: "/images/skyfringe/laptop.webp",
+        alt: "Sign up page for Skyfringe",
+      },
+      {
+        isPriority: false,
+        src: "/images/skyfringe/tilt.webp",
+        alt: "Screenshot of the 'Skyfringe' social media platform's navigation pane. Icons include home, friends, notifications, chat, settings, and log out.",
+      },
+      {
+        isPriority: false,
+        src: "/images/skyfringe/phone.webp",
+        alt: "Phone perspective of the chat section of Skyfringe",
       },
     ],
     render: () => (
@@ -60,9 +75,24 @@ const featuredProjects = [
     liveLink: "http://optimistictrousers.github.io/reddit-clone",
     images: [
       {
-        isPriority: true,
-        src: "/images/breakout.webp",
-        alt: "The home page of Session Hub showing the users My Hub section and recent posts of their friends",
+        isPriority: false,
+        src: "/images/reddit/tilt.webp",
+        alt: "Screenshot of a Reddit clone webpage with a dark theme. Features a post about a 'Steampunk Labrador' NFT and another post titled 'This is a cat'. On the right, there's a sidebar displaying top communities like 'NFT', 'bernke', and 'big'.",
+      },
+      {
+        isPriority: false,
+        src: "/images/reddit/phone.webp",
+        alt: "Mobile view of the Reddit clone showing the NFT community. Posts include questions about cryptocurrency and an NFT titled '01_GLASHUTTE_AdobeExpress'.",
+      },
+      {
+        isPriority: false,
+        src: "/images/reddit/laptop.webp",
+        alt: "A desktop monitor displaying a login popup on the Reddit clone site. It offers options to continue with Google or to enter an email and password.",
+      },
+      {
+        isPriority: false,
+        src: "/images/reddit/browser.webp",
+        alt: "A screenshot of a Reddit profile page. The top bar displays the Reddit logo and search bar. The right side of the page features a profile picture of an animated character with a Santa hat, labeled 'Tony Isern'. Below the profile picture, there is information indicating that the user joined 'a year ago' and their cake day is 'Tue, 23 Aug 2022 12:47:42 GMT'. The left side showcases three Reddit posts made by the user 'Tony Isern' in different subreddits titled 'r/more chicken', 'r/makeup', and 'r/chicken' with respective post titles 'HEY THIS IS A POST', 'MAKEUP TIPS', and 'IT WORKS'",
       },
     ],
     render: () => (
@@ -100,9 +130,24 @@ const featuredProjects = [
     codeLink: "https://github.com/OptimisticTrousers/cooking-recipe-portal",
     images: [
       {
-        isPriority: true,
-        src: "/images/breakout.webp",
-        alt: "The home page of Session Hub showing the users My Hub section and recent posts of their friends",
+        isPriority: false,
+        src: "/images/cooking-recipes/tilt.webp",
+        alt: "Homepage of the 'Cooking Recipes Portal' website with vibrant images of various dishes, including chicken wings, roasted vegetables, and a greeting message promoting home cooking.",
+      },
+      {
+        isPriority: false,
+        src: "/images/cooking-recipes/phone.webp",
+        alt: "Mobile view of a recipe titled 'Tasty Brekkie Casserole' under the breakfast category, authored by Michael Cross, with a list of ingredients for the casserole base.",
+      },
+      {
+        isPriority: false,
+        src: "/images/cooking-recipes/laptop.webp",
+        alt: "Content editing interface for the 'Tasty Brekkie Casserole' recipe, displaying fields for title, author, and the main content with formatting tools. The detailed recipe instructions are visible in the content area.",
+      },
+      {
+        isPriority: false,
+        src: "/images/reddit/browser.webp",
+        alt: "Screenshot of a recipe web application's table page. It has a navigation bar with 'Recipes' and 'Categories' tabs. Below, there's a button labeled 'Create Recipe'. A table displays recipes with columns for actions, ID, title, author, content, category, and creation date. Two recipes are shown: 'Tasty Brekkie Casserole' by Michael Cross in the 'Breakfast' category and 'Fried Polenta Panzanella' by Jocelyn Alfonso in the 'Lunch' category. Both recipes have a brief description and method.",
       },
     ],
     render: () => (

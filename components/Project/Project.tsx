@@ -15,11 +15,12 @@ interface Props {
   description: string;
   liveLink: string;
   codeLink: string;
-  images: {
+  images?: {
     isPriority: boolean;
     src: string;
     alt: string;
   }[];
+  video?: string;
   reverse: boolean;
   render: () => ReactNode;
 }
@@ -46,6 +47,7 @@ const Project: FC<Props> = ({
   liveLink,
   codeLink,
   images,
+  video,
   reverse,
   render,
 }) => {
@@ -55,9 +57,14 @@ const Project: FC<Props> = ({
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ once: true }}
-      styleName={`project ${reverse && "reverse"}`}
+      styleName={`project`}
     >
-      <ImageCarousel images={images} />
+      {images && <ImageCarousel images={images} />}
+      {video && (
+        <video styleName="project__image" autoPlay muted loop>
+          <source src={video} type="video/webm" />
+        </video>
+      )}
       <div styleName="project__details">
         <div styleName="project__content">
           <h3 styleName="project__title">{title}</h3>

@@ -33,17 +33,23 @@ function ImageCarousel({ images }: ImageCarouselProps) {
 
   return (
     <div styleName="carousel">
-      <div styleName="emlba">
+      <div styleName="embla">
         <div styleName="embla__viewport" ref={emblaRef}>
           <div styleName="embla__container">
             {images.map((image) => {
               return (
                 <div styleName="embla__slide" key={image.src}>
-                  <img
+                  <Image
+                    styleName="embla__image"
+                    priority={image.isPriority}
                     src={image.src}
                     alt={image.alt}
-                    style={{ width: "100%", height: "100%", boxShadow: "none" }}
-                  ></img>
+                    width={1920}
+                    height={1280}
+                    sizes="100%"
+                    objectFit="contain"
+                    objectPosition={"top"}
+                  />
                 </div>
               );
             })}
