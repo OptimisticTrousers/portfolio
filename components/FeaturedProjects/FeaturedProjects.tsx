@@ -21,7 +21,7 @@ const FeaturedProjects: FC = () => {
       >
         <p styleName="projects__text">Explore more →</p>
       </Link>
-      {featuredProjects.map((featuredProject, index) => (
+      {featuredProjects.map((featuredProject, index: number) => (
         <Project
           key={featuredProject.id}
           {...featuredProject}

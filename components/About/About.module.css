@@ -2,7 +2,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  animation: 1s slideUp ease-in-out;
   column-gap: 10rem;
 }
 

@@ -4,10 +4,34 @@ import Image from "next/image";
 import { FC } from "react";
 import CSSModules from "react-css-modules";
 import styles from "./About.module.css";
+import { AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
+
+const cardVariants = {
+  offscreen: {
+    y: 300,
+    opacity: 0,
+  },
+  onscreen: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: "spring",
+      bounce: 0.4,
+      duration: 0.8,
+    },
+  },
+};
 
 const About: FC = () => {
   return (
-    <section styleName="about">
+    <motion.section
+      variants={cardVariants}
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: true }}
+      styleName="about"
+    >
       <div styleName="about__content">
         <h2 styleName="about__title">About me</h2>
         <Image
@@ -123,7 +147,7 @@ const About: FC = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

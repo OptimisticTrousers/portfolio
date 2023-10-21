@@ -6,6 +6,7 @@ import greenDot from "../../public/svg/green-dot.svg";
 import code from "../../public/svg/code.svg";
 import styles from "./Project.module.css";
 import CSSModules from "react-css-modules";
+import { motion } from "framer-motion";
 
 interface Props {
   id: string;
@@ -18,6 +19,22 @@ interface Props {
   render: () => ReactNode;
 }
 
+const cardVariants = {
+  offscreen: {
+    y: 300,
+    opacity: 0,
+  },
+  onscreen: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: "spring",
+      bounce: 0.4,
+      duration: 0.8,
+    },
+  },
+};
+
 const Project: FC<Props> = ({
   title,
   description,
@@ -28,7 +45,13 @@ const Project: FC<Props> = ({
   render,
 }) => {
   return (
-    <section styleName={`project ${reverse && "reverse"}`}>
+    <motion.section
+      variants={cardVariants}
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: false }}
+      styleName={`project ${reverse && "reverse"}`}
+    >
       <div styleName="project__details">
         <div styleName="project__content">
           <h3 styleName="project__title">{title}</h3>
@@ -79,7 +102,7 @@ const Project: FC<Props> = ({
           </video>
         )}
       </div>
-    </section>
+    </motion.section>
   );
 };
 
