@@ -5,6 +5,14 @@ import CSSModules from "react-css-modules";
 import styles from "./Hero.module.css";
 import BackgroundAnimation from "../BackgroundImage/BackgroundImage";
 import ButtonLinks from "../ButtonLinks/ButtonLinks";
+import Typed from "react-typed";
+
+const typedStrings = [
+  "Web Developer",
+  "Software Engineer",
+  "Developer",
+  "Programmer",
+];
 
 const Hero: FC = () => {
   return (
@@ -25,7 +33,15 @@ const Hero: FC = () => {
           <div styleName="hero__position">
             <p styleName="hero__description">
               Studying Computer Science with the goal of becoming{" "}
-              <span styleName="hero__colorful">a Web Developer</span>
+              <span styleName="hero__colorful">
+                <Typed
+                  strings={typedStrings}
+                  typeSpeed={40}
+                  backSpeed={50}
+                  loop={true}
+                  startDelay={1000}
+                />
+              </span>
               <span styleName="hero__dash">_</span>
             </p>
           </div>
