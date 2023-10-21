@@ -32,7 +32,7 @@ const Hero: FC = () => {
           </div>
           <div styleName="hero__position">
             <p styleName="hero__description">
-              Studying Computer Science with the goal of becoming{" "}
+              Studying Computer Science with the goal of becoming a{" "}
               <span styleName="hero__colorful">
                 <Typed
                   strings={typedStrings}
