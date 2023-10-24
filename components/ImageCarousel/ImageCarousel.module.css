@@ -31,7 +31,6 @@
 .embla__prev,
 .embla__next {
   position: absolute;
-  z-index: 100;
   top: calc(50% - 15px);
   display: flex;
   justify-content: center;
