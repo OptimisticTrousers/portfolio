@@ -36,21 +36,19 @@ const Layout: FC<Props> = ({ children }) => {
     <>
       <div styleName="container">
         <Navbar />
-        <AnimatePresence mode="popLayout" initial={true}>
-          <motion.main
-            key={router.route}
-            initial="initialState"
-            animate="animateState"
-            exit="exitState"
-            transition={{
-              duration: "0.4",
-            }}
-            variants={variants}
-            styleName="main"
-          >
-            {children}
-          </motion.main>
-        </AnimatePresence>
+        <motion.main
+          key={router.route}
+          initial="initialState"
+          animate="animateState"
+          exit="exitState"
+          transition={{
+            duration: "0.4",
+          }}
+          variants={variants}
+          styleName="main"
+        >
+          {children}
+        </motion.main>
       </div>
       <Footer />
     </>
