@@ -56,7 +56,7 @@ const About: FC = () => {
           like to do in the future is to teach others the things I am currently
           learning! Programming is also pretty fun! It's pretty cool the stuff
           you can build with just a computer and internet connection. I'm
-          planning on applying for internships this summer of 2023 to get more
+          planning on applying for internships this summer of 2024 to get more
           experience from more senior developers. Currently learning more about
           Data Structures and Algorithms.
           <br />
