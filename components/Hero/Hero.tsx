@@ -5,13 +5,17 @@ import CSSModules from "react-css-modules";
 import styles from "./Hero.module.css";
 import BackgroundAnimation from "../BackgroundImage/BackgroundImage";
 import ButtonLinks from "../ButtonLinks/ButtonLinks";
-import Typed from "react-typed";
+import { TypeAnimation } from "react-type-animation";
 
 const typedStrings = [
   "Web Developer",
+  1000,
   "Software Engineer",
+  1000,
   "Developer",
+  1000,
   "Programmer",
+  1000,
 ];
 
 const Hero: FC = () => {
@@ -34,13 +38,7 @@ const Hero: FC = () => {
             <p styleName="hero__description">
               Studying Computer Science with the goal of becoming a{" "}
               <span styleName="hero__colorful">
-                <Typed
-                  strings={typedStrings}
-                  typeSpeed={40}
-                  backSpeed={50}
-                  loop={true}
-                  startDelay={1000}
-                />
+                <TypeAnimation sequence={typedStrings} wrapper="span" deletionSpeed={20} speed={20} repeat={Infinity} />
               </span>
               <span styleName="hero__dash">_</span>
             </p>

@@ -11,6 +11,12 @@
   min-height: 100%;
 }
 
+@media(max-width: 1220px) {
+  .container {
+    padding: 3rem;
+  }
+}
+
 @media (max-width: 400px) {
   .container {
     padding: 1rem;
