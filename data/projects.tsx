@@ -545,17 +545,17 @@ const projects = [
       {
         isPriority: false,
         src: "/images/tic-tac-toe/tilt.webp",
-        alt: "A vibrant web browser interface showcasing a Tic Tac Toe game on a pink background with playful illustrations of game controllers, consoles, and related elements. The game board displays a few moves with 'X' and water drop shapes. On the side, there are avatars for 'You' and the 'Computer', with 'You' having chosen the water drop shape. The URL reads 'https://optimistictrousers.github.io/tic-tac-toe/' and the copyright at the bottom mentions '2023 Tony Isern'.",
+        alt: "A vibrant web browser interface showcasing a Tic Tac Toe game on a pink background with playful illustrations of game controllers, consoles, and related elements. The game board displays a few moves with 'X' and water drop shapes. On the side, there are avatars for 'You' and the 'Computer', with 'You' having chosen the water drop shape. The URL reads 'https://optimistictrousers.github.io/tic-tac-toe/' and the copyright at the bottom mentions '2025 Tony Isern'.",
       },
       {
         isPriority: false,
         src: "/images/tic-tac-toe/browser.webp",
-        alt: "Vibrant Tic Tac Toe web interface set against a pink gaming-themed background. Player avatars and game moves are displayed, with a copyright notice for '2023 Tony Isern'.",
+        alt: "Vibrant Tic Tac Toe web interface set against a pink gaming-themed background. Player avatars and game moves are displayed, with a copyright notice for '2025 Tony Isern'.",
       },
       {
         isPriority: false,
         src: "/images/tic-tac-toe/browser-2.webp",
-        alt: "Vibrant Tic Tac Toe web interface set against a pink gaming-themed background. Player avatars and game moves are displayed, with a copyright notice for '2023 Tony Isern'.",
+        alt: "Vibrant Tic Tac Toe web interface set against a pink gaming-themed background. Player avatars and game moves are displayed, with a copyright notice for '2025 Tony Isern'.",
       },
     ],
     render: () => (
