@@ -46,7 +46,7 @@ const About: FC = () => {
         <p styleName="about__description">
           Hi! I'm Tony Isern. I love building things and the freedom that
           programming gives you. I'm currently studying at New Jersey City
-          University with a major in Computer Science as a junior.
+          University with a major in Computer Science as a senior.
           <br />
           <br />
           Web development is a space where things are constantly changing. Hell,
