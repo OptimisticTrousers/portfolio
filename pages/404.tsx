@@ -6,14 +6,11 @@ import styles from "../styles/404.module.css";
 const Custom404 = () => (
   <div styleName="not-found">
     <div styleName="not-found__container">
-      <img src="/images/optimistictrousers.jpg" alt="smiling pants" />
+      <img src="/images/optimistictrousers.jpeg" alt="smiling pants" />
       <h2 styleName="not-found__number">404</h2>
       <hr styleName="not-found__break" />
       <p styleName="not-found__error">Page Not Found</p>
-      <Link
-        styleName="not-found__link"
-        href="/"
-      >
+      <Link styleName="not-found__link" href="/">
         Go back to the home page
       </Link>
     </div>
