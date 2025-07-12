@@ -45,8 +45,8 @@ const About: FC = () => {
         />
         <p styleName="about__description">
           Hi! I'm Tony Isern. I love building things and the freedom that
-          programming gives you. I'm currently studying at New Jersey City
-          University with a major in Computer Science as a senior.
+          programming gives you. I graduated from New Jersey City University
+          with a major in Computer Science and a minor in philosophy.
           <br />
           <br />
           Web development is a space where things are constantly changing. Hell,
@@ -59,8 +59,8 @@ const About: FC = () => {
           interned at Google as a Software Engineer Intern in Summer 2024!{" "}
           <br />
           <br />
-          When I'm not coding, I'm usually reading, browsing Reddit, eating lots
-          of food, or reading my favorite manga, One Piece!
+          When I'm not coding, I'm usually reading, watching basketball, or
+          playing a video game.
         </p>
       </div>
       <div styleName="about__container">
@@ -69,14 +69,14 @@ const About: FC = () => {
           <div styleName="about__row">
             <div styleName="about__tech">
               <i
-                className="devicon-html5-plain-wordmark colored"
+                className="devicon-html5-plain colored"
                 styleName="about__icon"
               ></i>
               <div>html5</div>
             </div>
             <div styleName="about__tech">
               <i
-                className="devicon-css3-plain-wordmark colored"
+                className="devicon-css3-plain colored"
                 styleName="about__icon"
               ></i>
               <div>css3</div>
@@ -92,7 +92,7 @@ const About: FC = () => {
           <div styleName="about__row">
             <div styleName="about__tech">
               <i
-                className="devicon-react-original-wordmark colored"
+                className="devicon-react-original colored"
                 styleName="about__icon"
               ></i>
               <div>react</div>
@@ -122,24 +122,54 @@ const About: FC = () => {
           <div styleName="about__row">
             <div styleName="about__tech">
               <i
-                className="devicon-firebase-plain-wordmark colored"
+                className="devicon-firebase-plain colored"
                 styleName="about__icon"
               ></i>
               <div>firebase</div>
             </div>
             <div styleName="about__tech">
               <i
-                className="devicon-express-original-wordmark"
+                className="devicon-express-original colored"
                 styleName="about__icon"
               ></i>
               <div>express</div>
             </div>
             <div styleName="about__tech">
               <i
-                className="devicon-mongodb-plain-wordmark colored"
+                className="devicon-mongodb-plain colored"
                 styleName="about__icon"
               ></i>
               <div>mongodb</div>
+            </div>
+          </div>
+          <div styleName="about__row">
+            <div styleName="about__tech">
+              <i
+                className="devicon-graphql-plain colored"
+                styleName="about__icon"
+              ></i>
+              <div>graphql</div>
+            </div>
+            <div styleName="about__tech">
+              <i
+                className="devicon-postgresql-plain colored"
+                styleName="about__icon"
+              ></i>
+              <div>postgresql</div>
+            </div>
+            <div styleName="about__tech">
+              <i
+                className="devicon-java-plain colored"
+                styleName="about__icon"
+              ></i>
+              <div>java</div>
+            </div>
+            <div styleName="about__tech">
+              <i
+                className="devicon-python-plain colored"
+                styleName="about__icon"
+              ></i>
+              <div>python</div>
             </div>
           </div>
         </div>

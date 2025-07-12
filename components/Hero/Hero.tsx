@@ -36,9 +36,15 @@ const Hero: FC = () => {
           </div>
           <div styleName="hero__position">
             <p styleName="hero__description">
-              Studying Computer Science with the goal of becoming a{" "}
+              Bachelor of Computer Science graduate with the goal of becoming a{" "}
               <span styleName="hero__colorful">
-                <TypeAnimation sequence={typedStrings} wrapper="span" deletionSpeed={20} speed={20} repeat={Infinity} />
+                <TypeAnimation
+                  sequence={typedStrings}
+                  wrapper="span"
+                  deletionSpeed={20}
+                  speed={20}
+                  repeat={Infinity}
+                />
               </span>
               <span styleName="hero__dash">_</span>
             </p>
