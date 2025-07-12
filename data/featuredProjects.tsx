@@ -5,6 +5,113 @@ import { nanoid } from "nanoid";
 const featuredProjects = [
   {
     id: nanoid(),
+    title: "Word Reminder",
+    description:
+      "A fullstack cross-platform vocabulary building application using React.js, Express.js, PostgresQL, and TypeScript. Available as a Chrome extension or as an Android app. Capacitor is used to port the Chrome extension to an Android mobile app. Includes push notifications, scheduling of word reminders, ability to add words to your dictionary with context menu options, and much more! Clients and server have 95+% test code coverage with end-to-end test coverage for critical features.",
+    liveLink: "https://word-reminder.com",
+    codeLink: "https://github.com/OptimisticTrousers/word-reminder",
+    images: [
+      {
+        isPriority: true,
+        src: "/images/word-reminder/MobileWordReminder1.webp",
+        alt: "Word Reminder mobile user words page",
+      },
+      {
+        isPriority: false,
+        src: "/images/word-reminder/WordReminder1.webp",
+        alt: "Word Reminder chrome extension user words page",
+      },
+      {
+        isPriority: false,
+        src: "/images/word-reminder/MobileWordReminder2.webp",
+        alt: "Word Reminder mobile login page",
+      },
+      {
+        isPriority: false,
+        src: "/images/word-reminder/WordReminder2.webp",
+        alt: "Word Reminder chrome extension user words list",
+      },
+      {
+        isPriority: false,
+        src: "/images/word-reminder/MobileWordReminder3.webp",
+        alt: "Word Reminder mobile user word page",
+      },
+      {
+        isPriority: false,
+        src: "/images/word-reminder/WordReminder3.webp",
+        alt: "Word Reminder chrome extension context menu option",
+      },
+      {
+        isPriority: false,
+        src: "/images/word-reminder/MobileWordReminder4.webp",
+        alt: "Word Reminder mobile notification",
+      },
+      {
+        isPriority: false,
+        src: "/images/word-reminder/WordReminder4.webp",
+        alt: "Word Reminder chrome extension notification",
+      },
+      {
+        isPriority: false,
+        src: "/images/word-reminder/MobileWordReminder5.webp",
+        alt: "Word Reminder mobile context menu option",
+      },
+    ],
+    render: () => (
+      <>
+        <i
+          className="devicon-postgresql-plain-wordmark colored"
+          styleName="project__icon"
+        ></i>
+        <i
+          className="devicon-express-original-wordmark"
+          styleName="project__icon"
+        ></i>
+        <i
+          className="devicon-firebase-plain-wordmark colored"
+          styleName="project__icon"
+        ></i>
+        <i
+          className="devicon-capacitor-plain-wordmark colored"
+          styleName="project__icon"
+        ></i>
+        <i
+          className="devicon-androidstudio-plain-wordmark colored"
+          styleName="project__icon"
+        ></i>
+        <i
+          className="devicon-amazonwebservices-plain-wordmark colored"
+          styleName="project__icon"
+        ></i>
+        <i
+          className="devicon-playwright-plain colored"
+          styleName="project__icon"
+        ></i>
+        <i
+          className="devicon-vitest-plain colored"
+          styleName="project__icon"
+        ></i>
+        <i
+          className="devicon-webpack-plain-wordmark colored"
+          styleName="project__icon"
+        ></i>
+        <i
+          className="devicon-css3-plain-wordmark colored"
+          styleName="project__icon"
+        ></i>
+        <i
+          className="devicon-typescript-plain colored"
+          styleName="project__icon"
+        ></i>
+        <i
+          className="devicon-react-original-wordmark colored"
+          styleName="project__icon"
+        ></i>
+      </>
+    ),
+  },
+  {
+    id: nanoid(),
     title: "Skyfringe",
     description:
       "A fullstack social media application built using the MERN stack and Typescript. Front-end application is fully tested with Vitest and React Testing Library. Back-end application is tested with Supertest and mongodb-memory-server. AWS S3 is used to store images. Accessibility friendly. Please do not use Safari when accessing this app as Safari blocks cross-site cookies unless you want to disable the blocking of cross-site cookies.",
@@ -75,7 +182,7 @@ const featuredProjects = [
     codeLink: "https://github.com/OptimisticTrousers/wheres-waldo",
     images: [
       {
-        isPriority: false,
+        isPriority: true,
         src: "/images/wheres-waldo/tilt.webp",
         alt: "Screenshot of a web browser displaying a 'Where's Waldo?' themed game hosted on GitHub. The game provides a leaderboard and instructions at the top. Below, there are three levels displayed in thumbnail format, each showing a crowded scene. On the right side, there's a timer set to 1 minute, alongside character icons of Odlaw, Waldo, Wilma, and Wizard. A notice instructs players to click on the image to find the characters and warns that switching levels mid-game will lose progress.",
       },
@@ -109,60 +216,6 @@ const featuredProjects = [
           styleName="project__icon"
         ></i>
         <i className="devicon-jest-plain colored" styleName="project__icon"></i>
-      </>
-    ),
-  },
-  {
-    id: nanoid(),
-    title: "HoopGear",
-    description:
-      "Creating an Express application using MongoDB, Mongoose and Pug. Learned how Express works with routing, middleware, and rendering. Using MongoDB for database and Mongoose to query data. Using Pug for templating. Using the MVC pattern to design the application. Application generated with the express-application-generator command. ",
-    liveLink: "https://optimistic-inventory.herokuapp.com/",
-    codeLink: "https://github.com/OptimisticTrousers/inventory-application",
-    images: [
-      {
-        isPriority: false,
-        src: "/images/inventory/tilt.webp",
-        alt: "Website header for 'HoopGear' with a smiling trouser logo. Text announces 'The next generation of basketball apparel'. Two buttons labeled 'Accessories' and 'Footwear'.",
-      },
-      {
-        isPriority: false,
-        src: "/images/inventory/phone.webp",
-        alt: "Mobile view displaying categories: Accessories with Chicago Bulls items, Footwear showing various basketball shoes, and Jerseys showcasing different NBA team jerseys.",
-      },
-      {
-        isPriority: false,
-        src: "/images/inventory/laptop.webp",
-        alt: "Desktop view of 'Update Category' with a framed collectible jersey of Wade #3 surrounded by pictures. Text describes NBA collectibles available at the official NBA store.",
-      },
-      {
-        isPriority: false,
-        src: "/images/inventory/browser.webp",
-        alt: "A desktop webpage displaying the 'Footwear' category. A large illustration of a yellow and blue basketball shoe with the 'KD' logo is on the left.",
-      },
-    ],
-    render: () => (
-      <>
-        <i
-          className="devicon-mongodb-plain-wordmark colored"
-          styleName="project__icon"
-        ></i>
-        <i
-          className="devicon-express-original-wordmark"
-          styleName="project__icon"
-        ></i>
-        <i
-          className="devicon-css3-plain-wordmark colored"
-          styleName="project__icon"
-        ></i>
-        <i
-          className="devicon-html5-plain-wordmark colored"
-          styleName="project__icon"
-        ></i>
-        <i
-          className="devicon-javascript-plain colored"
-          styleName="project__icon"
-        ></i>
       </>
     ),
   },

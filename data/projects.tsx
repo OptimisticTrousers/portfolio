@@ -5,6 +5,113 @@ import { nanoid } from "nanoid";
 const projects = [
   {
     id: nanoid(),
+    title: "Word Reminder",
+    description:
+      "A fullstack cross-platform vocabulary building application using React.js, Express.js, PostgresQL, and TypeScript. Available as a Chrome extension or as an Android app. Capacitor is used to port the Chrome extension to an Android mobile app. Includes push notifications, scheduling of word reminders, ability to add words to your dictionary with context menu options, and much more! Clients and server have 95+% test code coverage with end-to-end test coverage for critical features.",
+    liveLink: "https://word-reminder.com",
+    codeLink: "https://github.com/OptimisticTrousers/word-reminder",
+    images: [
+      {
+        isPriority: true,
+        src: "/images/word-reminder/MobileWordReminder1.webp",
+        alt: "Word Reminder mobile user words page",
+      },
+      {
+        isPriority: false,
+        src: "/images/word-reminder/WordReminder1.webp",
+        alt: "Word Reminder chrome extension user words page",
+      },
+      {
+        isPriority: false,
+        src: "/images/word-reminder/MobileWordReminder2.webp",
+        alt: "Word Reminder mobile login page",
+      },
+      {
+        isPriority: false,
+        src: "/images/word-reminder/WordReminder2.webp",
+        alt: "Word Reminder chrome extension user words list",
+      },
+      {
+        isPriority: false,
+        src: "/images/word-reminder/MobileWordReminder3.webp",
+        alt: "Word Reminder mobile user word page",
+      },
+      {
+        isPriority: false,
+        src: "/images/word-reminder/WordReminder3.webp",
+        alt: "Word Reminder chrome extension context menu option",
+      },
+      {
+        isPriority: false,
+        src: "/images/word-reminder/MobileWordReminder4.webp",
+        alt: "Word Reminder mobile notification",
+      },
+      {
+        isPriority: false,
+        src: "/images/word-reminder/WordReminder4.webp",
+        alt: "Word Reminder chrome extension notification",
+      },
+      {
+        isPriority: false,
+        src: "/images/word-reminder/MobileWordReminder5.webp",
+        alt: "Word Reminder mobile context menu option",
+      },
+    ],
+    render: () => (
+      <>
+        <i
+          className="devicon-postgresql-plain-wordmark colored"
+          styleName="project__icon"
+        ></i>
+        <i
+          className="devicon-express-original-wordmark"
+          styleName="project__icon"
+        ></i>
+        <i
+          className="devicon-firebase-plain-wordmark colored"
+          styleName="project__icon"
+        ></i>
+        <i
+          className="devicon-capacitor-plain-wordmark colored"
+          styleName="project__icon"
+        ></i>
+        <i
+          className="devicon-androidstudio-plain-wordmark colored"
+          styleName="project__icon"
+        ></i>
+        <i
+          className="devicon-amazonwebservices-plain-wordmark colored"
+          styleName="project__icon"
+        ></i>
+        <i
+          className="devicon-playwright-plain colored"
+          styleName="project__icon"
+        ></i>
+        <i
+          className="devicon-vitest-plain colored"
+          styleName="project__icon"
+        ></i>
+        <i
+          className="devicon-webpack-plain-wordmark colored"
+          styleName="project__icon"
+        ></i>
+        <i
+          className="devicon-css3-plain-wordmark colored"
+          styleName="project__icon"
+        ></i>
+        <i
+          className="devicon-typescript-plain colored"
+          styleName="project__icon"
+        ></i>
+        <i
+          className="devicon-react-original-wordmark colored"
+          styleName="project__icon"
+        ></i>
+      </>
+    ),
+  },
+  {
+    id: nanoid(),
     title: "Skyfringe",
     description:
       "A fullstack social media application built using the MERN stack and Typescript. Front-end application is fully tested with Vitest and React Testing Library. Back-end application is tested with Supertest and mongodb-memory-server. AWS S3 is used to store images. Accessibility friendly. Please do not use Safari when accessing this app as Safari blocks cross-site cookies unless you want to disable the blocking of cross-site cookies.",
