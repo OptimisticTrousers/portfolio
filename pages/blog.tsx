@@ -47,9 +47,13 @@ const Blog = ({ posts, categories, tags }: Props) => {
       </SidebarLayout>
       <BlogContentLayout>
         <h1 styleName="blog__title">Blog Posts</h1>
-        {posts.map((post: Post) => {
-          return <BlogSnippet key={post._id} {...post} />;
-        })}
+        {posts.length > 0 ? (
+          posts.map((post: Post) => {
+            return <BlogSnippet key={post._id} {...post} />;
+          })
+        ) : (
+          <p>No blog posts at the moment...</p>
+        )}
       </BlogContentLayout>
     </BlogLayout>
   );
