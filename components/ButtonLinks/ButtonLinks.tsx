@@ -42,7 +42,7 @@ const ButtonLinks: FC = () => {
         </button>
       </a>
       <a
-        href="malito:tony.isern@yahoo.com"
+        href="malito:tonyisern@protonmail.com"
         target="_blank"
         rel="noreferrer"
         aria-label="send me an email(popup)"

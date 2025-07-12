@@ -187,7 +187,7 @@ const Contact: NextPage = () => {
               </span>
               <div styleName="card__card-content">
                 <h3>Email</h3>
-                <p styleName="contact__text">tony.isern@yahoo.com</p>
+                <p styleName="contact__text">tonyisern@protonmail.com</p>
               </div>
             </li>
             <li styleName="contact__card">
