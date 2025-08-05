@@ -159,10 +159,10 @@ const About: FC = () => {
             </div>
             <div styleName="about__tech">
               <i
-                className="devicon-java-plain colored"
+                className="devicon-docker-plain colored"
                 styleName="about__icon"
               ></i>
-              <div>java</div>
+              <div>docker</div>
             </div>
             <div styleName="about__tech">
               <i
