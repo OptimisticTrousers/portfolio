@@ -7,7 +7,7 @@ const featuredProjects = [
     id: nanoid(),
     title: "Word Reminder",
     description:
-      "A fullstack cross-platform vocabulary building application using React.js, Express.js, PostgresQL, and TypeScript. Available as a Chrome extension or as an Android app. Capacitor is used to port the Chrome extension to an Android mobile app. Includes push notifications, scheduling of word reminders, ability to add words to your dictionary with context menu options, and much more! Clients and server have 95+% test code coverage with end-to-end test coverage for critical features.",
+      "A fullstack cross-platform vocabulary building application using React.js, Express.js, PostgresQL, and TypeScript. Available as a browser extension or as an Android app. Capacitor is used to port the Chrome extension to an Android mobile app. Includes push notifications, scheduling of word reminders, ability to add words to your dictionary with context menu options, and much more! Clients and server have 95+% test code coverage with end-to-end test coverage for critical features.",
     liveLink: "https://word-reminder.com",
     codeLink: "https://github.com/OptimisticTrousers/word-reminder",
     images: [
