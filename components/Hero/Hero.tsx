@@ -8,13 +8,13 @@ import ButtonLinks from "../ButtonLinks/ButtonLinks";
 import { TypeAnimation } from "react-type-animation";
 
 const typedStrings = [
-  "Web Developer",
+  "Full Stack Developer",
   1000,
   "Software Engineer",
   1000,
-  "Developer",
+  "Development Engineer",
   1000,
-  "Programmer",
+  "Developer",
   1000,
 ];
 
@@ -36,7 +36,8 @@ const Hero: FC = () => {
           </div>
           <div styleName="hero__position">
             <p styleName="hero__description">
-              Bachelor of Computer Science graduate with the goal of becoming a{" "}
+              KPMG
+              {" "}
               <span styleName="hero__colorful">
                 <TypeAnimation
                   sequence={typedStrings}

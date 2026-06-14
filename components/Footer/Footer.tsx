@@ -6,7 +6,7 @@ import styles from "./Footer.module.css";
 const Footer: FC = () => {
   return (
     <footer styleName="footer">
-      <p>© 2025 Tony Isern. Made with 💌. Powered by Next.js</p>
+      <p>© 2026 Tony Isern. Made with 💌. Powered by Next.js</p>
     </footer>
   );
 };

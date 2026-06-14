@@ -46,7 +46,7 @@ const About: FC = () => {
         <p styleName="about__description">
           Hi! I'm Tony Isern. I love building things and the freedom that
           programming gives you. I graduated from New Jersey City University
-          with a major in Computer Science and a minor in philosophy.
+          with a BS in Computer Science and a minor in philosophy.
           <br />
           <br />
           Web development is a space where things are constantly changing. Hell,
@@ -59,8 +59,8 @@ const About: FC = () => {
           interned at Google as a Software Engineer Intern in Summer 2024!{" "}
           <br />
           <br />
-          When I'm not coding, I'm usually reading, watching basketball, or
-          playing a video game.
+          When I'm not coding, I'm usually reading, watching sports, a movie, or
+          TV show, or playing a video game.
         </p>
       </div>
       <div styleName="about__container">
